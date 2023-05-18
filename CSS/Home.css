@@ -935,7 +935,7 @@
     }
 }
 
-@media all and (max-width : 600px) {
+@media all and (max-width : 800px) {
     .section_5-content::-webkit-scrollbar, .section_7-content::-webkit-scrollbar, .section_8-content::-webkit-scrollbar, .section_4-content::-webkit-scrollbar {
         height: 0px;
     }
