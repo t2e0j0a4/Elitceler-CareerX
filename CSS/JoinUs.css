@@ -1,0 +1,635 @@
+@import "./styles.css";
+
+.join__main {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: #121212;
+}
+
+.join__main .main__center1 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #003A70 0%, #121212a0 100%);
+    padding: 3rem 0;
+}
+
+/* Section 1 : Join Our Club */
+
+.join__section1 {
+    width: 1156px;
+    max-width: 95%;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    padding: 1rem;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+}
+
+.join__section1 .section1__box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.section1__box .section1__side1 {
+    width: 100%;
+    flex: 0.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+
+.section1__side1 h1 {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    color: #FFFFFF;
+}
+
+.section1__side1 h1 span {
+    color: var(--primary);
+}
+
+.section1__side1 p {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.section1__side1 button {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--white);
+    border: 1px solid #FFFFFF;
+    border-radius: 9px;
+    box-shadow: 0px 0px 15px #FFFFFF;
+    transition: background-color 0.4s linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 16px;
+    cursor: pointer;
+    background-color: #121212;
+}
+
+.section1__side1 button:hover {
+    background-color: var(--primary);
+}
+
+.section1__box .section1__side2 {
+    width: 100%;
+    flex: 0.3;    
+}
+
+.section1__box .section1__side2 img {
+    width: 240px;
+}
+
+/* Section 1 : Join Our Club */
+
+/* Section Heads */
+
+.section__heads {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.section__heads .head__vector {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+}
+
+.section__heads .head__title {
+    position: absolute;
+    left: 30px;
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #FFFFFF;
+    background-color: #121212;
+    line-height: 40px;
+}
+
+/* Section Heads */
+
+.main__center2 {
+    width: 1200px;
+    max-width: 96%;
+    height: 100%;
+    margin: auto;
+    padding-bottom: 2rem;
+}
+
+/* Similar to Home Page : Copied Section 2 : Activities */
+
+.join__section2 {
+    width: 100%;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.section2__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1.4rem;
+}
+
+.section2__content .section2__data {
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem auto;
+}
+
+.section2__data .webinars__data {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    transition: transform 0.3s linear;
+}
+
+.webinars__data .webinar__box {
+    width: 100%;
+    height: 260px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 0px 15px #FFFFFF;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.webinar__box .webinar__side1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.webinar__box .webinar__side1 img {
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.webinar__box .webinar__side1 p {
+    text-align: center;
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    color: #121212;
+}
+
+
+.webinar__box .webinar__side2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.webinar__box .webinar__side2 p {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #636363;
+}
+
+.webinar__box .webinar__side2 a {
+    width: -moz-fit-content;
+    width: fit-content;
+    border: 1.2px solid #121212;
+    border-radius: 9px;
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 0.8rem 1rem;
+    line-height: 22px;
+    color: #121212;
+}
+
+.section2__content .section2__btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section2__btns button {
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.section2__btns button ion-icon {
+    font-size: 24px;
+    color: #FFF;
+}
+
+/* Similar to Home Page : Copied */
+
+/* Section 3 : Workshops & Section 4 : Meetups */
+
+.join__section34 {
+    width: 100%;
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+.section34__content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.6rem;
+    padding: 1.2rem 0.4rem;
+}
+
+.section34__content .item__box {
+    width: 272px;
+    height: 267px;
+    flex: 0 0 auto;
+    background: #D9E6EC;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 0px 6px #FFFFFF, 0px 0px 6px #FFFFFF;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1.2rem;
+}
+
+.item__box .item__title {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #121212;
+}
+
+.item__box .item__desc {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #636363;
+}
+
+/* Section 3 : Workshops & Section 4 : Meetups */
+
+/* Scrollbars */
+
+.section34__content::-webkit-scrollbar {
+    height: 0;
+}
+
+/* Scrollbars */
+
+/* Section 5 : Our Club Members are Saying */
+
+.join__section5 {
+    width: 100%;
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+.section5__content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.6rem;
+    padding: 1.2rem 0.4rem;
+}
+
+.peer__box {
+    flex: 0 0 auto;
+    width: 380px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem auto;
+    background-color: #fff;
+    padding: 1rem 1rem;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 0px 10px #FFFFFF;
+    border-radius: 20px;
+}
+
+.peer__box .peer__details {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.peer__box .peer__details img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.peer__box .peer__details .peer__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.2rem;
+}
+
+.peer__data .peer__name {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.peer__data .peer__place {
+    font-family: var(--font-lato);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #636363;
+}
+
+.peer__box .peer__desc {
+    width: 100%;
+}
+
+.peer__desc p {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #636363;
+}
+
+.section5__content::-webkit-scrollbar {
+    height: 10px;
+}
+
+.section5__content::-webkit-scrollbar-track {
+    background-color: #232323;
+    border-radius: 4px;
+    box-shadow: 0 0 4px #fff;
+}
+
+.section5__content::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 4px;
+}
+
+/* Section 5 : Our Club Members are Saying */
+
+
+/* ********************************************************************** */
+
+
+/* Responsive Media Queries */
+
+@media all and (max-width : 1236px) {
+
+    .section34__content::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    .section34__content::-webkit-scrollbar-track {
+        background-color: #232323;
+        border-radius: 4px;
+        box-shadow: 0 0 4px #fff;
+    }
+    
+    .section34__content::-webkit-scrollbar-thumb {
+        background-color: var(--primary);
+        border-radius: 4px;
+    }
+
+}
+
+@media all and (max-width : 850px) {
+    .section1__box .section1__side2 img {
+        width: 300px;
+    }
+
+    .section1__box .section1__side1 {
+        flex: 1;
+    }
+
+    .section1__box .section1__side2 {
+        flex: 0.1;
+    }
+
+}
+
+@media all and (max-width : 750px) {
+    .join__section1 .section1__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section1__box .section1__side1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .section1__box .section1__side2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media all and (max-width : 800px) {
+    .section34__content::-webkit-scrollbar, .section5__content::-webkit-scrollbar {
+        height: 0px;
+    }
+}
+
+@media all and (max-width : 520px) {
+    .join__section5 .section__heads p {
+        font-size: 1.2rem;
+        left: 30px;
+        line-height: 28px;
+    }
+
+    .join__section5 .section__heads div {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media all and (max-width : 500px) {
+    .section1__side1 h1 {
+        font-size: 34px;
+    }
+
+    .section1__side1 p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+@media all and (max-width : 1048px) {
+    .webinar__box .webinar__side2 p {
+        font-size: 16px;
+    }
+}
+
+@media all and (max-width : 900px) {
+    .webinars__data .webinar__box {
+        display: flex;
+        
+        flex-direction: column;
+        height: 100%;
+        padding: 1rem;
+    }
+
+    .webinar__box .webinar__side1 {
+        width: 100%;
+    }
+
+    .webinar__box .webinar__side1 img {
+        width: 100%;
+        height: 160px;
+    }
+}
+
+@media all and (max-width : 450px) {
+    .webinars__data .webinar__box {
+        padding: 1rem 0.4rem;
+    }
+
+    .section2__data .webinars__data {
+        gap: 1rem;
+    }
+
+    .webinars__data .webinar__box {
+        box-shadow: 0 0 7px #FFFFFF;
+    }
+
+    .webinar__box .webinar__side1 img {
+        height: 140px;
+    }
+}
+
+@media all and  (max-width : 400px) {
+    
+    .peer__box {
+        width: 320px;
+        height: 280px;
+    }
+}
+
+@media all and  (max-width : 350px) {
+
+    .peer__box {
+        width: 260px;
+    }
+
+    .peer__box .peer__details .peer__data .peer__name {
+        font-size: 18px;
+    }
+
+    .peer__box .peer__details .peer__data .peer__place {
+        font-size: 12px;
+    }
+
+    .section1__box .section1__side1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .section1__side1 h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .section1__side1 p {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .section1__box .section1__side2 img {
+        width: 200px;
+    }
+
+}

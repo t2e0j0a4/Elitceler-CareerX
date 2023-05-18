@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/Navbar.css" />
+    <link rel="stylesheet" href="./CSS/JoinUs.css" />
+    <link rel="stylesheet" href="./CSS/Footer.css" />
+    <title>CareerX | Join Our Club</title>
+  </head>
+  <body>
+
+    <!-- Navbar Starts -->
+
+    <nav class="app__navbar">
+
+      <div class="navbar__logo">
+        <img src="./Assets/CareerXLogo.png" alt="CareerX" />
+      </div>
+
+      <ul class="navbar__list">
+
+        <li class="list__item link1"><a href="./index.html">Home</a></li>
+        <li class="list__item list__drop link2"><span class="drop__name">Cohorts <ion-icon name="chevron-down"></ion-icon></span>
+          <!-- Dropdown Menu -->
+          <ul class="navbar__dropdown">
+            <li class="drop__item"><a href="./FullStack.html">Full Stack Cohort</a></li>
+            <li class="drop__item"><a href="./DataScience.html">Data Science Cohort</a></li>
+            <li class="drop__item"><a href="./CloudComputing.html">Cloud Computing</a></li>
+          </ul>
+        </li>
+        <li class="list__item link3"><a href="https://blog.careerx.club/" target="_blank" rel="noopener">Blogs</a>
+        </li>
+        <li class="list__item link4">
+          <a href="https://academy.careerx.club/account/login" target="_blank" rel="noopener">Login</a>
+        </li>
+
+        <!-- Only on Small Screen -->
+        <li class="cta__btn-sm">
+          <a href="./JoinUs.html" class="navbar__btn btn__cta">Join Our Club</a>
+        </li>
+
+      </ul>
+
+      <div class="cta__btn">
+        <a href="./JoinUs.html" class="navbar__btn btn__cta">Join Our Club</a>
+      </div>
+
+      <!-- Small Screen Menu Button -->
+      <div class="navbar__smallScreen">
+        <ion-icon name="menu"></ion-icon>
+      </div>
+
+    </nav>
+
+    <!-- Navbar Ends -->
+
+    
+    <main class="join__main">
+        
+        <div class="main__center1">
+
+            <!-- Join Us Section 1 : Join Our Club -->
+            
+            <section class="join__section1">
+                
+                <div class="section1__box">
+                    
+                    <div class="section1__side1">
+                        <h1 class="side1__head">Join Our <span>Club</span></h1>
+                        <p class="side1__sub">By joining our club, you'll gain access to a thriving community of like-minded professionals who are committed to supporting each other's career journeys. Our club offers a platform for powerful networking, collaborative learning, and professional development opportunities.  Join us today and unlock the limitless potential of collective growth and achievement.</p>
+                        <button type="button">Join Our Club</button>
+                    </div>
+
+                    <div class="section1__side2">
+                        <img src="./Assets/JoinGif1.gif" alt="Join Us">
+                    </div>      
+                    
+                </div>
+                
+            </section>
+            
+            <!-- Join Us Section 1 : Join Our Club -->
+            
+        </div>
+
+        <div class="main__center2">
+
+            <!-- Join Us Section 2 : Activities -->
+            
+            <section class="join__section2">
+                <!-- Heading -->
+                <div class="section__heads">
+                    <div class="head__vector"></div>
+                    <p class="head__title">Activities</p>
+                </div>
+
+                <!-- Content -->
+                <div class="section2__content">
+                    <div class="section2__data">
+                        <div class="webinars__data"></div>
+                    </div>
+                    <div class="section2__btns">
+                        <button type="button" onclick="moreWebinars('back')" title="Back">
+                            <ion-icon name="chevron-back"></ion-icon>
+                        </button>
+                        <button type="button" onclick="moreWebinars('next')" title="Forward">
+                            <ion-icon name="chevron-forward"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Join Us Section 2 : Activities -->
+
+            <!-- Join Us Section 3 : Workshops -->
+
+            <section class="join__section34">
+
+                <!-- Heading -->
+                <div class="section__heads">
+                    <div class="head__vector"></div>
+                    <p class="head__title">Workshops</p>
+                </div>
+
+                <!-- Content -->
+                <div class="section34__content section3__content"></div>
+
+            </section>
+
+            <!-- Join Us Section 3 : Workshops -->
+
+            <!-- Join Us Section 4 : Meetups -->
+
+            <section class="join__section34">
+
+                <!-- Heading -->
+                <div class="section__heads">
+                    <div class="head__vector"></div>
+                    <p class="head__title">Meetups</p>
+                </div>
+
+                <!-- Content -->
+                <div class="section34__content section4__content"></div>
+
+            </section>
+
+            <!-- Join Us Section 4 : Meetups -->
+
+            <!-- Join Us Section 5 : Our Club Members are Saying -->
+
+            <section class="join__section5">
+
+                <!-- Heading -->
+                <div class="section__heads">
+                    <div class="head__vector"></div>
+                    <p class="head__title">Our Club Members are Saying...</p>
+                </div>
+
+                <!-- Content -->
+                <div class="section5__content"></div>
+
+            </section>
+
+            <!-- Join Us Section 5 : Our Club Members are Saying -->
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="app__footer">
+
+      <div class="main__footer">
+
+        <div class="footer__sides footer__side1">
+
+          <div class="footer__logo">
+            <img src="./Assets/CareerXLogo.png" alt="CarrerX" />
+          </div>
+          <div class="company__links">
+            <a href="#" target="_blank" rel="noopener" title="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#" target="_blank" rel="noopener" title="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#" target="_blank" rel="noopener" title="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </div>
+        </div>
+
+        <ul class="footer__sides footer__side2">
+          <li>CareerX.club</li>
+          <li><a href="#explorecohorts">Explore Programs</a></li>
+          <li><a href="#">Full Stack Cohort</a></li>
+          <li><a href="#">Data Science Cohort</a></li>
+          <li><a href="#">GRE Cohort</a></li>
+        </ul>
+
+        <ul class="footer__sides footer__side2">
+          <li>Quick Links</li>
+          <li><a href="#" target="_blank" rel="noopener">Privacy Policy</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Terms and Conditions</a></li>
+        </ul>
+
+        <ul class="footer__sides footer__side3">
+          <li>Keep In Touch</li>
+          <li><ion-icon name="pin-outline"></ion-icon><span>CareerX Club, Plot 10.8. Rd Number 5, 2nd Floor, IDA, Nacharam, Hyderabad, Telangana, 500076</span></li>
+          <li><ion-icon name="call-outline"></ion-icon> <span>+918367721627</span></li>
+          <li><ion-icon name="mail-outline"></ion-icon> <span>info@careerx.club</span></li>
+        </ul>
+      </div>
+    </footer>
+
+    <footer class="app__footer-copy">
+      <p>@2023 CareerX.Club. All Rights Reserved | Colosseum CQ Solutions Pvt.Ltd</p>
+      <a href="#" target="_blank" rel="noopener">Privacy Policy | Terms and Conditions</a>
+    </footer>
+
+    <!-- Footer -->
+
+
+    <!-- Scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./JS/JoinUs.js"></script>
+
+  </body>
+</html>

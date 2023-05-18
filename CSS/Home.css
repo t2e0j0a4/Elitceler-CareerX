@@ -374,7 +374,6 @@
 @media all and (max-width : 900px) {
     .webinars__data .webinar__box {
         display: flex;
-        
         flex-direction: column;
         height: 100%;
         padding: 1rem;

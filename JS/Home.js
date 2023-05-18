@@ -14,6 +14,12 @@ smScreenMenu.addEventListener('click', () => {
     navbarMenu.classList.toggle('active');
 })
 
+if (window.innerWidth <= 785) {
+  navDropDown.style.pointerEvents = "none";
+} else {
+  navDropDown.style.pointerEvents = "all";
+}
+
 window.addEventListener('resize', (e) => {
     if (window.innerWidth <= 785) {
         navDropDown.style.pointerEvents = 'none';
@@ -107,6 +113,18 @@ let totalWebinars = webinars.length;
 sec3Content.style.width = `${totalWebinars * 60}%`;
 let moveConstant = 100/totalWebinars;
 let initialValue = 1;
+
+if (window.innerWidth <= 500) {
+  sec3Content.style.width = `${totalWebinars * 75}%`;
+}
+
+if (window.innerWidth <= 380) {
+  sec3Content.style.width = `${totalWebinars * 98}%`;
+}
+
+if (window.innerWidth >= 900) {
+  sec3Content.style.width = `${totalWebinars * 60}%`;
+}
 
 window.addEventListener('resize', () => {
     if (window.innerWidth <= 500) {
