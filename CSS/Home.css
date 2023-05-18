@@ -4,12 +4,13 @@
     width: 100%;
     max-width: 100%;
     min-height: 100vh;
+    padding: 0.4rem;
     background-color: #121212;
 }
 
 .main__center {
     width: 1400px;
-    max-width: 96%;
+    max-width: 100%;
     margin: auto;
     padding: 1rem;
 }
@@ -496,6 +497,7 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    padding: 0 10px;
 }
 
 .data_5-box {
@@ -992,8 +994,13 @@
     }
 
     .main__center {
-        padding: 0.1rem;
+        padding: 0.2rem;
     }
+
+    .section_5-content {
+        gap: 0.6rem;
+    }
+
 }
 
 @media all and (max-width : 500px) {
