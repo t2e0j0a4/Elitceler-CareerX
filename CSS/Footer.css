@@ -1,0 +1,230 @@
+@import "./styles.css";
+
+.app__footer {
+    width: 100%;
+    background-color: #121212;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.main__footer {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+.main__footer .footer__sides {
+    flex: 1;
+}
+
+.main__footer .footer__side1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.4rem;
+}
+
+.footer__side1 .footer__logo {
+    width: 200px;
+}
+
+.footer__logo img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.footer__side1 .company__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.company__links a {
+    cursor: pointer;
+}
+
+.company__links a ion-icon {
+    font-size: 28px;
+}
+
+.main__footer .footer__side2, .main__footer .footer__side3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.4rem;
+}
+
+.footer__side2 li, .footer__side3 li:nth-child(1) {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.footer__side2 li a {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.footer__side3 li {
+    /* width: 100%; */
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.footer__side3 li ion-icon {
+    font-size: 28px;
+}
+
+.footer__side3 li span {
+    flex: 1;
+    font-size: 14px;
+}
+
+.app__footer-copy {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    background-color: #121212;
+    padding: 2rem 1rem;
+}
+
+.app__footer-copy p, .app__footer-copy a {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: #939393;
+}
+
+@media all and (max-width : 927px) {
+
+    .main__footer {
+        display: flex;
+        gap: 4rem;
+    }
+
+    .main__footer .footer__sides {
+        flex: 0 0 auto;
+    }
+
+    .footer__side3 li span {
+        width: 300px;
+    }
+}
+
+@media all and (max-width : 850px) {
+    .app__footer-copy {
+        display: flex;
+        height: 200px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+@media all and (max-width : 850px) {
+    .app__footer-copy {
+        padding: 1rem;
+    }
+}
+
+@media all and (max-width : 450px) {
+
+    .main__footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__footer .footer__side1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__footer .footer__side2, .main__footer .footer__side3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__footer .footer__sides {
+        flex: 1;
+    }
+
+    .footer__side3 li  {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .footer__side3 li ion-icon {
+        flex: 0 0 auto;
+    }
+
+    .footer__side3 li span {
+        flex: 0 0 auto;
+    }
+}
+
+@media all and (max-width : 390px) {
+
+    .footer__side3 li {
+        gap: 0.3rem;
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__side3 li span {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer__side3 li ion-icon {
+        font-size: 30px;
+    }
+}

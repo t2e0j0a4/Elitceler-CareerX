@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap');
+
+:root {
+    
+    /* Fonts */
+    --font-lato : 'Lato', sans-serif;
+    --font-poppins : 'Poppins', sans-serif;
+
+    /* Colors */
+    --white : #FFFFFF;
+
+    --primary : #FF8F20;
+    --primary-1 : #FBD2AA;
+    --primary-2 : #FFAE5D;
+    --primary-3 : #ED7600;
+
+    --secondary : #FFD24A;
+    --secondary-1 : #FFEBB1;
+    --secondary-2 : #FDDA72;
+    --secondary-3 : #FEC20D;
+    
+    --black : #000000;
+    --neutral-black : #121212;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}

@@ -1,0 +1,288 @@
+@import "./styles.css";
+
+.app__navbar {
+    max-width: 100%;
+    height: 80px;
+
+    background-color: var(--neutral-black);
+    box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 0.063);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 2rem;
+}
+
+.navbar__logo {
+    width: 135px;
+}
+
+.navbar__logo img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.navbar__list {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 4rem;
+    flex: 0.8;
+}
+
+.list__item {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.link1 a{
+    color: var(--primary-1);
+}
+
+.link2 span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+ion-icon[name='chevron-down'] {
+    transition: transform 0.2s linear;
+}
+
+ion-icon[name='chevron-down'].active {
+    transform: rotate(-180deg);
+}
+
+.link4 a {
+    color: var(--primary);
+}
+
+.list__drop {
+    position: relative;
+}
+
+.navbar__dropdown {
+    display: none;
+}
+
+.navbar__dropdown.active {
+    width: 200px;
+    background-color: #232323;
+    position: absolute;
+    top: 36px;
+    left: -50px;
+
+    border: 1px solid var(--white);
+    border-radius: 9px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 0 0.2rem 0;
+}
+
+.navbar__dropdown li {
+    width: 100%;
+    text-align: center;
+    padding: 0.2rem 0 0.6rem 0;
+    border-bottom: 1px solid var(--white);
+}
+
+.navbar__dropdown li:nth-child(3) {
+    border-bottom: none;
+}
+
+.navbar__dropdown li a {
+    
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+}
+
+.cta__btn-sm {
+    display: none;
+}
+
+.cta__btn a {
+    
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--white);
+    border: 1px solid #FFFFFF;
+    border-radius: 9px;
+    box-shadow: 0px 0px 15px #FFFFFF;
+    transition: background-color 0.4s linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 16px;
+    cursor: pointer;
+}
+
+.cta__btn a:hover {
+    background-color: var(--primary);
+}
+
+
+.navbar__smallScreen {
+    display: none;
+}
+
+/* Medium Resposive Screen : 850px */
+
+@media all and (max-width : 850px) {
+    .navbar__list {
+        display: flex;
+        gap: 2.5rem;
+    }
+}
+
+/* Small Responsive Screen : <= 785px */
+@media all and (max-width : 785px) {
+    .app__navbar {
+        position: relative;
+    }
+
+    .navbar__smallScreen {
+        display: flex;
+    }
+
+    .navbar__smallScreen ion-icon {
+        font-size: 36px;
+        color: var(--white);
+        cursor: pointer;
+    }
+
+    .navbar__list {
+        background-color: #232323;
+        border: 1px solid var(--white);
+        border-radius: 9px;
+        position: absolute;
+        top: 81px;
+        right: -900px;
+        margin: 0.6rem 0.6rem 0 0;
+        transition: right 0.2s linear;
+        width: 180px;
+        padding: 1rem;
+
+        z-index: 10;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 1.2rem;
+    }
+
+    .navbar__list.active {
+        right: 0;
+    }
+
+    .navbar__list li a , .navbar__list li span {
+        font-weight: 700;
+    }
+
+    .list__drop {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        gap:0.8rem;
+    }
+
+    .navbar__dropdown {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        position: static;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+    }
+
+    .navbar__dropdown.active {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        position: static;
+        gap: 0;
+        padding: 0;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navbar__dropdown li {
+        width: 100%;
+        text-align: right;
+        border-bottom: none;
+    }
+
+    .navbar__dropdown li a {
+        font-weight: 300;
+    }
+
+    .link2 span ion-icon {
+        display: none;
+    }
+
+    .cta__btn {
+        flex: 0.8;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media all and (max-width : 470px) {
+    .cta__btn {
+        display: none;
+    }
+
+    .cta__btn-sm {
+        display: block;
+    }
+
+    .cta__btn-sm a {
+        
+        font-family: var(--font-lato);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: var(--white);
+        border: 1px solid #FFFFFF;
+        border-radius: 9px;
+        box-shadow: 0px 0px 15px #FFFFFF;
+        transition: background-color 0.4s linear;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 13px 16px;
+        cursor: pointer;
+    }
+
+    .cta__btn-sm a:hover {
+        background-color: var(--primary);
+    }
+}
