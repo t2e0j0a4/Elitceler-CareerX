@@ -229,7 +229,7 @@ let cohortsData = [
         cohort : 'Cloud Computing',
         stars : 4,
         redirect : '#'
-    }   
+    },   
 ]
 
 let sec5Content = document.querySelector(".section_5-content");
