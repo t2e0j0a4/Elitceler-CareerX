@@ -246,3 +246,95 @@ fullStackMentors.forEach((item) => {
 })
 
 // ************************** - SECTION 8 - *********************************
+
+let fullStackQueries = [
+  {
+    id: 1,
+    question: "Question",
+    answer:
+      "Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections. Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections",
+  },
+  {
+    id: 2,
+    question: "Question",
+    answer:
+      "Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections. Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections",
+  },
+  {
+    id: 3,
+    question: "Question",
+    answer:
+      "Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections. Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections",
+  },
+  {
+    id: 4,
+    question:
+      "Question",
+    answer:
+      "Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections. Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections",
+  },
+  {
+    id: 5,
+    question: "Question",
+    answer:
+      "Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections. Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections",
+  },
+];
+
+let fsd10Content = document.querySelector(".fsd10__content");
+
+fullStackQueries.forEach((item) => {
+  let queryBox = document.createElement('div');
+  queryBox.classList.add('cohort10__querybox', 'fsd10__querybox');
+
+  let questionBox = document.createElement("div");
+  questionBox.classList.add("cohort10__questionbox", "fsd10__questionbox");
+
+  let question = document.createElement('p');
+  question.innerHTML = item.question;
+
+  let toggle = document.createElement('img');
+  toggle.setAttribute('src', '../Assets/DownArrow.svg');
+  toggle.setAttribute('alt', 'Toggle');
+  toggle.setAttribute('data-token', `icon-${item.id}`);
+
+  questionBox.append(question, toggle);
+
+  let answerBox = document.createElement("div");
+  answerBox.classList.add("cohort10__answerbox", "fsd10__answerbox");
+  answerBox.setAttribute('data-token', `answer-${item.id}`);
+
+  let answer = document.createElement("p");
+  answer.innerHTML = item.answer;
+
+  toggle.addEventListener('click', function() {
+    showTheAnswer(answerBox, this);
+  })
+
+  answerBox.append(answer);
+
+  queryBox.append(questionBox, answerBox);
+  fsd10Content.append(queryBox);
+})
+
+let allAnswerBoxes = document.querySelectorAll('.fsd10__answerbox');
+let allToggleImages = document.querySelectorAll('.fsd10__questionbox img');
+
+function showTheAnswer(answerbox, thisEle) {
+  allToggleImages.forEach((imges) => {
+    if (imges.dataset.token === thisEle.dataset.token) {
+      imges.classList.toggle('active');
+      answerbox.classList.toggle('active');
+    }
+    else {
+      imges.classList.remove('active');
+      allAnswerBoxes.forEach((answer) => {
+        if (answer.dataset.token !== answerbox.dataset.token) {
+          answer.classList.remove('active');
+        }
+      })
+    }
+  })
+}
+
+// ************************** - SECTION 10 - *********************************
