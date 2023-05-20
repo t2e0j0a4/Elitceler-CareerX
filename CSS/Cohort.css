@@ -80,8 +80,8 @@
     margin: auto;
     height: 420px;
     /* background: #FFFFFF; */
-    border: 1px solid #FFFFFF;
-    box-shadow: 0px 0px 10px #FFFFFF, 0px 0px 10px #FFFFFF;
+    border: 3px solid #FFFFFF;
+    /* box-shadow: 0px 0px 10px #FFFFFF, 0px 0px 10px #FFFFFF; */
     border-radius: 12px;
     padding: 2rem 0.8rem;
     display: flex;
@@ -546,3 +546,76 @@
 }
 
 /* Section 8 : Meet Your Mentors */
+
+/* Section 9 : Your Certificate */
+
+.fsd9bg__grad {
+    background: linear-gradient(180deg, #000 20%, #090D69 88.75%, #000 100%);
+}
+
+.ds9bg__grad {
+    background: linear-gradient(180deg, #000 20%, rgba(165, 0, 223, 0.6) 88.75%, #000 100%);
+}
+
+.cc9bg__grad {
+    background: linear-gradient(180deg, #000 20%, rgba(128, 0, 84, 0.6) 88.75%, #000 100%);
+}
+
+.cohorts__section9 {
+    width: 1164px;
+    max-width: 96%;
+    height: 100%;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.cohort9__content {
+    width: 97%;
+    max-width: 100%;
+    height: 100%;
+    margin: 0.6rem auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cohort9__content p {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.cohort9__content img {
+    width: 100%;
+    object-fit: contain;
+}
+
+@media all and (max-width : 1024px) {
+    .cohort9__content p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+@media all and (max-width : 500px) {
+    .cohort9__content p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media all and (max-width : 400px) {
+    .cohort9__content p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+/* Section 9 : Your Certificate */
