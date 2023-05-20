@@ -45,6 +45,12 @@
     color: var(--primary);
 }
 
+@media all and (max-width : 500px) {
+    .cohorts__section6 .section__heads .head__title {
+        font-size: 1.4rem;
+    }
+}
+
 /* Section Heads */
 
 /* Section 2 : Why Cohorts? : FSD, DS, CC */
@@ -79,7 +85,7 @@
     max-width: 100%;
     margin: auto;
     height: 420px;
-    /* background: #FFFFFF; */
+    background: #FFFFFF;
     border: 3px solid #FFFFFF;
     /* box-shadow: 0px 0px 10px #FFFFFF, 0px 0px 10px #FFFFFF; */
     border-radius: 12px;
@@ -367,6 +373,105 @@
 
 /* Section 3 : Heres Your Roadmap */
 
+/* Section 4 : Tools you will Learn */
+
+.cohorts__section4 {
+    width: 1164px;
+    max-width: 96%;
+    height: 100%;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.cohort4__content {
+    width: 97%;
+    max-width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.6rem;
+    overflow-x: hidden;
+}
+
+.cohort4__toolbox {
+    width: 200px;
+    height: 100%;
+    padding: 1rem 0.8rem;
+    background: #FFFFFF;
+    border: 3px solid #FFFFFF;
+    border-radius: 20px;
+    margin: 1rem auto;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.fsd4__content .cohort4__toolbox {
+    animation: fsd4Tools 15s linear infinite;
+}
+
+.ds4__content .cohort4__toolbox , .cc4__content .cohort4__toolbox {
+    animation: ds_cc4Tools 10s linear infinite;
+}
+
+.cohort4__toolbox img {
+    width: 120px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.cohort4__toolbox p {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #121212;
+}
+
+@keyframes fsd4Tools {
+    0% {
+        transform: translateX(300%);
+    }
+
+    100% {
+        transform: translateX(-1150%);
+    }
+}
+
+@keyframes ds_cc4Tools {
+    0% {
+        transform: translateX(500%);
+    }
+
+    100% {
+        transform: translateX(-600%);
+    }
+}
+
+@media all and (max-width : 500px) {
+
+
+
+    @keyframes ds_cc4Tools {
+        0% {
+            transform: translateX(200%);
+        }
+
+        100% {
+            transform: translateX(-500%);
+        }
+    }
+}
+
+/* Section 4 : Tools you will Learn */
+
 /* Section 6 : Projects You will build */
 
 .cohorts__section6 {
@@ -397,7 +502,8 @@
     margin: 1rem auto;
     flex: 0 0 auto;
     width: 240px;
-    height: 200px;
+    height: 100%;
+    padding: 1rem 0.8rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -414,8 +520,8 @@
 .cohort6__projectbox p {
     font-family: var(--font-lato);
     font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 20px;
     line-height: 24px;
     text-align: center;
     color: #121212;

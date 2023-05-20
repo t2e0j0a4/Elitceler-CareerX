@@ -83,6 +83,79 @@ fullStackDetails.forEach((item) => {
 
 // ************************** - SECTION 2 - *********************************
 
+let fullStackTools = [
+  {
+    id: 1,
+    toolImg: "../Assets/FSDTool1.png",
+    toolName: "HTML",
+  },
+  {
+    id: 2,
+    toolImg: "../Assets/FSDTool2.png",
+    toolName: "CSS",
+  },
+  {
+    id: 3,
+    toolImg: "../Assets/FSDTool3.png",
+    toolName: "Javascript",
+  },
+  {
+    id: 4,
+    toolImg: "../Assets/FSDTool4.png",
+    toolName: "Bootstrap",
+  },
+  {
+    id: 5,
+    toolImg: "../Assets/FSDTool5.png",
+    toolName: "jQuery",
+  },
+  {
+    id: 6,
+    toolImg: "../Assets/FSDTool6.png",
+    toolName: "React.js",
+  },
+  {
+    id: 7,
+    toolImg: "../Assets/FSDTool7.png",
+    toolName: "Angular",
+  },
+  {
+    id: 8,
+    toolImg: "../Assets/FSDTool8.png",
+    toolName: "Github",
+  },
+  {
+    id: 9,
+    toolImg: "../Assets/FSDTool9.png",
+    toolName: "Node.js",
+  },
+  {
+    id: 10,
+    toolImg: "../Assets/FSDTool10.png",
+    toolName: "Mongo DB",
+  },
+];
+
+let fsd4Content = document.querySelector('.fsd4__content');
+
+fullStackTools.forEach((tool) => {
+  let toolBox = document.createElement('div');
+  toolBox.classList.add('cohort4__toolbox');
+
+  let toolImg = document.createElement('img');
+  toolImg.setAttribute('src', tool.toolImg);
+  toolImg.setAttribute('alt', tool.toolName);
+
+  let toolTitle = document.createElement('p');
+  toolTitle.innerHTML = tool.toolName;
+  
+  toolBox.append(toolImg, toolTitle);
+  fsd4Content.append(toolBox);
+
+})
+
+// ************************** - SECTION 4 - *********************************
+
 let fullStackProjects = [
   {
     id : 1,

@@ -83,6 +83,50 @@ dataScienceDetails.forEach((item) => {
 
 // ************************** - SECTION 2 - *********************************
 
+let dataScienceTools = [
+  {
+    id: 1,
+    toolImg: "../Assets/DSTool1.svg",
+    toolName: "Python",
+  },
+  {
+    id: 2,
+    toolImg: "../Assets/DSTool2.svg",
+    toolName: "Tableau",
+  },
+  {
+    id: 3,
+    toolImg: "../Assets/DSTool3.svg",
+    toolName: "NumPy",
+  },
+  {
+    id: 4,
+    toolImg: "../Assets/DSTool4.svg",
+    toolName: "Tensor Flow",
+  }
+
+];
+
+let ds4Content = document.querySelector('.ds4__content');
+
+dataScienceTools.forEach((tool) => {
+  let toolBox = document.createElement('div');
+  toolBox.classList.add('cohort4__toolbox');
+
+  let toolImg = document.createElement('img');
+  toolImg.setAttribute('src', tool.toolImg);
+  toolImg.setAttribute('alt', tool.toolName);
+
+  let toolTitle = document.createElement('p');
+  toolTitle.innerHTML = tool.toolName;
+  
+  toolBox.append(toolImg, toolTitle);
+  ds4Content.append(toolBox);
+
+})
+
+// ************************** - SECTION 4 - *********************************
+
 let dataScienceProjects = [
   {
     id : 1,

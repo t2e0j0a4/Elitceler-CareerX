@@ -83,6 +83,50 @@ cloudComputingDetails.forEach((item) => {
 
 // ************************** - SECTION 2 - *********************************
 
+let dataScienceTools = [
+  {
+    id: 1,
+    toolImg: "../Assets/CCTool1.svg",
+    toolName: "Kubernetes",
+  },
+  {
+    id: 2,
+    toolImg: "../Assets/CCTool2.svg",
+    toolName: "Google Cloud",
+  },
+  {
+    id: 3,
+    toolImg: "../Assets/CCTool3.svg",
+    toolName: "Docker",
+  },
+  {
+    id: 4,
+    toolImg: "../Assets/CCTool4.svg",
+    toolName: "AWS",
+  }
+
+];
+
+let cc4Content = document.querySelector('.cc4__content');
+
+dataScienceTools.forEach((tool) => {
+  let toolBox = document.createElement('div');
+  toolBox.classList.add('cohort4__toolbox');
+
+  let toolImg = document.createElement('img');
+  toolImg.setAttribute('src', tool.toolImg);
+  toolImg.setAttribute('alt', tool.toolName);
+
+  let toolTitle = document.createElement('p');
+  toolTitle.innerHTML = tool.toolName;
+  
+  toolBox.append(toolImg, toolTitle);
+  cc4Content.append(toolBox);
+
+})
+
+// ************************** - SECTION 4 - *********************************
+
 let cloudComputingProjects = [
   {
     id: 1,
