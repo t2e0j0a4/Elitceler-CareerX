@@ -250,34 +250,50 @@ fullStackMentors.forEach((item) => {
 let fullStackQueries = [
   {
     id: 1,
-    question: "Question",
+    question: "Who can take this course?",
     answer:
-      "Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections. Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections",
+      "Anyone interested in starting their career as a developer applies for this course.",
   },
   {
     id: 2,
-    question: "Question",
+    question: "What are the pre-requisites for this course?",
     answer:
-      "Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections. Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections",
+      "No, pre-requisites are required for this course. However, A basic understanding of programming is recommended.",
   },
   {
     id: 3,
-    question: "Question",
+    question: "How are my doubts going to be resolved in this Online program?",
     answer:
-      "Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections. Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections",
+      "There will be regular sessions exclusively for all your doubts to be cleared up on a real-time basis.",
   },
   {
     id: 4,
-    question:
-      "Question",
+    question: "Will I get placement support in this course?",
     answer:
-      "Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections. Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections",
+      "Yes, we provide you with different sessions that aim to improve your Profile and competitive programming skills that are required to crack your interviews. We provide you with 100% placement assistance and conduct regular mock exams and interviews.",
   },
   {
     id: 5,
-    question: "Question",
+    question: "Will I get a job after completing this course?",
     answer:
-      "Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections. Complete All The Modules Successfully To Obtain This Certificate Of Recognition And Add It To Your Wall Of Fame Or Share With Your LinkedIn Connections",
+      "This is a 100% Job Assistance program wherein you’ll acquire the industry-requested skillset and HandsOn experience in the live projects by the end of the course, which is the most important qualifying factor for any aspirant.",
+  },
+  {
+    id: 6,
+    question: "Can the course fee be paid in Installments?",
+    answer:
+      "Yes, we have banking partners who offer different EMI options to help you manage your finances and take the course. We also provide Up to 100% scholarships based on the Scholarship test we conduct.",
+  },
+  {
+    id: 7,
+    question: "What is the refund policy?",
+    answer: "A refund can be made only one week before the start date.",
+  },
+  {
+    id: 8,
+    question: "Can we shift to a different batch or course?",
+    answer:
+      "Yes, you can shift to a different batch. The money paid is not transferable to another person.",
   },
 ];
 

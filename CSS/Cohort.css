@@ -758,7 +758,7 @@
     border: 1px solid #fff;
     border-radius: 9px;
     display: flex;
-    padding: 1rem 1rem 0.8rem 0.8rem;
+    padding: 1rem;
     flex-direction: column;
     gap: 0.2rem;
 }
@@ -814,7 +814,7 @@
     font-family: var(--font-lato);
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     text-align: justify;
     color: #636363;
@@ -842,7 +842,7 @@
     }
 
     .cohort10__answerbox p {
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 
