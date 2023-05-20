@@ -9,7 +9,7 @@
 .cohorts__main .main__center {
     width: 100%;
     max-width: 100%;
-    background-color: #000000;
+    background-color: #121212;
 }
 
 /* Section Heads */
@@ -37,7 +37,7 @@
     font-weight: 500;
     font-size: 1.7rem;
     color: #FFFFFF;
-    background-color: #000000;
+    background-color: #121212;
     line-height: 40px;
 }
 
@@ -55,15 +55,15 @@
 }
 
 .fsd2bg__grad {
-    background: linear-gradient(180deg, #000000 20%, #090D69 88.75%, #000 100%);
+    background: linear-gradient(180deg, #121212 20%, #090D69 88.75%, #121212 100%);
 }
 
 .ds2bg__grad {
-    background: linear-gradient(180deg, #000000 20%, rgba(165, 0, 223, 0.6) 88.75%, #000 100%);
+    background: linear-gradient(180deg, #121212 20%, rgba(165, 0, 223, 0.6) 88.75%, #121212 100%);
 }
 
 .cc2bg__grad {
-    background: linear-gradient(180deg, #000000 20%, rgba(128, 0, 84, 0.6) 88.75%, #000 100%);
+    background: linear-gradient(180deg, #121212 20%, rgba(128, 0, 84, 0.6) 88.75%, #121212 100%);
 }
 
 .cohorts__section2 {
@@ -257,15 +257,15 @@
 /* Section 3 : Heres Your Roadmap */
 
 .fsd3bg__grad {
-    background: linear-gradient(180deg, #000000 20%, #090D69 88.75%, #000 100%);
+    background: linear-gradient(180deg, #121212 20%, #090D69 88.75%, #121212 100%);
 }
 
 .ds3bg__grad {
-    background: linear-gradient(180deg, #000000 20%, rgba(165, 0, 223, 0.6) 88.75%, #000 100%);
+    background: linear-gradient(180deg, #121212 20%, rgba(165, 0, 223, 0.6) 88.75%, #121212 100%);
 }
 
 .cc3bg__grad {
-    background: linear-gradient(180deg, #000000 20%, rgba(128, 0, 84, 0.6) 88.75%, #000 100%);
+    background: linear-gradient(180deg, #121212 20%, rgba(128, 0, 84, 0.6) 88.75%, #121212 100%);
 }
 
 .cohorts__section3 {
@@ -292,7 +292,7 @@
 
 .roadmap__box {
     background: #FFFFFF;
-    border: 1px solid #000000;
+    border: 1px solid #121212;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 26px;
     width: 200px;
@@ -320,7 +320,7 @@
     font-size: 18px;
     line-height: 24px;
     text-align: center;
-    color: #000000;
+    color: #121212;
 }
 
 .back__line {
@@ -418,7 +418,7 @@
     font-size: 18px;
     line-height: 24px;
     text-align: center;
-    color: #000000;
+    color: #121212;
 }
 
 @media all and (min-width : 1140px) {
@@ -455,15 +455,15 @@
 /* Section 8 : Meet Your Mentors */
 
 .fsd8bg__grad {
-    background: linear-gradient(180deg, #000 20%, #090D69 86.67%, #000 100%);
+    background: linear-gradient(180deg, #121212 20%, #090D69 86.67%, #121212 100%);
 }
 
 .ds8bg__grad {
-    background: linear-gradient(180deg, #000 20%, rgba(165, 0, 223, 0.6) 86.67%, #000 100%);
+    background: linear-gradient(180deg, #121212 20%, rgba(165, 0, 223, 0.6) 86.67%, #121212 100%);
 }
 
 .cc8bg__grad {
-    background: linear-gradient(180deg, #000 20%, rgba(128, 0, 84, 0.6) 86.67%, #000 100%);
+    background: linear-gradient(180deg, #121212 20%, rgba(128, 0, 84, 0.6) 86.67%, #121212 100%);
 }
 
 .cohorts__section8 {
@@ -496,7 +496,7 @@
     height: 100%;
     padding: 1rem;
     background: #FFFFFF;
-    border: 1px solid #000000;
+    border: 1px solid #121212;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 24px;
 
@@ -550,15 +550,15 @@
 /* Section 9 : Your Certificate */
 
 .fsd9bg__grad {
-    background: linear-gradient(180deg, #000 20%, #090D69 88.75%, #000 100%);
+    background: linear-gradient(180deg, #121212 20%, #090D69 88.75%, #121212 100%);
 }
 
 .ds9bg__grad {
-    background: linear-gradient(180deg, #000 20%, rgba(165, 0, 223, 0.6) 88.75%, #000 100%);
+    background: linear-gradient(180deg, #121212 20%, rgba(165, 0, 223, 0.6) 88.75%, #121212 100%);
 }
 
 .cc9bg__grad {
-    background: linear-gradient(180deg, #000 20%, rgba(128, 0, 84, 0.6) 88.75%, #000 100%);
+    background: linear-gradient(180deg, #121212 20%, rgba(128, 0, 84, 0.6) 88.75%, #121212 100%);
 }
 
 .cohorts__section9 {
