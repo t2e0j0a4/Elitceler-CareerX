@@ -82,3 +82,94 @@ dataScienceDetails.forEach((item) => {
 });
 
 // ************************** - SECTION 2 - *********************************
+
+let dataScienceProjects = [
+  {
+    id : 1,
+    projectTitle : 'Spotify Clone',
+    projectImage : '../Assets/DSProject1.svg'
+  },
+  {
+    id : 2,
+    projectTitle : 'Twitter Clone',
+    projectImage : '../Assets/DSProject2.svg'
+  },
+  {
+    id : 3,
+    projectTitle : 'Chatbot',
+    projectImage : '../Assets/DSProject3.png'
+  },
+  {
+    id : 4,
+    projectTitle : 'Prime Video Clone',
+    projectImage : '../Assets/DSProject4.svg'
+  }
+]
+
+let ds6Content = document.querySelector('.ds6__content');
+
+dataScienceProjects.forEach((item) => {
+  let projectBox = document.createElement('div');
+  projectBox.classList.add('cohort6__projectbox');
+
+  let projectImg = document.createElement('img');
+  projectImg.setAttribute('src', item.projectImage);
+  projectImg.setAttribute('alt', item.projectTitle);
+
+  let projectTitle = document.createElement('p');
+  projectTitle.innerHTML = item.projectTitle;
+  
+  projectBox.append(projectImg, projectTitle);
+  ds6Content.append(projectBox);
+  
+})
+
+// ************************** - SECTION 6 - *********************************
+
+let dataScienceMentors = [
+  {
+    id : 1,
+    name : 'John Doe',
+    desc : 'Having 10+ years of experience in managing mission-critical web projects.Exceptional record overseeing all facets of Application Development Life Cycle',
+    image : '../Assets/Potrait.jpg',
+    linkedin : '#'
+  },
+  {
+    id : 2,
+    name : 'John Doe',
+    desc : 'Having 10+ years of experience in managing mission-critical web projects.Exceptional record overseeing all facets of Application Development Life Cycle',
+    image : '../Assets/Potrait.jpg',
+    linkedin : '#'
+  } 
+]
+
+let ds8Content = document.querySelector('.ds8__content');
+
+dataScienceMentors.forEach((item) => {
+  let mentorBox = document.createElement('div');
+  mentorBox.classList.add('cohort8__mentorbox');
+
+  let mentorImg = document.createElement('img');
+  mentorImg.setAttribute("src", item.image);
+  mentorImg.setAttribute("alt", item.name);
+
+  let mentorName = document.createElement('p');
+  mentorName.classList.add('cohort8__mentorname');
+  mentorName.innerHTML = item.name;
+
+  let mentorDesc = document.createElement("p");
+  mentorDesc.classList.add("cohort8__mentordesc");
+  mentorDesc.innerHTML = item.desc;
+
+  let mentorLinkedin = document.createElement('a');
+  mentorLinkedin.setAttribute('href',item.linkedin);
+  mentorLinkedin.setAttribute('target','_blank');
+  mentorLinkedin.setAttribute('rel','noopener');
+  mentorLinkedin.innerHTML = '<ion-icon name="logo-linkedin"></ion-icon>';
+
+  mentorBox.append(mentorImg, mentorName, mentorDesc, mentorLinkedin);
+  ds8Content.append(mentorBox);
+
+})
+
+// ************************** - SECTION 8 - *********************************

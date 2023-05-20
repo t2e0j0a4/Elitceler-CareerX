@@ -82,3 +82,94 @@ fullStackDetails.forEach((item) => {
 });
 
 // ************************** - SECTION 2 - *********************************
+
+let fullStackProjects = [
+  {
+    id : 1,
+    projectTitle : 'Netflix Clone',
+    projectImage : '../Assets/FSDProject1.svg'
+  },
+  {
+    id : 2,
+    projectTitle : 'Spotify Clone',
+    projectImage : '../Assets/FSDProject2.svg'
+  },
+  {
+    id : 3,
+    projectTitle : 'Amazon Clone',
+    projectImage : '../Assets/FSDProject3.svg'
+  },
+  {
+    id : 4,
+    projectTitle : 'Instagram Clone',
+    projectImage : '../Assets/FSDProject4.svg'
+  }
+]
+
+let fsd6Content = document.querySelector('.fsd6__content');
+
+fullStackProjects.forEach((item) => {
+  let projectBox = document.createElement('div');
+  projectBox.classList.add('cohort6__projectbox');
+
+  let projectImg = document.createElement('img');
+  projectImg.setAttribute('src', item.projectImage);
+  projectImg.setAttribute('alt', item.projectTitle);
+
+  let projectTitle = document.createElement('p');
+  projectTitle.innerHTML = item.projectTitle;
+  
+  projectBox.append(projectImg, projectTitle);
+  fsd6Content.append(projectBox);
+  
+})
+
+// ************************** - SECTION 6 - *********************************
+
+let fullStackMentors = [
+  {
+    id : 1,
+    name : 'John Doe',
+    desc : 'Having 10+ years of experience in managing mission-critical web projects.Exceptional record overseeing all facets of Application Development Life Cycle',
+    image : '../Assets/Potrait.jpg',
+    linkedin : '#'
+  },
+  {
+    id : 2,
+    name : 'John Doe',
+    desc : 'Having 10+ years of experience in managing mission-critical web projects.Exceptional record overseeing all facets of Application Development Life Cycle',
+    image : '../Assets/Potrait.jpg',
+    linkedin : '#'
+  } 
+]
+
+let fsd8Content = document.querySelector('.fsd8__content');
+
+fullStackMentors.forEach((item) => {
+  let mentorBox = document.createElement('div');
+  mentorBox.classList.add('cohort8__mentorbox');
+
+  let mentorImg = document.createElement('img');
+  mentorImg.setAttribute("src", item.image);
+  mentorImg.setAttribute("alt", item.name);
+
+  let mentorName = document.createElement('p');
+  mentorName.classList.add('cohort8__mentorname');
+  mentorName.innerHTML = item.name;
+
+  let mentorDesc = document.createElement("p");
+  mentorDesc.classList.add("cohort8__mentordesc");
+  mentorDesc.innerHTML = item.desc;
+
+  let mentorLinkedin = document.createElement('a');
+  mentorLinkedin.setAttribute('href',item.linkedin);
+  mentorLinkedin.setAttribute('target','_blank');
+  mentorLinkedin.setAttribute('rel','noopener');
+  mentorLinkedin.innerHTML = '<ion-icon name="logo-linkedin"></ion-icon>';
+
+  mentorBox.append(mentorImg, mentorName, mentorDesc, mentorLinkedin);
+  fsd8Content.append(mentorBox);
+
+})
+
+// ************************** - SECTION 8 - *********************************

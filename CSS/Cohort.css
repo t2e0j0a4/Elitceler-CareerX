@@ -79,7 +79,7 @@
     max-width: 100%;
     margin: auto;
     height: 420px;
-    background: #FFFFFF;
+    /* background: #FFFFFF; */
     border: 1px solid #FFFFFF;
     box-shadow: 0px 0px 10px #FFFFFF, 0px 0px 10px #FFFFFF;
     border-radius: 12px;
@@ -236,11 +236,13 @@
 
     .cohort2__content .cohort2__side2 {
         gap: 0.6rem;
+        align-items: flex-start;
     }
 
     .cohort2__side2 .cohort2__whybox {
         width: 240px;
-        height: 180px;
+        height: 100%;
+        padding: 1rem 0.8rem;
     }
 
     .cohorts__section2 .cohort2__content {
@@ -255,15 +257,15 @@
 /* Section 3 : Heres Your Roadmap */
 
 .fsd3bg__grad {
-    background: linear-gradient(180deg, #000000 20%, #090D69 88.75%, #121212 100%);
+    background: linear-gradient(180deg, #000000 20%, #090D69 88.75%, #000 100%);
 }
 
 .ds3bg__grad {
-    background: linear-gradient(180deg, #000000 20%, rgba(165, 0, 223, 0.6) 88.75%, #121212 100%);
+    background: linear-gradient(180deg, #000000 20%, rgba(165, 0, 223, 0.6) 88.75%, #000 100%);
 }
 
 .cc3bg__grad {
-    background: linear-gradient(180deg, #000000 20%, rgba(128, 0, 84, 0.6) 88.75%, #121212 100%);
+    background: linear-gradient(180deg, #000000 20%, rgba(128, 0, 84, 0.6) 88.75%, #000 100%);
 }
 
 .cohorts__section3 {
@@ -364,3 +366,183 @@
 }
 
 /* Section 3 : Heres Your Roadmap */
+
+/* Section 6 : Projects You will build */
+
+.cohorts__section6 {
+    width: 1164px;
+    max-width: 96%;
+    height: 100%;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.cohort6__content {
+    width: 97%;
+    max-width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.6rem;
+    overflow-x: scroll;
+    padding: 0 10px;
+}
+
+.cohort6__projectbox {
+    background: #FFFFFF;
+    border: 3px solid #FFFFFF;
+    border-radius: 20px;
+    margin: 1rem auto;
+    flex: 0 0 auto;
+    width: 240px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cohort6__projectbox img {
+    width: 120px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.cohort6__projectbox p {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+}
+
+@media all and (min-width : 1140px) {
+    .cohort6__content::-webkit-scrollbar {
+        height: 0;
+    }
+}
+
+@media all and (max-width : 1140px) {
+    .cohort6__content::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    .cohort6__content::-webkit-scrollbar-track {
+        background-color: #121212;
+        box-shadow: 0 0 2px #fff;
+        border-radius: 4px;
+    }
+
+    .cohort6__content::-webkit-scrollbar-thumb {
+        background-color: #fff;
+        border-radius: 4px;
+    }
+}
+
+@media all and (max-width : 700px) {
+    .cohort6__content::-webkit-scrollbar {
+        height: 0;
+    }
+}
+
+/* Section 6 : Projects You will build */
+
+/* Section 8 : Meet Your Mentors */
+
+.fsd8bg__grad {
+    background: linear-gradient(180deg, #000 20%, #090D69 86.67%, #000 100%);
+}
+
+.ds8bg__grad {
+    background: linear-gradient(180deg, #000 20%, rgba(165, 0, 223, 0.6) 86.67%, #000 100%);
+}
+
+.cc8bg__grad {
+    background: linear-gradient(180deg, #000 20%, rgba(128, 0, 84, 0.6) 86.67%, #000 100%);
+}
+
+.cohorts__section8 {
+    width: 1164px;
+    max-width: 96%;
+    height: 100%;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.cohort8__content {
+    width: 97%;
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    padding-top: 2rem;
+    
+    /* For Now */
+    flex-wrap: wrap;
+}
+
+.cohort8__mentorbox {
+    width: 280px;
+    height: 100%;
+    padding: 1rem;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    padding-top: 4rem;
+}
+
+.cohort8__mentorbox img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 2px solid #fff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -64px;
+}
+
+.cohort8__mentorname {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #121212;
+    text-align: center;
+}
+
+.cohort8__mentordesc {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #636363;
+    text-align: center;
+}
+
+.cohort8__mentorbox a ion-icon {
+    font-size: 28px;
+    color: #0077b5;
+}
+
+/* Section 8 : Meet Your Mentors */
