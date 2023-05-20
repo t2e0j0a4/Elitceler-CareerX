@@ -78,7 +78,7 @@
         <section class="main__sections section_1">
           <!-- Side1 -->
           <div class="section_1-side1">
-            <h1 class="section_1-head">Fast Track Your <span>Career</span></h1>
+            <h1 class="section_1-head">Fast Track Your Career in <span id="animated__cohorts"></span></h1>
             <p class="section_1-subhead">
               <span>Get Trained</span> for top tech jobs and
               <span>Get Hired</span> into top companies with our exclusive
@@ -359,6 +359,23 @@
     <!-- Scripts -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    
+    <!-- Animated Landing Page -->
+
+    <script>
+
+      var typed = new Typed('#animated__cohorts', {
+        strings: ['Full Stack', 'Data Science', 'Cloud Computing'],
+        typeSpeed: 150,
+        backSpeed : 100,
+        loop : true
+      });
+
+    </script>
+
+    <!-- Animated Landing Page -->
+
     <script src="./JS/Home.js"></script>
   </body>
 </html>
