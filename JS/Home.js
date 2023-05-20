@@ -286,41 +286,48 @@ cohortsData.forEach((item) => {
 // ************************** - SECTION 5 ENDS - *******************************
 
 let HRReviews = [
-    {
-        id: 0,
-        name: "John Doe",
-        image: "../Assets/Potrait.jpg",
-        role: "Founder, Examify",
-        desc: "“Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.Acquire premium content through live full-stack development classes and offline bootcamps.”",
-    },
-    {
-        id: 1,
-        name: "John Doe",
-        image: "../Assets/Potrait.jpg",
-        role: "Founder, Examify",
-        desc: "“Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.Acquire premium content through live full-stack development classes and offline bootcamps.”",
-    },
-    {
-        id: 2,
-        name: "John Doe",
-        image: "../Assets/Potrait.jpg",
-        role: "Founder, Examify",
-        desc: "“Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.Acquire premium content through live full-stack development classes and offline bootcamps.”",
-    },
-    {
-        id: 3,
-        name: "John Doe",
-        image: "../Assets/Potrait.jpg",
-        role: "Founder, Examify",
-        desc: "“Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.Acquire premium content through live full-stack development classes and offline bootcamps.”",
-    },
-    {
-        id: 4,
-        name: "John Doe",
-        image: "../Assets/Potrait.jpg",
-        role: "Founder, Examify",
-        desc: "“Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.Acquire premium content through live full-stack development classes and offline bootcamps.”",
-    }
+  {
+    id: 0,
+    name: "Mr.Mallareddy",
+    image: "../Assets/Potrait.jpg",
+    role: "HR, Chainmonks",
+    desc: "“We hired few resources from CareerX, the experience of hiring process has been really smooth and found well trained resources in a short time.If anyone are looking for trained professionals especially in cutting edge tech, I would strongly recommend CareerX.”",
+  },
+  {
+    id: 1,
+    name: "Lavanya Jampana",
+    image: "../Assets/Potrait.jpg",
+    role: "HR, VIVID Minds PVT LTD",
+    desc: "“Working with  CareerX Club has been a fantastic experience. Their team took the time to understand our unique hiring needs and worked tirelessly to identify and recruit the best candidates for our organization.”",
+  },
+  {
+    id: 2,
+    name: "Savinay",
+    image: "../Assets/Potrait.jpg",
+    role: "HR, Immutable Ren Labs",
+    desc: "“My experience with CareerX Club has been nothing short of excellent.  We hired front-end developers through CareerX and the experience was really great. The candidates are well-trained for the job and have a thorough understanding of what we expect out of them.”",
+  },
+  {
+    id: 3,
+    name: "Harika",
+    image: "../Assets/Potrait.jpg",
+    role: "HR, Infinite learning Sols",
+    desc: "“Happy with the candidates and the support. Grateful to the team for superb coordination and helping in meeting the requirements.”",
+  },
+  {
+    id: 4,
+    name: "Vidya",
+    image: "../Assets/Potrait.jpg",
+    role: "HR, Divami Labs",
+    desc: "“Amazing- that's one word I would use to express my experience with CareerX Club. Their drive to ensure win-win placements for both candidates as well as companies helped accelerate our recruiting process.”",
+  },
+  {
+    id: 5,
+    name: "Sandeep",
+    image: "../Assets/Potrait.jpg",
+    role: "HR, Think Hat",
+    desc: "“I am pleased to provide a testimonial for our candidates who have been exceptional additions to our team. Their strong work ethic, dedication, and professionalism have been evident from the start.”",
+  },
 ];
 
 let sec7Content = document.querySelector(".section_7-content");
