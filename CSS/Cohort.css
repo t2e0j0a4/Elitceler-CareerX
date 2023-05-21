@@ -648,6 +648,10 @@
     .cohort5__titlebox p {
         font-size: 18px;
     }
+
+    .cohort5__data {
+        gap: 1rem;
+    }
 }
 
 /* Section 5 : Course Structure  */
