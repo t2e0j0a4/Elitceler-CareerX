@@ -245,21 +245,21 @@ let cohortsData = [
         image : '../Assets/HomeCohortFSD.png',
         cohort : 'Full Stack Cohort',
         stars : 4,
-        redirect : '#'
+        redirect : '../FullStack.html'
     },
     {
         id : 1,
         image : '../Assets/HomeCohortDS.png',
         cohort : 'Data Science Cohort',
         stars : 4,
-        redirect : '#'
+        redirect : '../DataScience.html'
     },
     {
         id : 2,
         image : '../Assets/HomeCohortCC.png',
         cohort : 'Cloud Computing',
         stars : 4,
-        redirect : '#'
+        redirect : '../CloudComputing.html'
     },   
 ]
 
