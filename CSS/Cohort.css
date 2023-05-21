@@ -881,7 +881,7 @@
 }
 
 .fsd4__content .cohort4__toolbox {
-    animation: fsd4Tools 15s linear infinite;
+    animation: fsd4Tools 10s linear infinite;
 }
 
 .ds4__content .cohort4__toolbox , .cc4__content .cohort4__toolbox {
@@ -916,7 +916,7 @@
 
 @keyframes ds_cc4Tools {
     0% {
-        transform: translateX(80%);
+        transform: translateX(70%);
     }
 
     100% {
@@ -1861,6 +1861,11 @@
     border-radius: 9px;
     background: #232323;
     cursor: pointer;
+}
+
+.bar__side2 a:nth-child(3) {
+    font-size: 32px;
+    color: #25D366;
 }
 
 @media all and (max-width : 560px) {
