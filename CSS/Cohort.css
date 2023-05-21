@@ -746,6 +746,8 @@
     height: 100%;
     margin: auto;
     padding: 2rem 0;
+
+    position: relative;
 }
 
 .cohort7__content {
@@ -857,6 +859,188 @@
         width: 260px;
     }
 }
+
+/* Popup */
+
+.cohort7__popup {
+    display: none;
+}
+
+.cohort7__popup.active {
+    width: 100%;
+    height: 500px;
+    background-color: #fffffff5;
+    border-radius: 9px;
+    padding: 0.8rem 1rem;
+    position: absolute;
+    top: 20%;
+    display: block;
+}
+
+.popup__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.popup__heading p {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 48px;
+    color: var(--primary);
+}
+
+.popup__heading button {
+    background-color: transparent;
+    padding: 6px;
+    border: 2px solid #d30000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.popup__heading button ion-icon {
+    font-size: 20px;
+    color: #d30000;
+}
+
+.popup__content {
+    width: 100%;
+    max-width: 100%;
+    height: 360px;
+    padding: 1rem 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem auto;
+
+    overflow-x: scroll;
+}
+
+@media all and (min-width : 1125px) {
+
+    .popup__content::-webkit-scrollbar {
+        height: 0px;
+    }
+}
+
+@media all and (max-width : 1124px) {
+
+    .popup__content {
+        justify-content: flex-start;
+    }
+
+    .popup__content::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    .popup__content::-webkit-scrollbar-track {
+        background-color: #232323;
+        border-radius: 6px;
+    }
+
+    .popup__content::-webkit-scrollbar-thumb {
+        background-color: #008F06;
+        border-radius: 6px;
+    }
+}
+
+.popup__emibox {
+    width: 320px;
+    height: 100%;
+    background-color: #fafafa;
+    border: 2px solid #232323;
+    border-radius: 9px;
+    padding: 1rem;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+@media all and (max-width : 500px) {
+    .popup__emibox {
+        width: 300px;
+    }   
+}
+
+@media all and (max-width : 400px) {
+    .popup__emibox {
+        width: 260px;
+    }   
+}
+
+.popup__emibox > p {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.popup__emidetails {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.popup__emidetails .popup__emitype {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup__emitype p:nth-child(1) {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 19px;
+    color: #363636;
+}
+
+.popup__emitype p:nth-child(2) {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 19px;
+    color: #008F06;
+}
+
+.popup__emifinal {
+    width: 100%;
+    border-top: 2px solid #636363;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 0 0;
+}
+
+.popup__emifinal p {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #008F06;
+}
+
+/* Popup */
 
 /* Section 7 : Fee Structure */
 
