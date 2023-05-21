@@ -79,17 +79,58 @@
 .cohort1__content {
     width: 98%;
     max-width: 100%;
-    margin: auto;
-    height: 100%;
+    margin: auto; 
+    overflow-y: scroll;
     padding: 1rem;
     border: 1px solid #FFFFFF;
     border-radius: 20px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1.2rem;
+}
+
+.cohort1__content::-webkit-scrollbar {
+    width: 0px;
+}
+
+.cohort1__slides::-webkit-scrollbar {
+    width: 10px
+}
+
+.cohort1__slides::-webkit-scrollbar-track {
+    background-color: #232323;
+    box-shadow: 0 0 4px #fff;
+    border-radius: 6px;
+}
+
+@media all and (min-width : 1200px) {
+    .cohort1__content {
+        height: 420px;
+    }
+}
+
+@media all and (max-width : 1199px) {
+    .cohort1__content {
+        height: 500px;
+    }
+}
+
+@media all and (max-width : 500px) {
+
+    .cohort1__content {
+        height: 540px;
+    }
+
+    .cohort1__slides::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
+.cohort1__slides::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 6px;
 }
 
 .fsd1__content {
@@ -125,7 +166,7 @@
 .cohort1__slide1 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 2em;
 }
@@ -222,7 +263,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
 }
@@ -272,7 +313,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 2rem;
 }
@@ -382,7 +423,7 @@
     .cohort1__slide3 {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
     }
 
@@ -419,7 +460,7 @@
     }
 
     .cohort1__slide3 {
-        gap: 8rem;
+        gap: 6rem;
     }
 
     .slide3__side2 h1 {
