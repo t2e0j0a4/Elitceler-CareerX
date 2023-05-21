@@ -35,10 +35,10 @@
 }
 
 .section_1-side1 h1 {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
-    font-weight: 400;
-    font-size: 5rem;
+    font-weight: 1000;
+    font-size: 3.6rem;
     color: var(--white);
 }
 
@@ -49,14 +49,14 @@
 .section_1-side1 p {
     font-family: var(--font-lato);
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.5rem;
     line-height: 40px;
     color: var(--white);
 }
 
 .section_1-side1 p span {
-    color: var(--primary-1);
+    color: var(--primary-2);
 }
 
 .section_1-cta {
@@ -925,7 +925,7 @@
 
 @media all and (max-width : 1240px) {
     .section_1-side1 h1 {
-        font-size: 4.8rem;
+        font-size: 3.2rem;
     }
 }
 
@@ -963,9 +963,15 @@
     }
 }
 
+@media all and (min-width : 1400px) {
+    .section_1-side1 h1 {
+        height: 160px;
+    }
+}
+
 @media all and (max-width : 1090px) {
     .section_1-side1 h1 {
-        font-size: 4.7rem;
+        font-size: 3.1rem;
     }
 
     .section_1-side1 p {
@@ -979,7 +985,7 @@
 
 @media all and (max-width : 980px) {
     .section_1-side1 h1 {
-        font-size: 4.4rem;
+        font-size: 3rem;
     }
 
     .section_1-side1 p {
@@ -1030,7 +1036,8 @@
     }   
 
     .section_1-side1 h1 {
-        font-size: 3.4rem;
+        font-size: 2.8rem;
+        height: 200px;
     }
 
     .link__content ion-icon:nth-child(1) {

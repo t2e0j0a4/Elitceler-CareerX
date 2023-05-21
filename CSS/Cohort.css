@@ -885,7 +885,7 @@
 }
 
 .ds4__content .cohort4__toolbox , .cc4__content .cohort4__toolbox {
-    animation: ds_cc4Tools 10s linear infinite;
+    animation: ds_cc4Tools 7.5s linear infinite;
 }
 
 .cohort4__toolbox img {
@@ -906,7 +906,7 @@
 
 @keyframes fsd4Tools {
     0% {
-        transform: translateX(300%);
+        transform: translateX(100%);
     }
 
     100% {
@@ -916,7 +916,7 @@
 
 @keyframes ds_cc4Tools {
     0% {
-        transform: translateX(500%);
+        transform: translateX(80%);
     }
 
     100% {
