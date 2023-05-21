@@ -68,21 +68,44 @@
 }
 
 .section_1-links {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--white);
+    border: 1px solid #FFFFFF;
+    border-radius: 9px;
+    box-shadow: 0px 0px 15px #FFFFFF;
+    transition: background-color 0.4s linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 16px;
+    cursor: pointer;
+}
+
+.section_1-links:hover {
+    background-color: var(--primary);
+}
+
+/* .section_1-links {
     position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-}
+} */
 
-.section_1-links .circle_vector {
+/* .section_1-links .circle_vector {
     position: absolute;
     width: 70px;
     height: 70px;
     border-radius: 50%;
     border: 3px solid var(--primary);
-}
+} */
 
-.section_1-links .link__content {
+/* .section_1-links .link__content {
     background-color: #121212;
     position: relative;
     left: 20px;
@@ -92,9 +115,9 @@
     justify-content: center;
     align-items: center;
     gap: 0.4rem;
-}
+} */
 
-.link__content ion-icon:nth-child(1) {
+/* .link__content ion-icon:nth-child(1) {
     font-size: 24px;
     color: var(--white);
 }
@@ -103,7 +126,7 @@
     font-size: 20px;
     color: var(--primary);
     animation: animatedarrows 1.2s linear infinite;
-}
+} */
 
 .link__content span {
     font-family: var(--font-lato);
@@ -162,7 +185,7 @@
     left: 30px;
     font-family: var(--font-lato);
     font-style: normal;
-    font-weight: 500;
+    font-weight: 1000;
     font-size: 2rem;
     color: #FFFFFF;
     background-color: #121212;
