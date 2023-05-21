@@ -163,25 +163,56 @@ function moreWebinars(type) {
 // ************************** - SECTION 3 ENDS - *******************************
 
 const featuredData = [
-    {
-        id : 0,
-        image : '../../Assets/HomePic2.png',
-        context : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-        readLink : '#'
-    },
-    {
-        id : 1,
-        image : '../../Assets/HomePic2.png',
-        context : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-        readLink : '#'
-    },
-    {
-        id : 2,
-        image : '../../Assets/HomePic2.png',
-        context : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-        readLink : '#'
-    }
-]
+  {
+    id: 0,
+    image: "../../Assets/HomeNews1.png",
+    context:
+      "Programmes are designed to emphasise practical principles and processes that equip students with the required knowledge and skills.",
+    readLink: "#",
+  },
+  {
+    id: 1,
+    image: "../../Assets/HomeNews2.png",
+    context:
+      "CareerX club has made a significant impact by placing more than 200 students in leading organisations.",
+    readLink: "#",
+  },
+  {
+    id: 2,
+    image: "../../Assets/HomeNews3.png",
+    context:
+      "The challenge is to stay relevant amid the changes, which is what CareerX specialises in.",
+    readLink: "#",
+  },
+  {
+    id: 3,
+    image: "../../Assets/HomeNews4.png",
+    context:
+      "Preparing the young talent for the continuously evolving needs of the Tech industry.",
+    readLink: "#",
+  },
+  {
+    id: 4,
+    image: "../../Assets/HomeNews5.png",
+    context:
+      "Employers do not just look at the educational qualifications but also the additional skills the potential employee has.",
+    readLink: "#",
+  },
+  {
+    id: 5,
+    image: "../../Assets/HomeNews6.png",
+    context:
+      "Our Startup has been Officially Recognised By Govt. Of India - Ministry Of Commerce.",
+    readLink: "#",
+  },
+  {
+    id: 6,
+    image: "../../Assets/HomeNews7.png",
+    context:
+      "CareerX Club, a Cohort based Edtech Startup helping students to learn emerging technologies and placing them in top companies.",
+    readLink: "#",
+  },
+];
 
 let sec4Content = document.querySelector(".section_4-content");
 

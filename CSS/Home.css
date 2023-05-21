@@ -426,7 +426,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     padding: 0 10px;
     gap: 2rem;
     overflow-x: scroll;
@@ -434,7 +434,7 @@
 }
 
 .section_4-data {
-    width: 360px;
+    width: 320px;
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
@@ -446,8 +446,8 @@
 
 .section_4-data img {
     width: 100%;
-    height: 160px;
-    object-fit: cover;
+    height: 100px;
+    object-fit: fill;
     border-radius: 9px;
     border: 1px solid var(--white);
 }
@@ -477,10 +477,6 @@
     color: #FFFFFF;
     background-color: transparent;
     cursor: pointer;
-}
-
-.section_4-content::-webkit-scrollbar {
-    height: 0;
 }
 
 /* Section 4 : We Got Featured In */
@@ -733,17 +729,17 @@
     color: #636363;
 }
 
-.section_7-content::-webkit-scrollbar , .section_8-content::-webkit-scrollbar {
+.section_7-content::-webkit-scrollbar , .section_8-content::-webkit-scrollbar , .section_4-content::-webkit-scrollbar {
     height: 10px;
 }
 
-.section_7-content::-webkit-scrollbar-track, .section_8-content::-webkit-scrollbar-track {
+.section_7-content::-webkit-scrollbar-track, .section_8-content::-webkit-scrollbar-track, .section_4-content::-webkit-scrollbar-track {
     background-color: #232323;
     border-radius: 4px;
     box-shadow: 0 0 4px #fff;
 }
 
-.section_7-content::-webkit-scrollbar-thumb, .section_8-content::-webkit-scrollbar-thumb {
+.section_7-content::-webkit-scrollbar-thumb, .section_8-content::-webkit-scrollbar-thumb, .section_4-content::-webkit-scrollbar-thumb {
     background-color: var(--primary);
     border-radius: 4px;
 }
@@ -916,17 +912,17 @@
         margin: 4rem auto;
     }
 
-    .section_5-content::-webkit-scrollbar, .section_4-content::-webkit-scrollbar {
+    .section_5-content::-webkit-scrollbar {
         height: 10px;
     }
 
-    .section_5-content::-webkit-scrollbar-track, .section_4-content::-webkit-scrollbar-track {
+    .section_5-content::-webkit-scrollbar-track {
         background-color: #232323;
         border-radius: 4px;
         box-shadow: 0 0 4px #fff;
     }
     
-    .section_5-content::-webkit-scrollbar-thumb, .section_4-content::-webkit-scrollbar-thumb {
+    .section_5-content::-webkit-scrollbar-thumb {
         background-color: var(--primary);
         border-radius: 4px;
     }
