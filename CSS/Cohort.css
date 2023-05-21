@@ -39,6 +39,19 @@
     color: #FFFFFF;
     background-color: #121212;
     line-height: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.section__heads .head__title ion-icon {
+    border: 1px solid #fff;
+    margin: 0 0rem 0 0.6rem;
+    font-size: 20px;
+    padding: 4px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .section__heads .head__title span {
@@ -572,7 +585,7 @@
     width: 100%;
     height: 100%;
     overflow-y: auto;
-    padding: 0.8rem 1rem 0.8rem 2rem;
+    padding: 0.8rem 1rem;
     background: #FFFFFF;
     border: 3px solid #FFFFFF;
     border-radius: 12px;
@@ -589,12 +602,8 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 34px;
-    text-align: center;
+    text-align: left;
     color: #121212;
-}
-
-.cohort5__listbox li::marker {
-    content : '👍 '
 }
 
 .cohort5__downloadbtn {
@@ -728,6 +737,128 @@
 }
 
 /* Section 6 : Projects You will build */
+
+/* Section 7 : Fee Structure */
+
+.cohorts__section7 {
+    width: 1164px;
+    max-width: 96%;
+    height: 100%;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.cohort7__content {
+    width: 97%;
+    max-width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    overflow-x: scroll;
+    padding: 0 10px;
+    position: relative;
+}
+
+@media all and (min-width : 960px) {
+    .cohort7__content::-webkit-scrollbar {
+        height: 0;
+    }
+}
+
+@media all and (max-width : 960px) {
+
+    .cohort7__content {
+        justify-content: flex-start;
+    }
+
+    .cohort7__content::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    .cohort7__content::-webkit-scrollbar-track {
+        background-color: #121212;
+        box-shadow: 0 0 2px #fff;
+        border-radius: 4px;
+    }
+
+    .cohort7__content::-webkit-scrollbar-thumb {
+        background-color: #fff;
+        border-radius: 4px;
+    }
+}
+
+@media all and (max-width : 800px) {
+    .cohort7__content::-webkit-scrollbar {
+        height: 0;
+    }
+}
+
+.cohort7__feebox {
+    flex: 0 0 auto;
+    width: 280px;
+    height: 424px;
+    background-color: white;
+    margin-right: 10px;
+    scroll-snap-align: start;
+    margin-bottom: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+
+    border-radius: 20px;
+    outline: 2px solid #121212;
+    box-shadow: 9px 9px #ffffff;
+}
+
+.cohort7__feebox p {
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.cohort7__feebox ul {
+    width: 100%;
+    padding: 0.4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.2rem;
+}
+
+.cohort7__feebox ul li {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #121212;
+    list-style-image: url('../Assets/CohortTick.svg');
+}
+
+@media all and (max-width : 400px) {
+    .cohort7__content {
+        gap: 1rem;
+    }
+
+    .cohort7__feebox {
+        width: 260px;
+    }
+}
+
+/* Section 7 : Fee Structure */
 
 /* Section 8 : Meet Your Mentors */
 

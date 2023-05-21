@@ -273,6 +273,60 @@ cloudComputingProjects.forEach((item) => {
 
 // ************************** - SECTION 6 - *********************************
 
+let cloudComputingFeeStructure = [
+  {
+    id : 1,
+    name : 'Silver',
+    badge : '../Assets/CohortSilverBadge.svg',
+    structure : [
+      'Rs 26,000 (O)', 'Rs 21,500 (A)', 'Rs 18,00 (L)', 'Training', 'Projects', 'Certification', 'Resume Building'
+    ]
+  },
+  {
+    id : 2,
+    name : 'Gold',
+    badge : '../Assets/CohortGoldBadge.svg',
+    structure : [
+      'Rs 53,000 (O)', 'Rs 35,000 (A)', 'Rs 33,000 (L)', 'Eligiblity Test', 'Projects', '1:1 Mentor Sessions', 'Certification', 'Resume Building', 'Mock Interviews', '5 Assured Interviews'
+    ]
+  },
+  {
+    id : 3,
+    name : 'Platinum',
+    badge : '../Assets/CohortPlatBadge.svg',
+    structure : [
+      'Rs 71,000 (O)', 'Rs 53,000 (A)', 'Rs 45,000 (L)', 'Eligiblity Test', 'Projects', '1:1 Mentor Sessions', 'Certification', 'Resume Building', 'Mock Interviews', 'Job Guarentee'
+    ]
+  }
+]
+
+let cc7Content = document.querySelector(".cc7__content");
+
+cloudComputingFeeStructure.forEach((item) => {
+  let feeBox = document.createElement("div");
+  feeBox.classList.add("cohort7__feebox");
+
+  let feeType = document.createElement("p");
+  feeType.innerHTML = item.name;
+
+  let feeImg = document.createElement("img");
+  feeImg.setAttribute("src", item.badge);
+  feeImg.setAttribute("alt", item.name);
+
+  let feeList = document.createElement("ul");
+
+  item.structure.forEach((list) => {
+    let listItem = document.createElement("li");
+    listItem.innerHTML = list;
+    feeList.append(listItem);
+  });
+
+  feeBox.append(feeType, feeImg, feeList);
+  cc7Content.append(feeBox);
+});
+
+// ************************** - SECTION 7 - *********************************
+
 let cloudComputingMentors = [
   {
     id : 1,

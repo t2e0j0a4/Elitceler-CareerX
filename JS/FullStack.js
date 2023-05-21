@@ -302,6 +302,61 @@ fullStackProjects.forEach((item) => {
 
 // ************************** - SECTION 6 - *********************************
 
+let fullStackFeeStructure = [
+  {
+    id : 1,
+    name : 'Silver',
+    badge : '../Assets/CohortSilverBadge.svg',
+    structure : [
+      'Rs 26,000 (O)', 'Rs 21,000 (A)', 'Rs 18,500 (L)', 'Training', 'Projects', 'Certification', 'Resume Building'
+    ]
+  },
+  {
+    id : 2,
+    name : 'Gold',
+    badge : '../Assets/CohortGoldBadge.svg',
+    structure : [
+      'Rs 53,000 (O)', 'Rs 35,000 (A)', 'Rs 33,000 (L)', 'Eligiblity Test', 'Projects', '1:1 Mentor Sessions', 'Certification', 'Resume Building', 'Mock Interviews', '5 Assured Interviews'
+    ]
+  },
+  {
+    id : 3,
+    name : 'Platinum',
+    badge : '../Assets/CohortPlatBadge.svg',
+    structure : [
+      'Rs 71,000 (O)', 'Rs 53,000 (A)', 'Rs 45,000 (L)', 'Eligiblity Test', 'Projects', '1:1 Mentor Sessions', 'Certification', 'Resume Building', 'Mock Interviews', 'Job Guarentee'
+    ]
+  }
+]
+
+let fsd7Content = document.querySelector(".fsd7__content");
+
+fullStackFeeStructure.forEach((item) => {
+  let feeBox = document.createElement('div');
+  feeBox.classList.add('cohort7__feebox');
+
+  let feeType = document.createElement('p');
+  feeType.innerHTML = item.name;
+
+  let feeImg = document.createElement('img');
+  feeImg.setAttribute('src', item.badge);
+  feeImg.setAttribute('alt', item.name);
+
+  let feeList = document.createElement('ul');
+  
+  item.structure.forEach((list) => {
+    let listItem = document.createElement('li');
+    listItem.innerHTML = list;
+    feeList.append(listItem);
+  })
+
+  feeBox.append(feeType, feeImg, feeList);
+  fsd7Content.append(feeBox);
+
+})
+
+// ************************** - SECTION 7 - *********************************
+
 let fullStackMentors = [
   {
     id : 1,

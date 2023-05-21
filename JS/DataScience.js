@@ -273,6 +273,61 @@ dataScienceProjects.forEach((item) => {
 
 // ************************** - SECTION 6 - *********************************
 
+let dataScienceFeeStructure = [
+  {
+    id : 1,
+    name : 'Silver',
+    badge : '../Assets/CohortSilverBadge.svg',
+    structure : [
+      'Rs 30,000 (O)', 'Rs 23,600 (A)', 'Rs 21,500 (L)', 'Training', 'Projects', 'Certification', 'Resume Building'
+    ]
+  },
+  {
+    id : 2,
+    name : 'Gold',
+    badge : '../Assets/CohortGoldBadge.svg',
+    structure : [
+      'Rs 59,000 (O)', 'Rs 47,200 (A)', 'Rs 41,300 (L)', 'Eligiblity Test', 'Projects', '1:1 Mentor Sessions', 'Certification', 'Resume Building', 'Mock Interviews', '5 Assured Interviews'
+    ]
+  },
+  {
+    id : 3,
+    name : 'Platinum',
+    badge : '../Assets/CohortPlatBadge.svg',
+    structure : [
+      'Rs 88,000 (O)', 'Rs 71,000 (A)', 'Rs 59,000 (L)', 'Eligiblity Test', 'Projects', '1:1 Mentor Sessions', 'Certification', 'Resume Building', 'Mock Interviews', 'Job Guarentee'
+    ]
+  }
+]
+
+let ds7Content = document.querySelector(".ds7__content");
+
+dataScienceFeeStructure.forEach((item) => {
+  let feeBox = document.createElement('div');
+  feeBox.classList.add('cohort7__feebox');
+
+  let feeType = document.createElement('p');
+  feeType.innerHTML = item.name;
+
+  let feeImg = document.createElement('img');
+  feeImg.setAttribute('src', item.badge);
+  feeImg.setAttribute('alt', item.name);
+
+  let feeList = document.createElement('ul');
+  
+  item.structure.forEach((list) => {
+    let listItem = document.createElement('li');
+    listItem.innerHTML = list;
+    feeList.append(listItem);
+  })
+
+  feeBox.append(feeType, feeImg, feeList);
+  ds7Content.append(feeBox);
+
+})
+
+// ************************** - SECTION 7 - *********************************
+
 let dataScienceMentors = [
   {
     id : 1,

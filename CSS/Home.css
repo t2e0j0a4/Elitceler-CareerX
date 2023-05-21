@@ -782,6 +782,7 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .peer__box .peer__details .peer__data {

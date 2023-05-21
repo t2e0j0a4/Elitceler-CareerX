@@ -397,6 +397,7 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .peer__box .peer__details .peer__data {
@@ -592,7 +593,7 @@
     
     .peer__box {
         width: 320px;
-        height: 280px;
+        height: 100%;
     }
 }
 
