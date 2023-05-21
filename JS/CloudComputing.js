@@ -127,6 +127,109 @@ dataScienceTools.forEach((tool) => {
 
 // ************************** - SECTION 4 - *********************************
 
+let cloudComputingCourse = [
+  {
+    id: 1,
+    name: "Fundamentals",
+    details: [
+      "Fundamentals of Web Dev",
+      "Fundamentals of Web Dev",
+      "Fundamentals of Web Dev",
+      "Fundamentals of Web Dev",
+      "Fundamentals of Web Dev",
+      "Fundamentals of Web Dev",
+    ],
+  },
+  {
+    id: 2,
+    name: "Programming",
+    details: [
+      "Fundamentals of Web Dev",
+      "Fundamentals of Web Dev",
+      "Fundamentals of Web Dev",
+      "Fundamentals of Web Dev",
+      "Fundamentals of Web Dev",
+      "Fundamentals of Web Dev",
+    ],
+  },
+  {
+    id: 3,
+    name: "Level Up",
+    details: [
+      "Fundamentals of Web Dev",
+      "Fundamentals of Web Dev",
+      "Fundamentals of Web Dev",
+      "Fundamentals of Web Dev",
+      "Fundamentals of Web Dev",
+      "Fundamentals of Web Dev",
+    ],
+  },
+  
+];
+
+let cc5Content = document.querySelector(".cc5__data");
+
+cloudComputingCourse.forEach((item) => {
+  let courseBox = document.createElement('div');
+  courseBox.classList.add('cohort5__coursebox', 'cc5__coursebox');
+
+  let titleBox = document.createElement('div');
+  titleBox.classList.add('cohort5__titlebox', 'cc5__titlebox');
+
+  let courseTitle = document.createElement('p');
+  courseTitle.innerHTML = item.name;
+
+  let toggle = document.createElement("img");
+  toggle.setAttribute("src", "../Assets/DownArrow2.svg");
+  toggle.setAttribute("alt", "Toggle");
+  toggle.setAttribute("data-token", `icon-${item.id}`);
+  
+  titleBox.append(courseTitle, toggle);
+
+  let listBox = document.createElement("ul");
+  listBox.classList.add("cohort5__listbox", "fsd5__listbox");
+  listBox.setAttribute("data-token", `list-${item.id}`);
+
+  item.details.forEach((list) => {
+    let listItem = document.createElement("li");
+    listItem.innerHTML = list;
+    listBox.append(listItem);
+  })
+
+  courseBox.append(titleBox, listBox);
+  cc5Content.append(courseBox);
+
+  titleBox.addEventListener('click', function() {
+    courseExpand(listBox, toggle);
+  })
+
+})
+
+
+let allListBoxes = document.querySelectorAll(".cc5__listbox");
+let allCourseToggles = document.querySelectorAll(".cc5__titlebox img");
+
+function courseExpand(currentList, currentToggle) {
+
+  allCourseToggles.forEach((imges) => {
+    if (imges.dataset.token === currentToggle.dataset.token) {
+      imges.classList.toggle("active");
+      currentList.classList.toggle("active");
+    } 
+    // else {
+    //   imges.classList.remove("active");
+    //   allListBoxes.forEach((answer) => {
+    //     if (answer.dataset.token !== currentList.dataset.token) {
+    //       answer.classList.remove("active");
+    //     }
+    //   });
+    // }
+  });
+
+}
+
+// ************************** - SECTION 5 - *********************************
+
 let cloudComputingProjects = [
   {
     id: 1,

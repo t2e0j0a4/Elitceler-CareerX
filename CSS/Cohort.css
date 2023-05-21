@@ -472,6 +472,165 @@
 
 /* Section 4 : Tools you will Learn */
 
+/* Section 5 : Course Structure  */
+
+.cohorts__section5 {
+    width: 1164px;
+    max-width: 96%;
+    height: 100%;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.cohort5__content {
+    width: 97%;
+    max-width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.cohort5__data {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 0.2rem auto 1rem auto;
+}
+
+.cohort5__coursebox {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media all and (max-width : 600px) {
+    .cohort5__coursebox {
+        width: 100%;
+    }
+}
+
+.cohort5__titlebox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1rem;
+    border: 2px solid #FFFFFF;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.fsd5__titlebox {
+    background: #090D69;
+}
+
+.ds5__titlebox {
+    background: #A500DF;
+}
+
+.cc5__titlebox {
+    background: #800054;
+}
+
+.cohort5__titlebox p {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.cohort5__titlebox img {
+    transition: transform 0.2s linear;
+}
+
+.cohort5__titlebox img.active {
+    transform: rotate(-180deg);
+}
+
+.cohort5__listbox {
+    width: 100%;
+    height: 0;
+    overflow-y: hidden;
+}
+
+.cohort5__listbox.active {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0.8rem 1rem;
+    background: #FFFFFF;
+    border: 3px solid #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.2rem;
+}
+
+.cohort5__listbox li {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    text-align: center;
+    color: #121212;
+}
+
+.cohort5__downloadbtn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 0;
+}
+
+.cohort5__downloadbtn button {
+    border: 1px solid #DFDCDC;
+    background-color: #121212;
+    padding: 0.8rem 2rem;
+    border-radius: 9px;
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.fsd5__downloadbtn button {
+    box-shadow: 0px 0px 40px 8px #090D69;
+}
+
+.ds5__downloadbtn button {
+    box-shadow: 0px 0px 40px 8px #67028b;
+}
+
+.cc5__downloadbtn button {
+    box-shadow: 0px 0px 40px 8px #74034c;
+}
+
+
+
+/* Section 5 : Course Structure  */
+
 /* Section 6 : Projects You will build */
 
 .cohorts__section6 {
@@ -770,6 +929,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    cursor: pointer;
 }
 
 .cohort10__questionbox p {
