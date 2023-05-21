@@ -30,6 +30,105 @@ window.addEventListener("resize", (e) => {
 
 // ************************** - NAVBAR ENDS - *******************************
 
+let fullStackIntro = [
+  {
+    id: 1,
+    image: "../Assets/FSDMap1.svg",
+    title: "100+ Hours of Hybrid Learning",
+    desc: "Acquire premium content through live full-stack development classes and offline bootcamps.",
+  },
+  {
+    id: 2,
+    image: "../Assets/FSDMap2.svg",
+    title: "1:1 Personalized Mentoring from Industry Experts",
+    desc: "Get personalized 1:1 career coaching from 100+ Coaches to learn in-demand Block Chain skills.",
+  },
+  {
+    id: 3,
+    image: "../Assets/FSDMap5.svg",
+    title: "Access to Employment Oppurtunities",
+    desc: "Apply for available industry internships and live Block Chain projects and full-time job opportunities.",
+  },
+  {
+    id: 4,
+    image: "../Assets/FSDMap4.svg",
+    title: "Rs 3-15 LPA CTC Salary Range",
+    desc: "Land your dream job now with our full stack development course with right salary in the right company.",
+  },
+];
+
+let fsd1Content = document.querySelector(".fsd1__slide2");
+
+fullStackIntro.forEach((item) => {
+  let introBox = document.createElement('div');
+  introBox.classList.add("slide2__introbox");
+
+  let introImg = document.createElement('img');
+  introImg.setAttribute('src', item.image);
+  introImg.setAttribute('alt', item.title);
+
+  let introTitle = document.createElement('p');
+  introTitle.innerHTML = item.title;
+
+  let introDesc = document.createElement('p');
+  introDesc.innerHTML = item.desc;
+
+  introBox.append(introImg, introTitle, introDesc);
+  fsd1Content.append(introBox);
+})
+
+// Funtion To Move The Intro Slider
+
+let base = 100;
+let initialValue = 1;
+
+let fsd1IntroSlider = document.querySelectorAll(".cohort1__slide");
+
+function moveIntroSec(type) {
+  console.log(type);
+
+  if (type === 'next') {
+
+    if (initialValue === 3) {
+      initialValue = 0;
+    }
+
+    fsd1IntroSlider.forEach((introSlide) => {
+      introSlide.style.transform = `translateX(-${base * initialValue}%)`;
+    })    
+    initialValue = initialValue + 1;
+  }
+
+  else {
+    if (initialValue === 1) {
+      initialValue = 4;
+    }
+
+    initialValue = initialValue - 2;
+    fsd1IntroSlider.forEach((introSlide) => {
+      introSlide.style.transform = `translateX(-${base * initialValue}%)`;
+    });
+    initialValue = initialValue + 1;
+    
+  }
+
+}
+
+setInterval(() => {
+
+  if (initialValue === 3) {
+    initialValue = 0;
+  }
+
+  fsd1IntroSlider.forEach((introSlide) => {
+    introSlide.style.transform = `translateX(-${base * initialValue}%)`;
+  });
+  initialValue = initialValue + 1;
+
+}, 10000);
+
+// ************************** - Section 1 - *********************************
+
 let fullStackDetails = [
   {
     id: 1,

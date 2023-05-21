@@ -66,6 +66,421 @@
 
 /* Section Heads */
 
+/* Section 1 : Intro */
+
+.cohorts__section1 {
+    width: 1164px;
+    max-width: 96%;
+    height: 100%;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.cohort1__content {
+    width: 98%;
+    max-width: 100%;
+    margin: auto;
+    height: 100%;
+    padding: 1rem;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.fsd1__content {
+    background: radial-gradient(97.6% 97.6% at 50% 2.4%, rgba(0, 9, 223, 0.42) 1.87%, #000000 100%);
+}
+
+.ds1__content {
+    background: radial-gradient(97.6% 97.6% at 50% 2.4%, rgba(165, 0, 223, 0.42) 1.87%, #000000 100%);
+}
+
+.cc1__content {
+    background: radial-gradient(97.6% 97.6% at 50% 2.4%, rgba(128, 0, 84, 0.42) 1.87%, #000000 100%);
+}
+
+.cohort1__slides {
+    width: 300%;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.cohort1__slide {
+    width: 100%;
+    height: 100%;
+    flex: 0 0 auto;
+    padding: 1rem;
+    transition: transform 0.4s linear;
+}
+
+.cohort1__slide1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.slide1__side1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.6rem;
+    width: 100%;
+    flex: 0.9;
+}
+
+.slide1__side1 h1 {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    color: #FFFFFF;
+}
+
+.slide1__side1 h1 span {
+    color: var(--primary);
+}
+
+.slide1__side1 p {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(209, 209, 209, 0.947);
+}
+
+.slide1__icons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.icons1__icon {
+    position: relative;
+}
+
+.icons1__icon .circle__vector {
+    width: 72px;
+    height: 72px;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+}
+
+.icons1__icon .link__content {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    /* background-color: #121212; */
+}
+
+.icons1__icon .link__content ion-icon{
+    position: absolute;
+    font-size: 40px;
+    top: 14%;
+    left: 16px;
+    color: #fff;
+}
+
+.link__content span {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 1rem;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.slide1__side2 {
+    width: 100%;
+    flex: 0.26;
+}
+
+.slide1__side2 img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.cohort1__slide2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.slide2__introbox {
+    width: 240px;
+    height: 240px;
+    background: #D9E6EC;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 0px 15px #FFFFFF;
+    border-radius: 20px;
+    padding: 1rem;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.slide2__introbox img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.slide2__introbox p:nth-child(2){
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #121212;
+}
+
+.slide2__introbox p:nth-child(3){
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #121212;
+}
+
+.cohort1__slide3 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.slide3__side1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex: 0.4;
+}
+
+.slide3__side1 img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.slide3__side1 p:nth-child(2) {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    line-height: 29px;
+    color: #ED7600;
+}
+
+.slide3__side1 p:nth-child(3) {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+    color: #F0F0F0;
+}
+
+.slide3__side2 {
+    flex: 0.6;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.slide3__side2 h1 {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 48px;
+    color: #FFFFFF;
+}
+
+.slide3__side2 h1 span {
+    color: var(--primary);
+}
+
+.slide3__side2 p {
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.cohort1__btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.cohort1__btns button {
+    background: transparent;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cohort1__btns button ion-icon {
+    font-size: 24px;
+    color: #FFF;
+}
+
+@media all and (max-width : 1024px) {
+    .slide1__side1 {
+        flex: 0.8;
+    }
+
+    .slide1__side2 {
+        flex: 0.5;
+    }
+
+    .cohort1__slide3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slide3__side1 , .slide3__side2 {
+        width: 100%;
+        flex: 1;
+    }
+}
+
+@media all and (max-width : 800px){
+
+    .cohort1__slide1 {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    .slide1__side1 {
+        flex: 1;
+        order: 2;
+    }
+
+    .slide1__side2 {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: 1;
+    }
+
+    .slide1__side2 img {
+        width: 60%;
+    }
+
+    .cohort1__slide3 {
+        gap: 8rem;
+    }
+
+    .slide3__side2 h1 {
+        font-size: 1.6rem;
+    }
+
+    .slide3__side1 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide3__side2 p {
+        font-size: 1rem;
+    }
+}
+
+@media all and (max-width : 600px) {
+    .slide1__side2 img {
+        width: 90%;
+    }
+
+    .slide1__side1 h1 {
+        font-size: 32px;
+    }
+
+    .slide1__side1 p {
+        font-size: 16px;
+    }
+
+    .slide1__icons {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .icons1__icon .link__content span {
+        font-size: 18px;
+    }
+}
+
+@media all and (max-width : 600px) {
+    .slide1__side2 img {
+        width: 100%;
+    }
+
+    .slide1__side1 h1 {
+        font-size: 28px;
+    }
+
+    .slide1__side1 p {
+        font-size: 14px;
+    }
+
+    .icons1__icon .link__content span {
+        font-size: 16px;
+    }
+}
+ 
+/* Section 1 : Intro */
+
 /* Section 2 : Why Cohorts? : FSD, DS, CC */
 
 .bg__gradient {
