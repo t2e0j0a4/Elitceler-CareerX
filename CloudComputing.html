@@ -232,11 +232,26 @@
             <!-- Heading -->
             <div class="section__heads">
               <div class="head__vector"></div>
-              <p class="head__title">Fee <span>Structure</span> <ion-icon name="help"></ion-icon></p>
+              <p class="head__title">Fee <span>Structure</span> <ion-icon name="help" onclick="emiPopup('open')"></ion-icon></p>
             </div>
 
             <!-- Content -->
             <div class="cohort7__content cc7__content"></div>
+
+            <!-- EMI Plans PopUp -->
+            
+            <div class="cohort7__popup cc7__popup">
+
+              <!-- Heads -->
+              <div class="popup__heading">
+                <p>EMI Plans</p>
+                <button type="button" title="Close" onclick="emiPopup('close')"><ion-icon name="close"></ion-icon></button>
+              </div>
+
+              <!-- Content -->
+              <div class="popup__content cc7popup__content"></div>
+
+            </div>
 
           </section>
 

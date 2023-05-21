@@ -325,6 +325,145 @@ cloudComputingFeeStructure.forEach((item) => {
   cc7Content.append(feeBox);
 });
 
+// Popup
+
+let cloudComputingEMIPlans = [
+  {
+    id: 1,
+    name: "One Time Plan",
+    image: "../Assets/CohortEMI1.svg",
+    details: [
+      {
+        type: "Course Fee",
+        pay: "₹50,000",
+      },
+      {
+        type: "GST",
+        pay: "₹9,000",
+      },
+      {
+        type: "Discount",
+        pay: "-₹7,000",
+      },
+      {
+        type: "Total Cost",
+        pay: "₹52,000",
+      },
+    ],
+    final : 'One Time Pay',
+    total: "₹52,000",
+  },
+  {
+    id: 2,
+    name: "Two Months EMI",
+    image: "../Assets/CohortEMI2.svg",
+    details: [
+      {
+        type: "Course Fee",
+        pay: "₹50,000",
+      },
+      {
+        type: "GST",
+        pay: "₹9,000",
+      },
+      {
+        type: "Discount",
+        pay: "-₹5,000",
+      },
+      {
+        type: "Total Cost",
+        pay: "₹54,000",
+      },
+    ],
+    final : 'Monthly Pay',
+    total: "₹27,000/mo",
+  },
+  {
+    id: 3,
+    name: "Three Months EMI",
+    image: "../Assets/CohortEMI3.svg",
+    details: [
+      {
+        type: "Course Fee",
+        pay: "₹50,000",
+      },
+      {
+        type: "GST",
+        pay: "₹9,000",
+      },
+      {
+        type: "Discount",
+        pay: "-₹2,000",
+      },
+      {
+        type: "Total Cost",
+        pay: "₹57,000",
+      },
+    ],
+    final : 'Monthly Pay',
+    total: "₹19,000/mo",
+  }
+];
+
+let cc7Popup = document.querySelector(".cc7popup__content");
+
+cloudComputingEMIPlans.forEach((item) => {
+
+  let emiBox = document.createElement('div');
+  emiBox.classList.add('popup__emibox');
+
+  let planImg = document.createElement('img');
+  planImg.setAttribute('src', item.image);
+  planImg.setAttribute('alt', item.name);
+
+  let planName = document.createElement('p');
+  planName.innerHTML = item.name;
+
+  let planDetails = document.createElement('div');
+  planDetails.classList.add('popup__emidetails');
+
+  item.details.forEach((list) => {
+    let eachDetail = document.createElement('div');
+    eachDetail.classList.add('popup__emitype');
+
+    let eachType = document.createElement('p');
+    eachType.innerHTML = list.type;
+
+    let eachPay = document.createElement('p');
+    eachPay.innerHTML = list.pay;
+
+    eachDetail.append(eachType, eachPay);
+    planDetails.append(eachDetail);
+
+  })
+
+  let finalPayDetail = document.createElement("div");
+  finalPayDetail.classList.add("popup__emifinal");
+
+  let finalPayType = document.createElement("p");
+  finalPayType.innerHTML = item.final;
+
+  let finalPayPay = document.createElement("p");
+  finalPayPay.innerHTML = item.total;
+
+  finalPayDetail.append(finalPayType, finalPayPay);
+
+  emiBox.append(planImg, planName, planDetails, finalPayDetail);
+  cc7Popup.append(emiBox);
+
+})
+
+let emiPopUp = document.querySelector(".cohort7__popup");
+
+function emiPopup(type) {
+  if (type === 'open') {
+    emiPopUp.classList.toggle('active');
+  }
+  else {
+    emiPopUp.classList.remove('active');
+  }
+}
+
 // ************************** - SECTION 7 - *********************************
 
 let cloudComputingMentors = [
