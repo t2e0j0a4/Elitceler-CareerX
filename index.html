@@ -88,7 +88,7 @@
               <a href="#explorecohorts" title="Explore" class="section_1-links">
                 Explore Cohorts
               </a>
-              <button type="button" title="ReachUs" class="section_1-btn">
+              <button type="button" title="ReachUs" class="section_1-btn" onclick="managePopup('open')">
                 Reach Us Out
               </button>
             </div>
@@ -339,8 +339,38 @@
 
     <!-- Footer -->
 
-    <!-- Stick Bottom Bar -->
+    <!-- Reach Us Out Popup Box -->
 
+    <div class="reachus__box">
+
+      <form onsubmit="reachUs1Submit(event)" class="reachus__form">
+        
+        <div class="reachus__heads">
+          <p>Reach Us</p>
+          <button type="button" title="Close" onclick="managePopup('close')"><ion-icon name="close"></ion-icon></button>
+        </div>
+        
+        <div class="reachus__content">
+          <input required class="reachus__name" type="text" placeholder="Name*">
+          <input required class="reachus__email" type="text" placeholder="Email*">
+          <input required class="reachus__mobile" type="text" placeholder="Mobile Number*">
+          <select class="reachus__option" name="cohorts" title="Cohorts">
+            <option value="Full Stack">Full Stack</option>
+            <option selected value="Data Science">Data Science</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+          </select>
+          <button type="submit">Reach Us</button>
+        </div>
+        
+        
+      </form>
+
+    </div>
+
+    <!-- Reach Us Out Popup Box -->
+
+    <!-- Stick Bottom Bar -->
+    
     <div class="bottom__bar">
       <p>Any Queries? <span>Want to know more about our Cohorts?</span></p>
       <div class="bar__links">
@@ -348,6 +378,8 @@
         <a href="#" title="Whatsapp"><ion-icon name="logo-whatsapp"></ion-icon></a>
       </div>
     </div>
+
+    <!-- Stick Bottom Bar -->
 
     <!-- Scripts -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

@@ -1268,3 +1268,125 @@
         font-size: 12px;
     }
 }
+
+/* Reach Us Out Pop Up */
+
+.reachus__box {
+    display: none;
+}
+
+.reachus__box.active {
+    width: 700px;
+    max-width: 100%;
+    padding: 1rem;
+    margin: auto;
+    display: block;
+    position: absolute;
+    z-index: 99;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-52%);
+}
+
+body.body__popup {
+    overflow-y: hidden;
+    height: 100vh;
+}
+
+.reachus__form  {
+    width: 100%;
+    box-shadow: 9px 9px #fff;
+    outline: 2px solid #121212;
+    max-width: 100%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.reachus__heads {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.6rem 0.3rem;
+    border-bottom: 1px solid #121212;
+}
+
+.reachus__heads p {
+    font-family: var(--font-poppins);
+    font-size: 20px;
+    font-weight: 600;
+    color: #232323;
+}
+
+.reachus__heads button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.reachus__heads button ion-icon {
+    font-size: 20px;
+    color: #a8a8a8;
+    transition: color 0.2s linear;
+}
+
+.reachus__heads button ion-icon:hover {
+    color: #232323;
+}
+
+.reachus__content {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.reachus__content input , .reachus__content select {
+    width: 100%;
+    padding: 8px 10px;
+    font-family: var(--font-poppins);
+    font-size: 18px;
+    outline: none;
+    border: 2px solid #d3d3d3;
+    border-radius: 4px;
+    color: #232323;
+}
+
+.reachus__content button {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 18px;
+    font-family: var(--font-poppins);
+    background-color: var(--primary-2);
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+
+.reachus__content h1 {
+    font-family: var(--font-poppins);
+    font-size: 28px;
+    color: var(--primary);
+}
+
+.reachus__form > button:hover {
+    background-color: var(--primary);
+}
+
+/* Reach Us Out Pop Up */

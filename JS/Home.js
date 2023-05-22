@@ -484,42 +484,93 @@ let sec8Content = document.querySelector(".section_8-content");
 
 PeersReviews.forEach((item) => {
 
-    let peerBox = document.createElement('div');
-    peerBox.setAttribute('class', 'peer__box');
+  let peerBox = document.createElement('div');
+  peerBox.setAttribute('class', 'peer__box');
+  
+  let peerDetails = document.createElement("div");
+  peerDetails.setAttribute("class", "peer__details");
+  
+  let peerImage = document.createElement('img');
+  peerImage.setAttribute('src', item.image);
+  peerImage.setAttribute('alt', item.name);
+  
+  let peerData = document.createElement("div");
+  peerData.setAttribute("class", "peer__data");
+  
+  let peerName = document.createElement('p');
+  peerName.classList.add('peer__name');
+  peerName.textContent = item.name;
 
-    let peerDetails = document.createElement("div");
-    peerDetails.setAttribute("class", "peer__details");
-
-    let peerImage = document.createElement('img');
-    peerImage.setAttribute('src', item.image);
-    peerImage.setAttribute('alt', item.name);
-
-    let peerData = document.createElement("div");
-    peerData.setAttribute("class", "peer__data");
-
-    let peerName = document.createElement('p');
-    peerName.classList.add('peer__name');
-    peerName.textContent = item.name;
-
-    let peerPlacement = document.createElement("p");
-    peerPlacement.classList.add("peer__place");
-    peerPlacement.textContent = item.placement;
-
-    peerData.append(peerName, peerPlacement);
-
-    peerDetails.append(peerImage, peerData);
-
-    let peerDescription = document.createElement("div");
-    peerDescription.setAttribute("class", "peer__desc");
-
-    let desc = document.createElement('p');
-    desc.innerHTML = item.desc;
-
-    peerDescription.append(desc);
-    peerBox.append(peerDetails, peerDescription);
-
-    sec8Content.append(peerBox);
+  let peerPlacement = document.createElement("p");
+  peerPlacement.classList.add("peer__place");
+  peerPlacement.textContent = item.placement;
+  
+  peerData.append(peerName, peerPlacement);
+  
+  peerDetails.append(peerImage, peerData);
+  
+  let peerDescription = document.createElement("div");
+  peerDescription.setAttribute("class", "peer__desc");
+  
+  let desc = document.createElement('p');
+  desc.innerHTML = item.desc;
+  
+  peerDescription.append(desc);
+  peerBox.append(peerDetails, peerDescription);
+  
+  sec8Content.append(peerBox);
 })
 
 let allPeerBoxes = document.querySelectorAll(".peer__box");
 autoScroll(allPeerBoxes);
+
+// ************************** - SECTION 8 ENDS - *******************************
+
+// Reach Us Popup
+
+let reachUsPopup = document.querySelector(".reachus__box ");
+let reachUsPopupContent = document.querySelector(".reachus__content");
+
+let mainPage = document.querySelector(".home__main");
+let navbar = document.querySelector(".app__navbar");
+
+function managePopup(type) {
+  if (type === 'open') {
+    reachUsPopup.classList.add('active');
+    document.body.classList.add('body__popup');
+    mainPage.style.pointerEvents = 'none';
+    navbar.style.pointerEvents = 'none';
+  }
+  else {
+    reachUsPopup.classList.remove('active');
+    document.body.classList.remove('body__popup');
+    mainPage.style.pointerEvents = 'all';
+    navbar.style.pointerEvents = 'all';
+  }
+}
+
+let formName = document.querySelector('.reachus__name');
+let formEmail = document.querySelector('.reachus__email');
+let formMobile = document.querySelector('.reachus__mobile');
+let formCohort = document.querySelector('.reachus__option');
+
+function reachUs1Submit(e) {
+  e.preventDefault();
+  let name = formName.value;
+  let email = formEmail.value;
+  let phone = formMobile.value;
+  let cohort = formCohort.value;
+  console.log(name, email, phone, cohort);
+
+  let submitNotice = `
+    <h1>We will Reach you soon...</h1>
+  `
+  reachUsPopupContent.innerHTML = submitNotice;
+
+  setTimeout(() => {
+    window.location.reload();
+  }, 3000);
+
+}
+
+// Reach Us Popup
