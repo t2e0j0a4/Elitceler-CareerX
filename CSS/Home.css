@@ -1381,7 +1381,8 @@ body.body__popup {
 
 .reachus__content h1 {
     font-family: var(--font-poppins);
-    font-size: 28px;
+    font-size: 24px;
+    text-align: center;
     color: var(--primary);
 }
 
