@@ -38,7 +38,7 @@
     font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 22px;
     color: var(--white);
     cursor: pointer;
@@ -109,8 +109,8 @@ ion-icon[name='chevron-down'].active {
     font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 22px;
 
 }
 
@@ -123,7 +123,7 @@ ion-icon[name='chevron-down'].active {
     font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
     color: var(--white);
     border: 1px solid #FFFFFF;
@@ -257,6 +257,11 @@ ion-icon[name='chevron-down'].active {
 }
 
 @media all and (max-width : 470px) {
+    
+    .app__navbar {
+        padding: 0 1rem;
+    }
+    
     .cta__btn {
         display: none;
     }
@@ -270,7 +275,7 @@ ion-icon[name='chevron-down'].active {
         font-family: var(--font-poppins);
         font-style: normal;
         font-weight: 500;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 22px;
         color: var(--white);
         border: 1px solid #FFFFFF;
