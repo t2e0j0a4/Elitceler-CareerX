@@ -276,9 +276,34 @@
             <div class="cohort5__content fsd5__content">
               <div class="cohort5__data fsd5__data"></div>
               <div class="cohort5__downloadbtn fsd5__downloadbtn">
-                <button type="button">Download Full Brochure</button>
+                <button type="button" onclick="downloadPopup('open')">Download Full Brochure</button>
               </div>
             </div>
+
+            <!-- Download Brochure Popup Box -->
+
+              <div class="download__box">
+
+                <form onsubmit="fullStackBrochure(event)" class="download__form">
+                  
+                  <div class="download__heads">
+                    <p>Brochure</p>
+                    <button type="button" title="Close" onclick="downloadPopup('close')"><ion-icon name="close"></ion-icon></button>
+                  </div>
+                  
+                  <div class="download__content">
+                    <input required class="download__name" type="text" placeholder="Name*">
+                    <input required class="download__email" type="text" placeholder="Email*">
+                    <input required class="download__mobile" type="text" placeholder="Mobile Number*">
+                    <input readonly type="text" class="download_cohort" value="Full Stack" title="Cohort">
+                    <button type="submit">Download</button>
+                  </div>
+                  
+                </form>
+
+              </div>
+
+            <!-- Download Brochure Popup Box -->
 
           </section>
 

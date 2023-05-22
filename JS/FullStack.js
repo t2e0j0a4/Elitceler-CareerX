@@ -368,7 +368,7 @@ function courseExpand(currentList, currentToggle) {
     if (imges.dataset.token === currentToggle.dataset.token) {
       imges.classList.toggle("active");
       currentList.classList.toggle("active");
-    } 
+    }
     // else {
     //   imges.classList.remove("active");
     //   allListBoxes.forEach((answer) => {
@@ -378,8 +378,33 @@ function courseExpand(currentList, currentToggle) {
     //   });
     // }
   });
-
 }
+
+// Download Popup
+
+let downloadPopupBox = document.querySelector(".download__box ");
+let downloadPopupContent = document.querySelector(".download__content");
+
+let screenYLenght;
+
+function downloadPopup(type) {
+  if (type === 'open') {
+    downloadPopupBox.classList.add('active');
+    screenYLenght =  window.scrollY;
+
+    setInterval(() => {
+      if (window.scrollY > screenYLenght + 500 || window.scrollY < screenYLenght - 500) {
+        downloadPopupBox.classList.remove("active");
+      }
+    }, 100);
+
+  }
+  else {
+    downloadPopupBox.classList.remove('active');
+  }
+}
+
+// Download Popup
 
 // ************************** - SECTION 5 - *********************************
 

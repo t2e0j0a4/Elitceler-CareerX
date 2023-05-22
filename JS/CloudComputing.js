@@ -311,7 +311,7 @@ cloudComputingCourse.forEach((item) => {
   titleBox.append(courseTitle, toggle);
 
   let listBox = document.createElement("ul");
-  listBox.classList.add("cohort5__listbox", "fsd5__listbox");
+  listBox.classList.add("cohort5__listbox", "cc5__listbox");
   listBox.setAttribute("data-token", `list-${item.id}`);
 
   item.details.forEach((list) => {
@@ -351,6 +351,32 @@ function courseExpand(currentList, currentToggle) {
   });
 
 }
+
+// Download Popup
+
+let downloadPopupBox = document.querySelector(".download__box ");
+let downloadPopupContent = document.querySelector(".download__content");
+
+let screenYLenght;
+
+function downloadPopup(type) {
+  if (type === 'open') {
+    downloadPopupBox.classList.add('active');
+    screenYLenght =  window.scrollY;
+
+    setInterval(() => {
+      if (window.scrollY > screenYLenght + 500 || window.scrollY < screenYLenght - 500) {
+        downloadPopupBox.classList.remove("active");
+      }
+    }, 100);
+
+  }
+  else {
+    downloadPopupBox.classList.remove('active');
+  }
+}
+
+// Download Popup
 
 // ************************** - SECTION 5 - *********************************
 

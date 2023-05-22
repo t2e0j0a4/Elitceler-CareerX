@@ -1386,7 +1386,7 @@ body.body__popup {
     color: var(--primary);
 }
 
-.reachus__form > button:hover {
+.reachus__content button:hover {
     background-color: var(--primary);
 }
 
