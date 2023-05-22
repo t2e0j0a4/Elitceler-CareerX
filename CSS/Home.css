@@ -939,6 +939,10 @@
     .bar__links a {
         font-size: 17px;
     } 
+
+    .bottom__bar p span {
+        display: none;
+    }
 }
 
 @media all and (max-width : 400px) {
