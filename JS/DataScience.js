@@ -30,6 +30,26 @@ window.addEventListener("resize", (e) => {
 
 // ************************** - NAVBAR ENDS - *******************************
 
+// **************** Function for Auto Scroll **************
+
+function autoScroll(itemsContainer) {
+  itemsContainer.forEach((item) => {
+    item.addEventListener("mouseover", () => {
+      itemsContainer.forEach((item) => {
+        item.style.animationPlayState = "paused";
+      });
+    });
+
+    item.addEventListener("mouseleave", () => {
+      itemsContainer.forEach((item) => {
+        item.style.animationPlayState = "running";
+      });
+    });
+  });
+}
+
+// **************** Function for Auto Scroll **************
+
 let dataScienceIntro = [
   {
     id: 1,
@@ -181,6 +201,11 @@ dataScienceDetails.forEach((item) => {
 });
 
 // ************************** - SECTION 2 - *********************************
+
+let roadMapBoxes = document.querySelectorAll(".cohort3__content .roadmap__box");
+autoScroll(roadMapBoxes);
+
+// ************************** - SECTION 3 - *********************************
 
 let dataScienceTools = [
   {
@@ -369,6 +394,9 @@ dataScienceProjects.forEach((item) => {
   ds6Content.append(projectBox);
   
 })
+
+let projectBoxes = document.querySelectorAll(".cohort6__projectbox");
+autoScroll(projectBoxes);
 
 // ************************** - SECTION 6 - *********************************
 

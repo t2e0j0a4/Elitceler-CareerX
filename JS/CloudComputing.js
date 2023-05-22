@@ -30,6 +30,26 @@ window.addEventListener("resize", (e) => {
 
 // ************************** - NAVBAR ENDS - *******************************
 
+// **************** Function for Auto Scroll **************
+
+function autoScroll(itemsContainer) {
+  itemsContainer.forEach((item) => {
+    item.addEventListener("mouseover", () => {
+      itemsContainer.forEach((item) => {
+        item.style.animationPlayState = "paused";
+      });
+    });
+
+    item.addEventListener("mouseleave", () => {
+      itemsContainer.forEach((item) => {
+        item.style.animationPlayState = "running";
+      });
+    });
+  });
+}
+
+// **************** Function for Auto Scroll **************
+
 let dataScienceIntro = [
   {
     id: 1,
@@ -182,6 +202,11 @@ cloudComputingDetails.forEach((item) => {
 
 // ************************** - SECTION 2 - *********************************
 
+let roadMapBoxes = document.querySelectorAll(".cohort3__content .roadmap__box");
+autoScroll(roadMapBoxes);
+
+// ************************** - SECTION 3 - *********************************
+
 let dataScienceTools = [
   {
     id: 1,
@@ -332,23 +357,23 @@ function courseExpand(currentList, currentToggle) {
 let cloudComputingProjects = [
   {
     id: 1,
-    projectTitle: "Project",
-    projectImage: "../Assets/ProjectDummy.png",
+    projectTitle: "Netflix",
+    projectImage: "../Assets/CCProject1.svg",
   },
   {
     id: 2,
-    projectTitle: "Project",
-    projectImage: "../Assets/ProjectDummy.png",
+    projectTitle: "Gmail",
+    projectImage: "../Assets/CCProject2.png",
   },
   {
     id: 3,
-    projectTitle: "Project",
-    projectImage: "../Assets/ProjectDummy.png",
+    projectTitle: "Facebook",
+    projectImage: "../Assets/CCProject3.svg",
   },
   {
     id: 4,
-    projectTitle: "Project",
-    projectImage: "../Assets/ProjectDummy.png",
+    projectTitle: "Prime Video",
+    projectImage: "../Assets/CCProject4.svg",
   },
 ];
 
@@ -369,6 +394,9 @@ cloudComputingProjects.forEach((item) => {
   cc6Content.append(projectBox);
   
 })
+
+let projectBoxes = document.querySelectorAll(".cohort6__projectbox");
+autoScroll(projectBoxes);
 
 // ************************** - SECTION 6 - *********************************
 

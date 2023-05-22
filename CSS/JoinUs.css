@@ -51,7 +51,7 @@
 }
 
 .section1__side1 h1 {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 900;
     font-size: 40px;
@@ -64,7 +64,7 @@
 }
 
 .section1__side1 p {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -73,7 +73,7 @@
 }
 
 .section1__side1 button {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -126,7 +126,7 @@
 .section__heads .head__title {
     position: absolute;
     left: 30px;
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 1000;
     font-size: 2rem;
@@ -212,7 +212,7 @@
 
 .webinar__box .webinar__side1 p {
     text-align: center;
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -232,7 +232,7 @@
 }
 
 .webinar__box .webinar__side2 p {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -245,7 +245,7 @@
     width: fit-content;
     border: 1.2px solid #121212;
     border-radius: 9px;
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -293,8 +293,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
+    overflow-x: hidden;
     justify-content: flex-start;
     align-items: center;
     gap: 1.6rem;
@@ -319,7 +318,7 @@
 }
 
 .item__box .item__title {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -328,7 +327,7 @@
 }
 
 .item__box .item__desc {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -358,8 +357,8 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
+    /* overflow-x: scroll; */
+    overflow-x: hidden;
     justify-content: flex-start;
     align-items: center;
     gap: 1.6rem;
@@ -369,7 +368,7 @@
 .peer__box {
     flex: 0 0 auto;
     width: 380px;
-    height: 240px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -381,6 +380,19 @@
     border: 1px solid #FFFFFF;
     box-shadow: 0px 0px 10px #FFFFFF;
     border-radius: 20px;
+
+    animation: movingPeers 12s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes movingPeers {
+    0% {
+        transform: translateX(50%);
+    }
+
+    100% {
+        transform: translateX(-1100%);
+    }
 }
 
 .peer__box .peer__details {
@@ -408,7 +420,7 @@
 }
 
 .peer__data .peer__name {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -417,7 +429,7 @@
 }
 
 .peer__data .peer__place {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: italic;
     font-weight: 400;
     font-size: 16px;
@@ -430,14 +442,14 @@
 }
 
 .peer__desc p {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     color: #636363;
 }
 
-.section5__content::-webkit-scrollbar {
+/* .section5__content::-webkit-scrollbar {
     height: 10px;
 }
 
@@ -450,7 +462,7 @@
 .section5__content::-webkit-scrollbar-thumb {
     background-color: var(--primary);
     border-radius: 4px;
-}
+} */
 
 /* Section 5 : Our Club Members are Saying */
 
@@ -462,19 +474,22 @@
 
 @media all and (max-width : 1236px) {
 
-    .section34__content::-webkit-scrollbar {
-        height: 10px;
+    .section3__content .item__box {
+        animation: movingBoxes 10s linear infinite;
     }
 
-    .section34__content::-webkit-scrollbar-track {
-        background-color: #232323;
-        border-radius: 4px;
-        box-shadow: 0 0 4px #fff;
+    .section4__content .item__box {
+        animation: movingBoxes 10s linear infinite;
     }
-    
-    .section34__content::-webkit-scrollbar-thumb {
-        background-color: var(--primary);
-        border-radius: 4px;
+
+    @keyframes movingBoxes {
+        0% {
+            transform: translateX(50%);
+        }
+        
+        100% {
+            transform: translateX(-500%);
+        }
     }
 
 }
@@ -516,6 +531,15 @@
 }
 
 @media all and (max-width : 800px) {
+
+    .section34__content {
+        overflow-x: scroll;
+    }
+
+    .section34__content .item__box {
+        animation: none;
+    }
+
     .section34__content::-webkit-scrollbar, .section5__content::-webkit-scrollbar {
         height: 0px;
     }

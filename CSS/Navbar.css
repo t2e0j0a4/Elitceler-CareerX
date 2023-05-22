@@ -12,6 +12,9 @@
     align-items: center;
     gap: 1rem;
     padding: 0 2rem;
+
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .navbar__logo {
@@ -32,7 +35,7 @@
 }
 
 .list__item {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -103,7 +106,7 @@ ion-icon[name='chevron-down'].active {
 
 .navbar__dropdown li a {
     
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -117,7 +120,7 @@ ion-icon[name='chevron-down'].active {
 
 .cta__btn a {
     
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -264,7 +267,7 @@ ion-icon[name='chevron-down'].active {
 
     .cta__btn-sm a {
         
-        font-family: var(--font-lato);
+        font-family: var(--font-poppins);
         font-style: normal;
         font-weight: 500;
         font-size: 18px;

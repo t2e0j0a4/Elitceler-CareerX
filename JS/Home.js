@@ -52,22 +52,7 @@ let webinars = [
         image : "../Assets/HomeWebinar1.png",
         desc : "Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.",
         link : "#"
-    },
-    {
-        id : 3,
-        webinar : "Name of Webinar",
-        image : "../Assets/HomeWebinar2.png",
-        desc : "Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.",
-        link : "#"
-    },
-    {
-        id : 4,
-        webinar : "Name of Webinar",
-        image : "../Assets/HomeWebinar1.png",
-        desc : "Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.",
-        link : "#"
-    },
-    
+    }
 ]
 
 let sec3Content = document.querySelector(".webinars__data");

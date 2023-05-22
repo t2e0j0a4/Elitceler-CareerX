@@ -44,3 +44,9 @@ a {
 li {
     list-style-type: none;
 }
+
+@media all and (max-width : 600px) {
+    * {
+        cursor: default;
+    }
+}

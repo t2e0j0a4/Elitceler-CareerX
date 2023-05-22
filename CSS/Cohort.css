@@ -32,7 +32,7 @@
 .section__heads .head__title {
     position: absolute;
     left: 30px;
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 1000;
     font-size: 1.7rem;
@@ -69,7 +69,7 @@
 /* Section 1 : Intro */
 
 .cohorts__section1 {
-    width: 1164px;
+    width: 1170px;
     max-width: 96%;
     height: 100%;
     margin: auto;
@@ -182,10 +182,10 @@
 }
 
 .slide1__side1 h1 {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 500;
-    font-size: 40px;
+    font-size: 36px;
     line-height: 48px;
     color: #FFFFFF;
 }
@@ -195,7 +195,7 @@
 }
 
 .slide1__side1 p {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -240,7 +240,7 @@
 }
 
 .link__content span {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 500;
     margin-top: 1rem;
@@ -291,7 +291,7 @@
 }
 
 .slide2__introbox p:nth-child(2){
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -301,7 +301,7 @@
 }
 
 .slide2__introbox p:nth-child(3){
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -336,7 +336,7 @@
 }
 
 .slide3__side1 p:nth-child(2) {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -346,7 +346,7 @@
 }
 
 .slide3__side1 p:nth-child(3) {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 600;
     text-align: center;
@@ -366,7 +366,7 @@
 }
 
 .slide3__side2 h1 {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 500;
     font-size: 2rem;
@@ -379,7 +379,7 @@
 }
 
 .slide3__side2 p {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
@@ -483,7 +483,7 @@
     }
 
     .slide1__side1 h1 {
-        font-size: 32px;
+        font-size: 31px;
     }
 
     .slide1__side1 p {
@@ -508,7 +508,7 @@
     }
 
     .slide1__side1 h1 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .slide1__side1 p {
@@ -553,10 +553,10 @@
     width: 97%;
     max-width: 100%;
     margin: auto;
-    height: 420px;
+    height: 450px;
     /* background: #FFFFFF; */
     border: 3px solid #FFFFFF;
-    /* box-shadow: 0px 0px 10px #FFFFFF, 0px 0px 10px #FFFFFF; */
+    box-shadow: 0px 0px 10px #FFFFFF, 0px 0px 10px #FFFFFF;
     border-radius: 12px;
     padding: 2rem 0.8rem;
     display: flex;
@@ -575,7 +575,6 @@
 }
 
 .cohort2__side1 img {
-    width: 320px;
     border-radius: 9px;
 }
 
@@ -599,12 +598,12 @@
     padding: 0.8rem;
     gap: 0.8rem;
     background: #FFFFFF;
-    border: 1px solid #939393;
+    border: 2px solid #939393;
     border-radius: 13px;
 }
 
 .cohort2__whytitle {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -613,7 +612,7 @@
 }
 
 .cohort2__whydesc {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -621,7 +620,7 @@
     color: #636363;
 }
 
-@media all and (max-width : 1044px) {
+@media all and (max-width : 1056px) {
 
     .cohorts__section2 .cohort2__content {
         display: flex;
@@ -633,6 +632,7 @@
 
     .cohort2__content .cohort2__side1 {
         flex: 0.9;
+        display: none;
     }
 
     .cohort2__side1 img {
@@ -641,9 +641,15 @@
         object-fit: cover;
     }
 
+    .cohort2__content .cohort2__side2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
     .cohort2__side2 .cohort2__whybox {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 160px;
     }
 }
 
@@ -675,7 +681,10 @@
         height: 150px;
         flex: 0 0 auto;
         justify-content: flex-start;
-        margin: 1rem auto;
+    }
+
+    .cohorts__section2 .cohort2__content {
+        background-color: #fff;
     }
 }
 
@@ -705,8 +714,9 @@
 }
 
 @media all and (max-width : 360px) {
-    .cohort2__side1 img {
-        height: 220px;
+
+    .cohorts__section2 .cohort2__content {
+        background-color: transparent;
     }
 
     .cohort2__content .cohort2__side2 {
@@ -715,9 +725,10 @@
     }
 
     .cohort2__side2 .cohort2__whybox {
-        width: 240px;
-        height: 100%;
-        padding: 1rem 0.8rem;
+        width: 220px;
+        height: 220px;
+        padding: 1rem;
+        gap: 0.4rem;
     }
 
     .cohorts__section2 .cohort2__content {
@@ -760,7 +771,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 1.6rem;
-    overflow-x: scroll;
+    overflow-x: hidden;
     padding: 0 10px;
     position: relative;
 }
@@ -789,7 +800,7 @@
 }
 
 .roadmap__box p {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -805,32 +816,42 @@
     background-color: #fff;
 }
 
-@media all and (min-width : 1206px) {
-    .cohort3__content::-webkit-scrollbar {
-        height: 0;
-    }
+.cohort3__content::-webkit-scrollbar {
+    height: 0;
 }
 
 @media all and (max-width : 1205px) {
-    .cohort3__content::-webkit-scrollbar {
-        height: 10px;
+    .cohort3__content .roadmap__box {
+        animation: moveRoadMap 8s linear infinite;
+    }
+    
+    .back__line {
+        display: none;
     }
 
-    .cohort3__content::-webkit-scrollbar-track {
-        background-color: #121212;
-        box-shadow: 0 0 2px #fff;
-        border-radius: 4px;
-    }
+    @keyframes moveRoadMap {
+        0% {
+            transform: translateX(50%);
+        }
 
-    .cohort3__content::-webkit-scrollbar-thumb {
-        background-color: #fff;
-        border-radius: 4px;
+        100% {
+            transform: translateX(-500%);
+        }
     }
 }
 
 @media all and (max-width : 700px) {
-    .cohort3__content::-webkit-scrollbar {
-        height: 0;
+
+    .back__line {
+        display: block;
+    }
+
+    .cohort3__content {
+        overflow-x: scroll;
+    }
+
+    .cohort3__content .roadmap__box {
+        animation: none;
     }
 }
 
@@ -895,7 +916,7 @@
 }
 
 .cohort4__toolbox p {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -1014,7 +1035,7 @@
 }
 
 .cohort5__titlebox p {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -1053,7 +1074,7 @@
 }
 
 .cohort5__listbox li {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     list-style-type: disc;
     font-weight: 400;
@@ -1075,7 +1096,7 @@
     background-color: #121212;
     padding: 0.8rem 2rem;
     border-radius: 9px;
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -1131,7 +1152,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 1.6rem;
-    overflow-x: scroll;
+    overflow-x: hidden;
     padding: 0 10px;
 }
 
@@ -1158,7 +1179,7 @@
 }
 
 .cohort6__projectbox p {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -1167,32 +1188,42 @@
     color: #121212;
 }
 
-@media all and (min-width : 1140px) {
-    .cohort6__content::-webkit-scrollbar {
-        height: 0;
-    }
+.cohort6__content::-webkit-scrollbar {
+    height: 0;
 }
 
 @media all and (max-width : 1140px) {
-    .cohort6__content::-webkit-scrollbar {
-        height: 10px;
+    .cohort6__projectbox {
+        animation: moveProjects 8s linear infinite;
     }
 
-    .cohort6__content::-webkit-scrollbar-track {
-        background-color: #121212;
-        box-shadow: 0 0 2px #fff;
-        border-radius: 4px;
+    @keyframes moveProjects {
+    0% {
+        transform: translateX(50%);
     }
 
-    .cohort6__content::-webkit-scrollbar-thumb {
-        background-color: #fff;
-        border-radius: 4px;
+    100% {
+        transform: translateX(-500%);
     }
 }
 
+}
+
 @media all and (max-width : 700px) {
-    .cohort6__content::-webkit-scrollbar {
-        height: 0;
+    
+    .cohort6__content {
+        overflow-x: scroll;
+    }
+
+    .cohort6__projectbox {
+        animation: none;
+    }
+
+}
+
+@media all and (max-width : 500px) {
+    .cohort6__projectbox {
+        width: 220px;
     }
 }
 
@@ -1237,10 +1268,10 @@
     }
 
     .cohort7__content::-webkit-scrollbar {
-        height: 10px;
+        height: 0px;
     }
 
-    .cohort7__content::-webkit-scrollbar-track {
+    /*.cohort7__content::-webkit-scrollbar-track {
         background-color: #121212;
         box-shadow: 0 0 2px #fff;
         border-radius: 4px;
@@ -1249,7 +1280,7 @@
     .cohort7__content::-webkit-scrollbar-thumb {
         background-color: #fff;
         border-radius: 4px;
-    }
+    } */
 }
 
 @media all and (max-width : 800px) {
@@ -1282,7 +1313,7 @@
 .cohort7__feebox p {
     width: 100%;
     text-align: center;
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -1301,7 +1332,7 @@
 }
 
 .cohort7__feebox ul li {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -1345,7 +1376,7 @@
 }
 
 .popup__heading p {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
@@ -1439,7 +1470,7 @@
 }
 
 .popup__emibox > p {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -1465,7 +1496,7 @@
 }
 
 .popup__emitype p:nth-child(1) {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -1474,7 +1505,7 @@
 }
 
 .popup__emitype p:nth-child(2) {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -1573,7 +1604,7 @@
 }
 
 .cohort8__mentorname {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -1583,7 +1614,7 @@
 }
 
 .cohort8__mentordesc {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -1645,7 +1676,7 @@
 }
 
 .cohort9__content img {
-    width: 100%;
+    width: 80%;
     object-fit: contain;
 }
 
@@ -1654,12 +1685,22 @@
         font-size: 18px;
         line-height: 26px;
     }
+
+    .cohort9__content img {
+        width: 90%;
+        object-fit: contain;
+    }
 }
 
 @media all and (max-width : 500px) {
     .cohort9__content p {
         font-size: 16px;
         line-height: 24px;
+    }
+
+    .cohort9__content img {
+        width: 100%;
+        object-fit: contain;
     }
 }
 
@@ -1720,7 +1761,7 @@
 }
 
 .cohort10__questionbox p {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -1758,7 +1799,7 @@
 }
 
 .cohort10__answerbox p {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -1822,7 +1863,7 @@
 }
 
 .bar__side1 p {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -1831,7 +1872,7 @@
 }
 
 .bar__side1 a , .bar__side2 a {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -1849,7 +1890,7 @@
 }
 
 .bar__side2 button {
-    font-family: var(--font-lato);
+    font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -1868,7 +1909,7 @@
     color: #25D366;
 }
 
-@media all and (max-width : 560px) {
+@media all and (max-width : 600px) {
     .bar__side1 {
         display: none;
     }

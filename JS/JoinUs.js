@@ -30,6 +30,28 @@ window.addEventListener("resize", (e) => {
 
 // ************************** - NAVBAR ENDS - *******************************
 
+
+// **************** Function for Auto Scroll **************
+
+function autoScroll(itemsContainer) {
+  itemsContainer.forEach((item) => {
+    item.addEventListener("mouseover", () => {
+      itemsContainer.forEach((item) => {
+        item.style.animationPlayState = "paused";
+      });
+    });
+
+    item.addEventListener("mouseleave", () => {
+      itemsContainer.forEach((item) => {
+        item.style.animationPlayState = "running";
+      });
+    });
+  });
+}
+
+// **************** Function for Auto Scroll **************
+
+
 let webinars = [
     {
         id : 0,
@@ -222,7 +244,12 @@ meetups.forEach((item) => {
   sec4Content.append(itemBox);
 });
 
-// ************************** - SECTION 3 & 4 ENDS - *******************************
+let item3Boxes = document.querySelectorAll('.section3__content .item__box');
+let item4Boxes = document.querySelectorAll('.section4__content .item__box');
+autoScroll(item3Boxes);
+autoScroll(item4Boxes);
+
+// *************** - SECTION 3 & 4 ENDS - *****************
 
 
 let PeersReviews = [
@@ -330,3 +357,8 @@ PeersReviews.forEach((item) => {
 
   sec5Content.append(peerBox);
 });
+
+let peerBoxes = document.querySelectorAll('.peer__box');
+autoScroll(peerBoxes);
+
+// ************************* Section 5 **************************
