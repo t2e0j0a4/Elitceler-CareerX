@@ -452,7 +452,7 @@
     align-items: flex-start;
     padding: 0 10px;
     gap: 2rem;
-    overflow-x: scroll;
+    overflow-x: hidden;
     background: linear-gradient(180deg, rgba(0, 58, 112, 0) 0%, rgba(0, 58, 112, 0.450959) 46.67%, #121212 100%);
 }
 
@@ -465,6 +465,18 @@
     align-items: flex-start;
     gap: 1rem;
     margin: 1.4rem auto;
+
+    animation: moveFeaturedBoxes 14s linear infinite;
+}
+
+@keyframes moveFeaturedBoxes {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-800%);
+    }
 }
 
 .section_4-data img {
@@ -673,7 +685,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    overflow-x: scroll;
+    overflow-x: hidden;
     gap: 2rem;
     padding: 0 10px;
 }
@@ -693,6 +705,18 @@
     border: 1px solid #FFFFFF;
     box-shadow: 0px 0px 10px #FFFFFF;
     border-radius: 20px;
+
+    animation: moveHRBoxes 12s linear infinite;
+}
+
+@keyframes moveHRBoxes {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-700%);
+    }
 }
 
 .hr__box .hr__details {
@@ -752,7 +776,7 @@
     color: #636363;
 }
 
-.section_7-content::-webkit-scrollbar , .section_8-content::-webkit-scrollbar , .section_4-content::-webkit-scrollbar {
+/* .section_7-content::-webkit-scrollbar , .section_8-content::-webkit-scrollbar , .section_4-content::-webkit-scrollbar {
     height: 10px;
 }
 
@@ -765,7 +789,7 @@
 .section_7-content::-webkit-scrollbar-thumb, .section_8-content::-webkit-scrollbar-thumb, .section_4-content::-webkit-scrollbar-thumb {
     background-color: var(--primary);
     border-radius: 4px;
-}
+} */
 
 /* Section 7 : The HR's Saying */
 
@@ -786,6 +810,18 @@
     border: 1px solid #FFFFFF;
     box-shadow: 0px 0px 10px #FFFFFF;
     border-radius: 20px;
+
+    animation: movePeerBoxes 10s linear infinite;
+}
+
+@keyframes movePeerBoxes {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-1000%);
+    }
 }
 
 .peer__box .peer__details {
@@ -971,7 +1007,20 @@
 }
 
 @media all and (max-width : 800px) {
-    .section_5-content::-webkit-scrollbar, .section_7-content::-webkit-scrollbar, .section_8-content::-webkit-scrollbar, .section_4-content::-webkit-scrollbar {
+
+    .section_7-content, .section_8-content {
+        overflow-x: scroll;
+    }
+
+    .hr__box {
+        animation: none;
+    }
+
+    .peer__box {
+        animation: none;
+    }
+
+    .section_5-content::-webkit-scrollbar, .section_7-content::-webkit-scrollbar, .section_8-content::-webkit-scrollbar {
         height: 0px;
     }
 }
@@ -1075,6 +1124,10 @@
 
     .stats .stat__name {
         font-size: 18px;
+    }
+
+    .peer__desc p {
+        font-size: 13px;
     }
 }
 

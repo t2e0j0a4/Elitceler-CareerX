@@ -31,6 +31,26 @@ window.addEventListener('resize', (e) => {
 
 // ************************** - NAVBAR ENDS - *******************************
 
+// **************** Function for Auto Scroll **************
+
+function autoScroll(itemsContainer) {
+  itemsContainer.forEach((item) => {
+    item.addEventListener("mouseover", () => {
+      itemsContainer.forEach((item) => {
+        item.style.animationPlayState = "paused";
+      });
+    });
+
+    item.addEventListener("mouseleave", () => {
+      itemsContainer.forEach((item) => {
+        item.style.animationPlayState = "running";
+      });
+    });
+  });
+}
+
+// **************** Function for Auto Scroll **************
+
 let webinars = [
     {
         id : 0,
@@ -145,7 +165,7 @@ function moreWebinars(type) {
 
 }
 
-// ************************** - SECTION 3 ENDS - *******************************
+// *********************** - SECTION 3 ENDS - ********************
 
 const featuredData = [
   {
@@ -222,7 +242,10 @@ featuredData.forEach((item) => {
     sec4Content.append(itemBox);
 })
 
-// ************************** - SECTION 4 ENDS - *******************************
+let section4Boxes = document.querySelectorAll(".section_4-data");
+autoScroll(section4Boxes);
+
+// ******************** - SECTION 4 ENDS - *****************
 
 let cohortsData = [
     {
@@ -386,6 +409,9 @@ HRReviews.forEach((item) => {
     sec7Content.append(hrBox);
 })
 
+let allHRBoxes = document.querySelectorAll('.hr__box');
+autoScroll(allHRBoxes); 
+
 // ************************** - SECTION 7 ENDS - *******************************
 
 let PeersReviews = [
@@ -494,3 +520,6 @@ PeersReviews.forEach((item) => {
 
     sec8Content.append(peerBox);
 })
+
+let allPeerBoxes = document.querySelectorAll(".peer__box");
+autoScroll(allPeerBoxes);
