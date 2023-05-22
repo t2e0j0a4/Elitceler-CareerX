@@ -623,7 +623,7 @@
 @media all and  (max-width : 350px) {
 
     .peer__box {
-        width: 260px;
+        width: 300px;
     }
 
     .peer__box .peer__details .peer__data .peer__name {
