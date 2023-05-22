@@ -62,6 +62,14 @@
     .cohorts__section6 .section__heads .head__title {
         font-size: 1.4rem;
     }
+
+    .cc__section2 .section__heads .head__title {
+        font-size: 1.2rem;
+    }
+
+    .cohorts__section3 .section__heads .head__title, .cohorts__section4 .section__heads .head__title, .cohorts__section5 .section__heads .head__title, .cohorts__section6 .section__heads .head__title, .cohorts__section7 .section__heads .head__title, .cohorts__section8 .section__heads .head__title, .cohorts__section9 .section__heads .head__title {
+        font-size: 1.4rem;
+    }
 }
 
 /* Section Heads */
@@ -857,7 +865,7 @@
 
 @media all and (max-width : 400px) {
     .cohorts__section3 .section__heads .head__title {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }
 
