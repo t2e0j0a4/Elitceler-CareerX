@@ -357,10 +357,9 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    /* overflow-x: scroll; */
     overflow-x: hidden;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     gap: 1.6rem;
     padding: 1.2rem 0.4rem;
 }
@@ -387,7 +386,7 @@
 
 @keyframes movingPeers {
     0% {
-        transform: translateX(50%);
+        transform: translateX(150%);
     }
 
     100% {
@@ -532,11 +531,11 @@
 
 @media all and (max-width : 800px) {
 
-    .section34__content {
+    .section34__content , .section5__content {
         overflow-x: scroll;
     }
 
-    .section34__content .item__box {
+    .section34__content .item__box , .peer__box {
         animation: none;
     }
 
@@ -615,15 +614,17 @@
 @media all and  (max-width : 400px) {
     
     .peer__box {
-        width: 320px;
+        width: 350px;
         height: 100%;
+        justify-content: flex-start;
     }
 }
 
 @media all and  (max-width : 350px) {
 
     .peer__box {
-        width: 300px;
+        width: 320px;
+        height: 350px;
     }
 
     .peer__box .peer__details .peer__data .peer__name {

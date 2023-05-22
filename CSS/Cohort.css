@@ -1012,9 +1012,30 @@
     gap: 1rem;
 }
 
-@media all and (max-width : 600px) {
+@media all and (max-width : 1035px) {
+    .cohort5__data {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cohort5__coursebox {
+        width: 70%;
+    }
+}
+
+@media all and (max-width : 680px) {
+    .cohort5__coursebox {
+        width: 80%;
+    }
+}
+
+@media all and (max-width : 400px) {
     .cohort5__coursebox {
         width: 100%;
+    }
+
+    .cohort5__listbox li {
+        font-size: 16px;
     }
 }
 
@@ -1079,7 +1100,7 @@
     justify-content: center;
     align-items: flex-start;
     gap: 0.4rem;
-    padding: 0.6rem 0.4rem;
+    padding: 1rem 1rem 1rem 2rem;
     box-shadow: 0 0 8px #fff;
 }
 
@@ -1087,14 +1108,10 @@
     font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    list-style-type: square;
+    font-size: 17px;
     width: 100%;
     text-align: left;
-    color: #121212;
-}
-
-.cohort5__listbox li::before {
-    content: "⁍ ";
     color: #121212;
 }
 

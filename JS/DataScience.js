@@ -310,7 +310,7 @@ dataScienceCourse.forEach((item) => {
   
   titleBox.append(courseTitle, toggle);
 
-  let listBox = document.createElement("ul");
+  let listBox = document.createElement("ol");
   listBox.classList.add("cohort5__listbox", "ds5__listbox");
   listBox.setAttribute("data-token", `list-${item.id}`);
 
