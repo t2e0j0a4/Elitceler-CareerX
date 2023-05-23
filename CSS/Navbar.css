@@ -18,7 +18,7 @@
 }
 
 .navbar__logo {
-    width: 135px;
+    width: 200px;
 }
 
 .navbar__logo img {
@@ -262,6 +262,10 @@ ion-icon[name='chevron-down'].active {
         padding: 0 1rem;
     }
     
+    .navbar__logo {
+        width: 150px;
+    }
+
     .cta__btn {
         display: none;
     }
