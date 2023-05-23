@@ -2036,7 +2036,21 @@
     gap: 1rem;
 }
 
-.download__content input , .download__content select {
+.download__details {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media all and (max-width : 800px) {
+    .download__details {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.download__content input , .download__content select , .download__details input {
     width: 100%;
     padding: 8px 10px;
     font-family: var(--font-poppins);

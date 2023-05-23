@@ -123,8 +123,8 @@ ion-icon[name='chevron-down'].active {
     font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 15px;
+    line-height: 20px;
     color: var(--white);
     border: 1px solid #FFFFFF;
     border-radius: 9px;
@@ -256,7 +256,7 @@ ion-icon[name='chevron-down'].active {
     }
 }
 
-@media all and (max-width : 470px) {
+@media all and (max-width : 500px) {
     
     .app__navbar {
         padding: 0 1rem;

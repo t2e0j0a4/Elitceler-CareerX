@@ -1299,7 +1299,7 @@
     z-index: 99;
     top: 12%;
     left: 50%;
-    transform: translateX(-52%);
+    transform: translateX(-50%);
 }
 
 body.body__popup {
@@ -1309,8 +1309,8 @@ body.body__popup {
 
 .reachus__form  {
     width: 100%;
-    box-shadow: 9px 9px #fff;
-    outline: 2px solid #121212;
+    /* box-shadow: 9px 9px #fff;
+    outline: 2px solid #121212; */
     max-width: 100%;
     display: flex;
     margin: auto;
@@ -1369,7 +1369,21 @@ body.body__popup {
     gap: 1rem;
 }
 
-.reachus__content input , .reachus__content select {
+.reachus__details {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media all and (max-width : 800px) {
+    .reachus__details {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.reachus__content input , .reachus__content select , .reachus__details input {
     width: 100%;
     padding: 8px 10px;
     font-family: var(--font-poppins);
