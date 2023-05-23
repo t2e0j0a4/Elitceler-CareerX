@@ -30,7 +30,7 @@
     display: flex;
     justify-content: end;
     align-items: center;
-    gap: 4rem;
+    gap: 3.4rem;
     flex: 0.8;
 }
 
@@ -134,7 +134,7 @@ ion-icon[name='chevron-down'].active {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 13px 16px;
+    padding: 12px 12px;
     cursor: pointer;
 }
 
@@ -152,7 +152,7 @@ ion-icon[name='chevron-down'].active {
 @media all and (max-width : 850px) {
     .navbar__list {
         display: flex;
-        gap: 2.5rem;
+        gap: 2.4rem;
     }
 }
 
