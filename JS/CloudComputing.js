@@ -354,6 +354,21 @@ function courseExpand(currentList, currentToggle) {
 
 // Download Popup
 
+let API = "https://api-in21.leadsquared.com/v2/LeadManagement.svc/Lead.Capture?accessKey=u$rbb01343610153d72739e7fe9984d4a34&secretKey=8361119156fef165d1ebe571c9d1f42dc894eac7";
+
+async function sendUserData(data) {
+  const response = await fetch(API, {
+    method: "POST",
+    cache: "no-cache",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+
+  return response.json();
+}
+
 let downloadPopupBox = document.querySelector(".download__box ");
 let downloadPopupContent = document.querySelector(".download__content");
 
@@ -374,6 +389,56 @@ function downloadPopup(type) {
   else {
     downloadPopupBox.classList.remove('active');
   }
+}
+
+let formName = document.querySelector(".download__name");
+let formEmail = document.querySelector(".download__email");
+let formMobile = document.querySelector(".download__mobile");
+let formCity = document.querySelector(".download__city");
+let formCohort = document.querySelector(".download__cohort");
+
+function fullStackBrochure(e) {
+  e.preventDefault();
+
+  let newRequest = [
+    {
+      Attribute: formName.name,
+      Value: formName.value,
+    },
+    {
+      Attribute: formEmail.name,
+      Value: formEmail.value,
+    },
+    {
+      Attribute: formMobile.name,
+      Value: formMobile.value,
+    },
+    {
+      Attribute: formCohort.name,
+      Value: formCohort.value,
+    },
+    {
+      Attribute: formCity.name,
+      Value: formCity.value,
+    },
+    {
+      Attribute: "Source",
+      Value: "Website",
+    },
+  ];
+
+  sendUserData(newRequest);
+
+  let submitNotice = `<h1>Download Starts Soon...</h1>`;
+  
+  downloadPopupContent.innerHTML = submitNotice;
+
+  
+  setTimeout(() => {
+    window.location.reload();
+  }, 3000);
+  
+  window.location.href = '../Assets/CareerX Cloud Computing Brochure.pdf';
 }
 
 // Download Popup
@@ -743,8 +808,8 @@ cloudComputingQueries.forEach((item) => {
   let answer = document.createElement("p");
   answer.innerHTML = item.answer;
 
-  toggle.addEventListener("click", function () {
-    showTheAnswer(answerBox, this);
+  questionBox.addEventListener("click", function () {
+    showTheAnswer(answerBox, toggle);
   });
 
   answerBox.append(answer);

@@ -552,15 +552,54 @@ function managePopup(type) {
 let formName = document.querySelector('.reachus__name');
 let formEmail = document.querySelector('.reachus__email');
 let formMobile = document.querySelector('.reachus__mobile');
+let formCity = document.querySelector('.reachus__city');
 let formCohort = document.querySelector('.reachus__option');
+
+let API = "https://api-in21.leadsquared.com/v2/LeadManagement.svc/Lead.Capture?accessKey=u$rbb01343610153d72739e7fe9984d4a34&secretKey=8361119156fef165d1ebe571c9d1f42dc894eac7";
+
+async function sendUserData(data) {
+  const response = await fetch(API, {
+    method: "POST",
+    cache: "no-cache",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+  return response.json();
+}
 
 function reachUs1Submit(e) {
   e.preventDefault();
-  let name = formName.value;
-  let email = formEmail.value;
-  let phone = formMobile.value;
-  let cohort = formCohort.value;
-  console.log(name, email, phone, cohort);
+
+  let newRequest = [
+    {
+      Attribute: formName.name,
+      Value: formName.value,
+    },
+    {
+      Attribute: formEmail.name,
+      Value: formEmail.value,
+    },
+    {
+      Attribute: formMobile.name,
+      Value : formMobile.value,
+    },
+    {
+      Attribute: formCohort.name,
+      Value: formCohort.value,
+    },
+    {
+      Attribute: formCity.name,
+      Value: formCity.value,
+    },
+    {
+      Attribute: "Source",
+      Value: "Website",
+    }
+  ];
+
+  sendUserData(newRequest);
 
   let submitNotice = `
     <h1>We will Reach you soon...</h1>
