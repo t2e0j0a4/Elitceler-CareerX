@@ -1822,13 +1822,17 @@
     width: 100%;
     height: 0;
     overflow-y: hidden;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s linear;
 }
 
 .cohort10__answerbox.active {
     height: 100%;
     overflow-y: auto;
     margin: 1rem auto;
+}
+
+.cohort10__answerbox::-webkit-scrollbar {
+    width: 0px;
 }
 
 .cohort10__answerbox p {
