@@ -1,0 +1,83 @@
+@import "./styles.css";
+
+.extras__main {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    background-color: #121212;
+}
+
+.main__center {
+    width: 1200px;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    background-color: #121212;
+    padding: 1rem 0.6rem;
+}
+
+/* extras Policy */
+
+.extras__head {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 1rem 0 2rem 0;
+    padding: 1rem 0;
+}
+
+.extras__head h1 {
+    font-family: var(--font-poppins);
+    color: #fff;
+    font-weight: 900;
+    font-size: 40px;
+    text-align: left;
+}
+
+.extras__content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.extras__content h2 {
+    font-family: var(--font-poppins);
+    color: #fff;
+    font-weight: 400;
+    font-size: 36px;
+    text-align: left;
+    margin: 1.6rem 0;
+}
+
+.extras__content p {
+    font-family: var(--font-poppins);
+    color: #fff;
+    font-weight: 100;
+    font-size: 18px;
+    text-align: left;
+    margin: 0.8rem 0;
+}
+
+.extras__content p a {
+    text-decoration: underline;
+    color: var(--primary);
+}
+
+@media all and (max-width : 600px) {
+    .extras__head h1 {
+        font-size: 36px;
+    }
+
+    .extras__content h2 {
+        font-size: 32px;
+    }
+
+    .extras__content p {
+        font-size: 16px;
+    }
+
+}
+
+/* extras Policy */
