@@ -313,7 +313,7 @@ cohortsData.forEach((item) => {
             
             let notRatedStar = document.createElement("img");
             notRatedStar.setAttribute("src", "../Assets/NotRatedStar.png");
-            notratedStar.setAttribute("alt", 'NotRated');
+            notRatedStar.setAttribute("alt", 'NotRated');
             cohortRating.append(notRatedStar);
         }
     }
