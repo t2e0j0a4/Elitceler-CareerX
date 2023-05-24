@@ -82,11 +82,13 @@
         font-size: 1.4rem;
         height: 44px;
         font-weight: 700;
+        text-align: center;
         line-height: normal;
     }
 
     .section_1-side1 p {
         width: 100%;
+        text-align: center;
         font-weight: 300 !important;
         font-size: 14px !important;
         line-height: 24px !important;
