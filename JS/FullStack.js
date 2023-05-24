@@ -104,9 +104,9 @@ let initialValue = 1;
 let scrollInt;
 
 let fsd1IntroSlider = document.querySelectorAll(".cohort1__slide");
+let fsd1OuterSlider = document.querySelector(".cohort1__slides");
 
 function moveIntroSec(type) {
-
   if (type === 'next') {
     clearInterval(scrollInt);
 
@@ -116,6 +116,7 @@ function moveIntroSec(type) {
 
     fsd1IntroSlider.forEach((introSlide) => {
       introSlide.style.transform = `translateX(-${base * initialValue}%)`;
+      fsd1OuterSlider.scrollTop = 0;
     })
     initialValue = initialValue + 1;
     scrollerInterval();
@@ -132,6 +133,7 @@ function moveIntroSec(type) {
     initialValue = initialValue - 2;
     fsd1IntroSlider.forEach((introSlide) => {
       introSlide.style.transform = `translateX(-${base * initialValue}%)`;
+      fsd1OuterSlider.scrollTop = 0;
     });
     initialValue = initialValue + 1;
     
@@ -149,6 +151,7 @@ function scrollerInterval() {
 
     fsd1IntroSlider.forEach((introSlide) => {
       introSlide.style.transform = `translateX(-${base * initialValue}%)`;
+      fsd1OuterSlider.scrollTop = 0;
     });
     initialValue = initialValue + 1;
   }, 10000);
