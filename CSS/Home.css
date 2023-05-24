@@ -78,6 +78,7 @@
     }
 
     .section_1-side1 h1 {
+        width: 100%;
         font-size: 1.4rem;
         height: 44px;
         font-weight: 700;
@@ -85,9 +86,18 @@
     }
 
     .section_1-side1 p {
+        width: 100%;
         font-weight: 300 !important;
         font-size: 14px !important;
         line-height: 24px !important;
+    }
+
+    .section_1-cta {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
     .section_1-links , .section_1-btn {
