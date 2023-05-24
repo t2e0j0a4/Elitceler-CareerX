@@ -306,12 +306,14 @@ cohortsData.forEach((item) => {
         if (i <= item.stars) {
             let ratedStar = document.createElement('img');
             ratedStar.setAttribute("src", '../Assets/RatedStar.png');
+            ratedStar.setAttribute("alt", 'Rated');
             cohortRating.append(ratedStar);
-        }
-        else {
+          }
+          else {
             
             let notRatedStar = document.createElement("img");
             notRatedStar.setAttribute("src", "../Assets/NotRatedStar.png");
+            notratedStar.setAttribute("alt", 'NotRated');
             cohortRating.append(notRatedStar);
         }
     }
