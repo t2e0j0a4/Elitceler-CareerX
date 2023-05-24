@@ -101,13 +101,14 @@ dataScienceIntro.forEach((item) => {
 
 let base = 100;
 let initialValue = 1;
+let scrollInt;
 
 let fsd1IntroSlider = document.querySelectorAll(".cohort1__slide");
 
 function moveIntroSec(type) {
-  console.log(type);
 
   if (type === 'next') {
+    clearInterval(scrollInt);
 
     if (initialValue === 3) {
       initialValue = 0;
@@ -115,37 +116,45 @@ function moveIntroSec(type) {
 
     fsd1IntroSlider.forEach((introSlide) => {
       introSlide.style.transform = `translateX(-${base * initialValue}%)`;
-    })    
+    })
     initialValue = initialValue + 1;
+    scrollerInterval();
   }
-
+  
   else {
+    
+    clearInterval(scrollInt)
+
     if (initialValue === 1) {
       initialValue = 4;
     }
-
+    
     initialValue = initialValue - 2;
     fsd1IntroSlider.forEach((introSlide) => {
       introSlide.style.transform = `translateX(-${base * initialValue}%)`;
     });
     initialValue = initialValue + 1;
+
+    scrollerInterval();
     
   }
 
 }
 
-setInterval(() => {
+function scrollerInterval() {
+  scrollInt = setInterval(() => {
+    if (initialValue === 3) {
+      initialValue = 0;
+    }
 
-  if (initialValue === 3) {
-    initialValue = 0;
-  }
+    fsd1IntroSlider.forEach((introSlide) => {
+      introSlide.style.transform = `translateX(-${base * initialValue}%)`;
+    });
+    initialValue = initialValue + 1;
+  }, 10000);
+}
 
-  fsd1IntroSlider.forEach((introSlide) => {
-    introSlide.style.transform = `translateX(-${base * initialValue}%)`;
-  });
-  initialValue = initialValue + 1;
-
-}, 8000);
+scrollerInterval();
 
 // ************************** - Section 1 - *********************************
 
