@@ -320,43 +320,48 @@ let PeersReviews = [
 
 let sec5Content = document.querySelector(".section5__content");
 
-PeersReviews.forEach((item) => {
-  let peerBox = document.createElement("div");
-  peerBox.setAttribute("class", "peer__box");
+function sec5ContentPopulate() {
+  PeersReviews.forEach((item) => {
+    let peerBox = document.createElement("div");
+    peerBox.setAttribute("class", "peer__box");
 
-  let peerDetails = document.createElement("div");
-  peerDetails.setAttribute("class", "peer__details");
+    let peerDetails = document.createElement("div");
+    peerDetails.setAttribute("class", "peer__details");
 
-  let peerImage = document.createElement("img");
-  peerImage.setAttribute("src", item.image);
-  peerImage.setAttribute("alt", item.name);
+    let peerImage = document.createElement("img");
+    peerImage.setAttribute("src", item.image);
+    peerImage.setAttribute("alt", item.name);
 
-  let peerData = document.createElement("div");
-  peerData.setAttribute("class", "peer__data");
+    let peerData = document.createElement("div");
+    peerData.setAttribute("class", "peer__data");
 
-  let peerName = document.createElement("p");
-  peerName.classList.add("peer__name");
-  peerName.textContent = item.name;
+    let peerName = document.createElement("p");
+    peerName.classList.add("peer__name");
+    peerName.textContent = item.name;
 
-  let peerPlacement = document.createElement("p");
-  peerPlacement.classList.add("peer__place");
-  peerPlacement.textContent = item.placement;
+    let peerPlacement = document.createElement("p");
+    peerPlacement.classList.add("peer__place");
+    peerPlacement.textContent = item.placement;
 
-  peerData.append(peerName, peerPlacement);
+    peerData.append(peerName, peerPlacement);
 
-  peerDetails.append(peerImage, peerData);
+    peerDetails.append(peerImage, peerData);
 
-  let peerDescription = document.createElement("div");
-  peerDescription.setAttribute("class", "peer__desc");
+    let peerDescription = document.createElement("div");
+    peerDescription.setAttribute("class", "peer__desc");
 
-  let desc = document.createElement("p");
-  desc.innerHTML = item.desc;
+    let desc = document.createElement("p");
+    desc.innerHTML = item.desc;
 
-  peerDescription.append(desc);
-  peerBox.append(peerDetails, peerDescription);
+    peerDescription.append(desc);
+    peerBox.append(peerDetails, peerDescription);
 
-  sec5Content.append(peerBox);
-});
+    sec5Content.append(peerBox);
+  });
+}
+
+sec5ContentPopulate();
+sec5ContentPopulate();
 
 let peerBoxes = document.querySelectorAll('.peer__box');
 autoScroll(peerBoxes);

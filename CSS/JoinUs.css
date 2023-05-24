@@ -380,17 +380,16 @@
     box-shadow: 0px 0px 10px #FFFFFF;
     border-radius: 20px;
 
-    animation: movingPeers 15s linear infinite;
-    animation-fill-mode: forwards;
+    animation: movingPeers 20s linear infinite;
 }
 
 @keyframes movingPeers {
     0% {
-        transform: translateX(100%);
+        transform: translateX(10%);
     }
 
     100% {
-        transform: translateX(-1000%);
+        transform: translateX(calc(-380px * 9.5));
     }
 }
 
