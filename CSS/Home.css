@@ -64,6 +64,29 @@
     }
 }
 
+@media all and (max-width : 400px) {
+    .section_1-side1 h1 {
+        letter-spacing: 0.1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media all and (max-width : 358px) {
+    .section_1-side1 h1 {
+        letter-spacing: 0.1rem;
+        font-size: 1.4rem;
+    }
+
+    .section_1-side1 p {
+        font-family: var(--font-poppins);
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 40px;
+        color: var(--white);
+    }
+}
+
 
 .section_1-side1 h1 span {
     color: var(--primary);
