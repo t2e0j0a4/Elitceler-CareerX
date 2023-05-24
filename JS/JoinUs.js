@@ -361,7 +361,9 @@ function sec5ContentPopulate() {
 }
 
 sec5ContentPopulate();
-sec5ContentPopulate();
+if (window.innerWidth >= 800) {
+  sec5ContentPopulate();
+}
 
 let peerBoxes = document.querySelectorAll('.peer__box');
 autoScroll(peerBoxes);

@@ -416,7 +416,9 @@ function sec7ContentPopulate() {
 }
 
 sec7ContentPopulate();
-sec7ContentPopulate();
+if (window.innerWidth >= 800) {
+  sec7ContentPopulate();
+}
 
 let allHRBoxes = document.querySelectorAll('.hr__box');
 autoScroll(allHRBoxes); 
@@ -532,11 +534,9 @@ function sec8ContentPopulate() {
 }
 
 sec8ContentPopulate();
-window.addEventListener('resize', () => {
-  if (window.innerWidth >= 800) {
-    sec8ContentPopulate();
-  }
-})
+if (window.innerWidth >= 800) {
+  sec8ContentPopulate();
+}
 
 let allPeerBoxes = document.querySelectorAll(".peer__box");
 autoScroll(allPeerBoxes);
