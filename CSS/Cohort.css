@@ -953,19 +953,6 @@
     }
 }
 
-@media all and (max-width : 500px) {
-
-    @keyframes ds_cc4Tools {
-        0% {
-            transform: translateX(200%);
-        }
-
-        100% {
-            transform: translateX(-500%);
-        }
-    }
-}
-
 /* Section 4 : Tools you will Learn */
 
 /* Section 5 : Course Structure  */
