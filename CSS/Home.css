@@ -72,18 +72,25 @@
 }
 
 @media all and (max-width : 358px) {
+
+    .section_1-side1 {
+        gap: 1.5rem;
+    }
+
     .section_1-side1 h1 {
         letter-spacing: 0.1rem;
         font-size: 1.4rem;
+        line-height: normal;
     }
 
     .section_1-side1 p {
-        font-family: var(--font-poppins);
-        font-style: normal;
-        font-weight: 600;
-        font-size: 1rem;
-        line-height: 40px;
-        color: var(--white);
+        font-weight: 400 !important;
+        font-size: 12px !important;
+        line-height: 24px !important;
+    }
+
+    .section_1-links , .section_1-btn {
+        font-size: 16px !important;
     }
 }
 
