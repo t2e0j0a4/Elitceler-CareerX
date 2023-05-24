@@ -221,26 +221,31 @@ const featuredData = [
 
 let sec4Content = document.querySelector(".section_4-content");
 
-featuredData.forEach((item) => {
-    let itemBox = document.createElement('div');
-    itemBox.classList.add('section_4-data');
+function sec4ContentPopulate() {
+  featuredData.forEach((item) => {
+    let itemBox = document.createElement("div");
+    itemBox.classList.add("section_4-data");
 
     let itemImage = document.createElement("img");
-    itemImage.setAttribute('src', item.image);
-    itemImage.setAttribute('alt', 'Featured');
+    itemImage.setAttribute("src", item.image);
+    itemImage.setAttribute("alt", "Featured");
 
     let itemContext = document.createElement("p");
     itemContext.classList.add("data_4-context");
     itemContext.textContent = item.context;
 
-    let readMore = document.createElement('button');
-    readMore.setAttribute('type', 'button');
+    let readMore = document.createElement("button");
+    readMore.setAttribute("type", "button");
     readMore.innerHTML = "Read";
 
     itemBox.append(itemImage, itemContext, readMore);
 
     sec4Content.append(itemBox);
-})
+  });
+}
+
+sec4ContentPopulate();
+sec4ContentPopulate();
 
 let section4Boxes = document.querySelectorAll(".section_4-data");
 autoScroll(section4Boxes);
@@ -371,23 +376,23 @@ let HRReviews = [
 
 let sec7Content = document.querySelector(".section_7-content");
 
-HRReviews.forEach((item) => {
-
-    let hrBox = document.createElement('div');
-    hrBox.setAttribute('class', 'hr__box');
+function sec7ContentPopulate() {
+  HRReviews.forEach((item) => {
+    let hrBox = document.createElement("div");
+    hrBox.setAttribute("class", "hr__box");
 
     let hrDetails = document.createElement("div");
     hrDetails.setAttribute("class", "hr__details");
 
-    let hrImage = document.createElement('img');
-    hrImage.setAttribute('src', item.image);
-    hrImage.setAttribute('alt', item.name);
+    let hrImage = document.createElement("img");
+    hrImage.setAttribute("src", item.image);
+    hrImage.setAttribute("alt", item.name);
 
     let hrData = document.createElement("div");
     hrData.setAttribute("class", "hr__data");
 
-    let hrName = document.createElement('p');
-    hrName.classList.add('hr__name');
+    let hrName = document.createElement("p");
+    hrName.classList.add("hr__name");
     hrName.textContent = item.name;
 
     let hrRole = document.createElement("p");
@@ -401,13 +406,17 @@ HRReviews.forEach((item) => {
     let hrDescription = document.createElement("div");
     hrDescription.setAttribute("class", "hr__desc");
 
-    let desc = document.createElement('p');
+    let desc = document.createElement("p");
     desc.innerHTML = item.desc;
 
     hrDescription.append(desc);
     hrBox.append(hrDetails, hrDescription);
     sec7Content.append(hrBox);
-})
+  });
+}
+
+sec7ContentPopulate();
+sec7ContentPopulate();
 
 let allHRBoxes = document.querySelectorAll('.hr__box');
 autoScroll(allHRBoxes); 
@@ -482,43 +491,51 @@ let PeersReviews = [
 
 let sec8Content = document.querySelector(".section_8-content");
 
-PeersReviews.forEach((item) => {
+function sec8ContentPopulate() {
+  PeersReviews.forEach((item) => {
+    let peerBox = document.createElement("div");
+    peerBox.setAttribute("class", "peer__box");
 
-  let peerBox = document.createElement('div');
-  peerBox.setAttribute('class', 'peer__box');
-  
-  let peerDetails = document.createElement("div");
-  peerDetails.setAttribute("class", "peer__details");
-  
-  let peerImage = document.createElement('img');
-  peerImage.setAttribute('src', item.image);
-  peerImage.setAttribute('alt', item.name);
-  
-  let peerData = document.createElement("div");
-  peerData.setAttribute("class", "peer__data");
-  
-  let peerName = document.createElement('p');
-  peerName.classList.add('peer__name');
-  peerName.textContent = item.name;
+    let peerDetails = document.createElement("div");
+    peerDetails.setAttribute("class", "peer__details");
 
-  let peerPlacement = document.createElement("p");
-  peerPlacement.classList.add("peer__place");
-  peerPlacement.textContent = item.placement;
-  
-  peerData.append(peerName, peerPlacement);
-  
-  peerDetails.append(peerImage, peerData);
-  
-  let peerDescription = document.createElement("div");
-  peerDescription.setAttribute("class", "peer__desc");
-  
-  let desc = document.createElement('p');
-  desc.innerHTML = item.desc;
-  
-  peerDescription.append(desc);
-  peerBox.append(peerDetails, peerDescription);
-  
-  sec8Content.append(peerBox);
+    let peerImage = document.createElement("img");
+    peerImage.setAttribute("src", item.image);
+    peerImage.setAttribute("alt", item.name);
+
+    let peerData = document.createElement("div");
+    peerData.setAttribute("class", "peer__data");
+
+    let peerName = document.createElement("p");
+    peerName.classList.add("peer__name");
+    peerName.textContent = item.name;
+
+    let peerPlacement = document.createElement("p");
+    peerPlacement.classList.add("peer__place");
+    peerPlacement.textContent = item.placement;
+
+    peerData.append(peerName, peerPlacement);
+
+    peerDetails.append(peerImage, peerData);
+
+    let peerDescription = document.createElement("div");
+    peerDescription.setAttribute("class", "peer__desc");
+
+    let desc = document.createElement("p");
+    desc.innerHTML = item.desc;
+
+    peerDescription.append(desc);
+    peerBox.append(peerDetails, peerDescription);
+
+    sec8Content.append(peerBox);
+  });
+}
+
+sec8ContentPopulate();
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 800) {
+    sec8ContentPopulate();
+  }
 })
 
 let allPeerBoxes = document.querySelectorAll(".peer__box");

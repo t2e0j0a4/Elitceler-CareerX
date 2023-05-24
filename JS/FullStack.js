@@ -262,21 +262,25 @@ let fullStackTools = [
 
 let fsd4Content = document.querySelector('.fsd4__content');
 
-fullStackTools.forEach((tool) => {
-  let toolBox = document.createElement('div');
-  toolBox.classList.add('cohort4__toolbox');
+function fsd4ContentPopulate() {
+  fullStackTools.forEach((tool) => {
+    let toolBox = document.createElement("div");
+    toolBox.classList.add("cohort4__toolbox");
 
-  let toolImg = document.createElement('img');
-  toolImg.setAttribute('src', tool.toolImg);
-  toolImg.setAttribute('alt', tool.toolName);
+    let toolImg = document.createElement("img");
+    toolImg.setAttribute("src", tool.toolImg);
+    toolImg.setAttribute("alt", tool.toolName);
 
-  let toolTitle = document.createElement('p');
-  toolTitle.innerHTML = tool.toolName;
-  
-  toolBox.append(toolImg, toolTitle);
-  fsd4Content.append(toolBox);
+    let toolTitle = document.createElement("p");
+    toolTitle.innerHTML = tool.toolName;
 
-})
+    toolBox.append(toolImg, toolTitle);
+    fsd4Content.append(toolBox);
+  });
+}
+
+fsd4ContentPopulate();
+fsd4ContentPopulate();
 
 // ************************** - SECTION 4 - *********************************
 

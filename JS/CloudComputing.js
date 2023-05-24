@@ -207,7 +207,7 @@ autoScroll(roadMapBoxes);
 
 // ************************** - SECTION 3 - *********************************
 
-let dataScienceTools = [
+let cloudComputingTools = [
   {
     id: 1,
     toolImg: "../Assets/CCTool1.svg",
@@ -233,21 +233,26 @@ let dataScienceTools = [
 
 let cc4Content = document.querySelector('.cc4__content');
 
-dataScienceTools.forEach((tool) => {
-  let toolBox = document.createElement('div');
-  toolBox.classList.add('cohort4__toolbox');
+function cc4ContentPopulate() {
+  cloudComputingTools.forEach((tool) => {
+    let toolBox = document.createElement("div");
+    toolBox.classList.add("cohort4__toolbox");
 
-  let toolImg = document.createElement('img');
-  toolImg.setAttribute('src', tool.toolImg);
-  toolImg.setAttribute('alt', tool.toolName);
+    let toolImg = document.createElement("img");
+    toolImg.setAttribute("src", tool.toolImg);
+    toolImg.setAttribute("alt", tool.toolName);
 
-  let toolTitle = document.createElement('p');
-  toolTitle.innerHTML = tool.toolName;
-  
-  toolBox.append(toolImg, toolTitle);
-  cc4Content.append(toolBox);
+    let toolTitle = document.createElement("p");
+    toolTitle.innerHTML = tool.toolName;
 
-})
+    toolBox.append(toolImg, toolTitle);
+    cc4Content.append(toolBox);
+  });
+}
+
+cc4ContentPopulate();
+cc4ContentPopulate();
+cc4ContentPopulate();
 
 // ************************** - SECTION 4 - *********************************
 

@@ -485,16 +485,16 @@
     gap: 1rem;
     margin: 1.4rem auto;
 
-    animation: moveFeaturedBoxes 14s linear infinite;
+    animation: moveFeaturedBoxes 16s linear infinite;
 }
 
 @keyframes moveFeaturedBoxes {
     0% {
-        transform: translateX(100%);
+        transform: translateX(2%);
     }
 
     100% {
-        transform: translateX(-800%);
+        transform: translateX(calc(-320px * 7.8));
     }
 }
 
@@ -730,11 +730,11 @@
 
 @keyframes moveHRBoxes {
     0% {
-        transform: translateX(100%);
+        transform: translateX(10%);
     }
 
     100% {
-        transform: translateX(-700%);
+        transform: translateX(calc(-480px * 6.3));
     }
 }
 
@@ -822,11 +822,11 @@
 
 @keyframes movePeerBoxes {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0%);
     }
 
     100% {
-        transform: translateX(-1000%);
+       transform: translateX(calc(-380px * 9.7));
     }
 }
 
@@ -1221,7 +1221,19 @@
     }
 
     .section_4-data {
-        width: 96%;
+        width: 300px;
+    
+        animation: moveFeaturedBoxes 16s linear infinite;
+    }
+
+    @keyframes moveFeaturedBoxes {
+        0% {
+            transform: translateX(2%);
+        }
+
+        100% {
+            transform: translateX(calc(-300px * 7.8));
+        }
     }
 
     .peer__box {

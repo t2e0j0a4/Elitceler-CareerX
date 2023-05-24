@@ -233,21 +233,26 @@ let dataScienceTools = [
 
 let ds4Content = document.querySelector('.ds4__content');
 
-dataScienceTools.forEach((tool) => {
-  let toolBox = document.createElement('div');
-  toolBox.classList.add('cohort4__toolbox');
+function ds4ContentPopulate() {
+  dataScienceTools.forEach((tool) => {
+    let toolBox = document.createElement("div");
+    toolBox.classList.add("cohort4__toolbox");
 
-  let toolImg = document.createElement('img');
-  toolImg.setAttribute('src', tool.toolImg);
-  toolImg.setAttribute('alt', tool.toolName);
+    let toolImg = document.createElement("img");
+    toolImg.setAttribute("src", tool.toolImg);
+    toolImg.setAttribute("alt", tool.toolName);
 
-  let toolTitle = document.createElement('p');
-  toolTitle.innerHTML = tool.toolName;
-  
-  toolBox.append(toolImg, toolTitle);
-  ds4Content.append(toolBox);
+    let toolTitle = document.createElement("p");
+    toolTitle.innerHTML = tool.toolName;
 
-})
+    toolBox.append(toolImg, toolTitle);
+    ds4Content.append(toolBox);
+  });
+}
+
+ds4ContentPopulate();
+ds4ContentPopulate();
+ds4ContentPopulate();
 
 // ************************** - SECTION 4 - *********************************
 

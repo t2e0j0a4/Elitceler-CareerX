@@ -914,7 +914,7 @@
 }
 
 .ds4__content .cohort4__toolbox , .cc4__content .cohort4__toolbox {
-    animation: ds_cc4Tools 7.5s linear infinite;
+    animation: ds_cc4Tools 6s linear infinite;
 }
 
 .cohort4__toolbox img {
@@ -935,27 +935,25 @@
 
 @keyframes fsd4Tools {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
 
     100% {
-        transform: translateX(-1150%);
+        transform: translateX(calc(-200px * 11.3));
     }
 }
 
 @keyframes ds_cc4Tools {
     0% {
-        transform: translateX(70%);
+        transform: translateX(0);
     }
 
     100% {
-        transform: translateX(-600%);
+        transform: translateX(calc(-200px * 4.5));
     }
 }
 
 @media all and (max-width : 500px) {
-
-
 
     @keyframes ds_cc4Tools {
         0% {
