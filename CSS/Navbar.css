@@ -207,7 +207,6 @@ ion-icon[name='chevron-down'].active {
         flex-direction: column;
         align-items: flex-end;
         justify-content: center;
-        gap:0.8rem;
     }
 
     .navbar__dropdown {
@@ -215,11 +214,13 @@ ion-icon[name='chevron-down'].active {
         border: none;
         border-radius: 0;
         position: static;
-        
+
+        height: 0;
+        overflow-y: hidden;
+
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-
     }
 
     .navbar__dropdown.active {
@@ -229,10 +230,17 @@ ion-icon[name='chevron-down'].active {
         position: static;
         gap: 0;
         padding: 0;
+
+        height: 100%;
+        overflow-y: auto;
         
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+    }
+
+    .list__drop.makeGap {
+        gap: 0.8rem;
     }
 
     .navbar__dropdown li {

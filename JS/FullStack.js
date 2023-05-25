@@ -4,28 +4,16 @@ let downArrow = document.querySelector("ion-icon[name='chevron-down']");
 let smScreenMenu = document.querySelector(".navbar__smallScreen");
 let navbarMenu = document.querySelector(".navbar__list");
 let smScreenMenuIcon = document.querySelector(".navbar__smallScreen ion-icon");
+let listDrop = document.querySelector(".list__drop");
 
 navDropDown.addEventListener("click", () => {
   dropDownMenu.classList.toggle("active");
   downArrow.classList.toggle("active");
+  listDrop.classList.toggle("makeGap");
 });
 
 smScreenMenu.addEventListener("click", () => {
   navbarMenu.classList.toggle("active");
-});
-
-if (window.innerWidth <= 785) {
-  navDropDown.style.pointerEvents = "none";
-} else {
-  navDropDown.style.pointerEvents = "all";
-}
-
-window.addEventListener("resize", (e) => {
-  if (window.innerWidth <= 785) {
-    navDropDown.style.pointerEvents = "none";
-  } else {
-    navDropDown.style.pointerEvents = "all";
-  }
 });
 
 // ************************** - NAVBAR ENDS - *******************************
@@ -80,22 +68,22 @@ let fullStackIntro = [
 let fsd1Content = document.querySelector(".fsd1__slide2");
 
 fullStackIntro.forEach((item) => {
-  let introBox = document.createElement('div');
+  let introBox = document.createElement("div");
   introBox.classList.add("slide2__introbox");
 
-  let introImg = document.createElement('img');
-  introImg.setAttribute('src', item.image);
-  introImg.setAttribute('alt', item.title);
+  let introImg = document.createElement("img");
+  introImg.setAttribute("src", item.image);
+  introImg.setAttribute("alt", item.title);
 
-  let introTitle = document.createElement('p');
+  let introTitle = document.createElement("p");
   introTitle.innerHTML = item.title;
 
-  let introDesc = document.createElement('p');
+  let introDesc = document.createElement("p");
   introDesc.innerHTML = item.desc;
 
   introBox.append(introImg, introTitle, introDesc);
   fsd1Content.append(introBox);
-})
+});
 
 // Funtion To Move The Intro Slider
 
@@ -107,7 +95,7 @@ let fsd1IntroSlider = document.querySelectorAll(".cohort1__slide");
 let fsd1OuterSlider = document.querySelector(".cohort1__slides");
 
 function moveIntroSec(type) {
-  if (type === 'next') {
+  if (type === "next") {
     clearInterval(scrollInt);
 
     if (initialValue === 3) {
@@ -117,30 +105,25 @@ function moveIntroSec(type) {
     fsd1IntroSlider.forEach((introSlide) => {
       introSlide.style.transform = `translateX(-${base * initialValue}%)`;
       fsd1OuterSlider.scrollTop = 0;
-    })
+    });
     initialValue = initialValue + 1;
     scrollerInterval();
-  }
-  
-  else {
-    
-    clearInterval(scrollInt)
+  } else {
+    clearInterval(scrollInt);
 
     if (initialValue === 1) {
       initialValue = 4;
     }
-    
+
     initialValue = initialValue - 2;
     fsd1IntroSlider.forEach((introSlide) => {
       introSlide.style.transform = `translateX(-${base * initialValue}%)`;
       fsd1OuterSlider.scrollTop = 0;
     });
     initialValue = initialValue + 1;
-    
-    scrollerInterval();
-    
-  }
 
+    scrollerInterval();
+  }
 }
 
 function scrollerInterval() {
@@ -272,7 +255,7 @@ let fullStackTools = [
   },
 ];
 
-let fsd4Content = document.querySelector('.fsd4__content');
+let fsd4Content = document.querySelector(".fsd4__content");
 
 function fsd4ContentPopulate() {
   fullStackTools.forEach((tool) => {
@@ -333,26 +316,25 @@ let fullStackCourse = [
       "Fundamentals of Web Dev",
     ],
   },
-  
 ];
 
 let fsd5Content = document.querySelector(".fsd5__data");
 
 fullStackCourse.forEach((item) => {
-  let courseBox = document.createElement('div');
-  courseBox.classList.add('cohort5__coursebox', 'fsd5__coursebox');
+  let courseBox = document.createElement("div");
+  courseBox.classList.add("cohort5__coursebox", "fsd5__coursebox");
 
-  let titleBox = document.createElement('div');
-  titleBox.classList.add('cohort5__titlebox', 'fsd5__titlebox');
+  let titleBox = document.createElement("div");
+  titleBox.classList.add("cohort5__titlebox", "fsd5__titlebox");
 
-  let courseTitle = document.createElement('p');
+  let courseTitle = document.createElement("p");
   courseTitle.innerHTML = item.name;
 
   let toggle = document.createElement("img");
   toggle.setAttribute("src", "../Assets/DownArrow2.svg");
   toggle.setAttribute("alt", "Toggle");
   toggle.setAttribute("data-token", `icon-${item.id}`);
-  
+
   titleBox.append(courseTitle, toggle);
 
   let listBox = document.createElement("ol");
@@ -363,23 +345,20 @@ fullStackCourse.forEach((item) => {
     let listItem = document.createElement("li");
     listItem.innerHTML = list;
     listBox.append(listItem);
-  })
+  });
 
   courseBox.append(titleBox, listBox);
   fsd5Content.append(courseBox);
 
-  titleBox.addEventListener('click', function() {
+  titleBox.addEventListener("click", function () {
     courseExpand(listBox, toggle);
-  })
-
-})
-
+  });
+});
 
 let allListBoxes = document.querySelectorAll(".fsd5__listbox");
 let allCourseToggles = document.querySelectorAll(".fsd5__titlebox img");
 
 function courseExpand(currentList, currentToggle) {
-
   allCourseToggles.forEach((imges) => {
     if (imges.dataset.token === currentToggle.dataset.token) {
       imges.classList.toggle("active");
@@ -398,7 +377,8 @@ function courseExpand(currentList, currentToggle) {
 
 // Download Popup
 
-let API = "https://api-in21.leadsquared.com/v2/LeadManagement.svc/Lead.Capture?accessKey=u$rbb01343610153d72739e7fe9984d4a34&secretKey=8361119156fef165d1ebe571c9d1f42dc894eac7";
+let API =
+  "https://api-in21.leadsquared.com/v2/LeadManagement.svc/Lead.Capture?accessKey=u$rbb01343610153d72739e7fe9984d4a34&secretKey=8361119156fef165d1ebe571c9d1f42dc894eac7";
 
 async function sendUserData(data) {
   const response = await fetch(API, {
@@ -419,19 +399,20 @@ let downloadPopupContent = document.querySelector(".download__content");
 let screenYLenght;
 
 function downloadPopup(type) {
-  if (type === 'open') {
-    downloadPopupBox.classList.add('active');
-    screenYLenght =  window.scrollY;
+  if (type === "open") {
+    downloadPopupBox.classList.add("active");
+    screenYLenght = window.scrollY;
 
     setInterval(() => {
-      if (window.scrollY > screenYLenght + 500 || window.scrollY < screenYLenght - 500) {
+      if (
+        window.scrollY > screenYLenght + 500 ||
+        window.scrollY < screenYLenght - 500
+      ) {
         downloadPopupBox.classList.remove("active");
       }
     }, 100);
-
-  }
-  else {
-    downloadPopupBox.classList.remove('active');
+  } else {
+    downloadPopupBox.classList.remove("active");
   }
 }
 
@@ -474,15 +455,14 @@ function fullStackBrochure(e) {
   sendUserData(newRequest);
 
   let submitNotice = `<h1>Download Starts Soon...</h1>`;
-  
+
   downloadPopupContent.innerHTML = submitNotice;
 
-  
   setTimeout(() => {
     window.location.reload();
   }, 3000);
-  
-  window.location.href = '../Assets/CareerX FSD Brochure.pdf';
+
+  window.location.href = "../Assets/CareerX FSD Brochure.pdf";
 }
 
 // Download Popup
@@ -500,44 +480,43 @@ function applyNowPopUp() {
 
 let fullStackProjects = [
   {
-    id : 1,
-    projectTitle : 'Netflix Clone',
-    projectImage : '../Assets/FSDProject1.svg'
+    id: 1,
+    projectTitle: "Netflix Clone",
+    projectImage: "../Assets/FSDProject1.svg",
   },
   {
-    id : 2,
-    projectTitle : 'Spotify Clone',
-    projectImage : '../Assets/FSDProject2.svg'
+    id: 2,
+    projectTitle: "Spotify Clone",
+    projectImage: "../Assets/FSDProject2.svg",
   },
   {
-    id : 3,
-    projectTitle : 'Amazon Clone',
-    projectImage : '../Assets/FSDProject3.svg'
+    id: 3,
+    projectTitle: "Amazon Clone",
+    projectImage: "../Assets/FSDProject3.svg",
   },
   {
-    id : 4,
-    projectTitle : 'Instagram Clone',
-    projectImage : '../Assets/FSDProject4.svg'
-  }
-]
+    id: 4,
+    projectTitle: "Instagram Clone",
+    projectImage: "../Assets/FSDProject4.svg",
+  },
+];
 
-let fsd6Content = document.querySelector('.fsd6__content');
+let fsd6Content = document.querySelector(".fsd6__content");
 
 fullStackProjects.forEach((item) => {
-  let projectBox = document.createElement('div');
-  projectBox.classList.add('cohort6__projectbox');
+  let projectBox = document.createElement("div");
+  projectBox.classList.add("cohort6__projectbox");
 
-  let projectImg = document.createElement('img');
-  projectImg.setAttribute('src', item.projectImage);
-  projectImg.setAttribute('alt', item.projectTitle);
+  let projectImg = document.createElement("img");
+  projectImg.setAttribute("src", item.projectImage);
+  projectImg.setAttribute("alt", item.projectTitle);
 
-  let projectTitle = document.createElement('p');
+  let projectTitle = document.createElement("p");
   projectTitle.innerHTML = item.projectTitle;
-  
+
   projectBox.append(projectImg, projectTitle);
   fsd6Content.append(projectBox);
-  
-})
+});
 
 let projectBoxes = document.querySelectorAll(".cohort6__projectbox");
 autoScroll(projectBoxes);
@@ -546,57 +525,79 @@ autoScroll(projectBoxes);
 
 let fullStackFeeStructure = [
   {
-    id : 1,
-    name : 'Silver',
-    badge : '../Assets/CohortSilverBadge.svg',
-    structure : [
-      'Rs 26,000 (O)', 'Rs 21,000 (A)', 'Rs 18,500 (L)', 'Training', 'Projects', 'Certification', 'Resume Building'
-    ]
+    id: 1,
+    name: "Silver",
+    badge: "../Assets/CohortSilverBadge.svg",
+    structure: [
+      "Rs 26,000 (O)",
+      "Rs 21,000 (A)",
+      "Rs 18,500 (L)",
+      "Training",
+      "Projects",
+      "Certification",
+      "Resume Building",
+    ],
   },
   {
-    id : 2,
-    name : 'Gold',
-    badge : '../Assets/CohortGoldBadge.svg',
-    structure : [
-      'Rs 53,000 (O)', 'Rs 35,000 (A)', 'Rs 33,000 (L)', 'Eligiblity Test', 'Projects', '1:1 Mentor Sessions', 'Certification', 'Resume Building', 'Mock Interviews', '5 Assured Interviews'
-    ]
+    id: 2,
+    name: "Gold",
+    badge: "../Assets/CohortGoldBadge.svg",
+    structure: [
+      "Rs 53,000 (O)",
+      "Rs 35,000 (A)",
+      "Rs 33,000 (L)",
+      "Eligiblity Test",
+      "Projects",
+      "1:1 Mentor Sessions",
+      "Certification",
+      "Resume Building",
+      "Mock Interviews",
+      "5 Assured Interviews",
+    ],
   },
   {
-    id : 3,
-    name : 'Platinum',
-    badge : '../Assets/CohortPlatBadge.svg',
-    structure : [
-      'Rs 71,000 (O)', 'Rs 53,000 (A)', 'Rs 45,000 (L)', 'Eligiblity Test', 'Projects', '1:1 Mentor Sessions', 'Certification', 'Resume Building', 'Mock Interviews', 'Job Guarentee'
-    ]
-  }
-]
+    id: 3,
+    name: "Platinum",
+    badge: "../Assets/CohortPlatBadge.svg",
+    structure: [
+      "Rs 71,000 (O)",
+      "Rs 53,000 (A)",
+      "Rs 45,000 (L)",
+      "Eligiblity Test",
+      "Projects",
+      "1:1 Mentor Sessions",
+      "Certification",
+      "Resume Building",
+      "Mock Interviews",
+      "Job Guarentee",
+    ],
+  },
+];
 
 let fsd7Content = document.querySelector(".fsd7__content");
 
 fullStackFeeStructure.forEach((item) => {
-  let feeBox = document.createElement('div');
-  feeBox.classList.add('cohort7__feebox');
+  let feeBox = document.createElement("div");
+  feeBox.classList.add("cohort7__feebox");
 
-  let feeType = document.createElement('p');
+  let feeType = document.createElement("p");
   feeType.innerHTML = item.name;
 
-  let feeImg = document.createElement('img');
-  feeImg.setAttribute('src', item.badge);
-  feeImg.setAttribute('alt', item.name);
+  let feeImg = document.createElement("img");
+  feeImg.setAttribute("src", item.badge);
+  feeImg.setAttribute("alt", item.name);
 
-  let feeList = document.createElement('ul');
-  
+  let feeList = document.createElement("ul");
+
   item.structure.forEach((list) => {
-    let listItem = document.createElement('li');
+    let listItem = document.createElement("li");
     listItem.innerHTML = list;
     feeList.append(listItem);
-  })
+  });
 
   feeBox.append(feeType, feeImg, feeList);
   fsd7Content.append(feeBox);
-
-})
-
+});
 
 // Popup
 
@@ -623,7 +624,7 @@ let fullStackEMIPlans = [
         pay: "₹52,000",
       },
     ],
-    final : 'One Time Pay',
+    final: "One Time Pay",
     total: "₹52,000",
   },
   {
@@ -648,7 +649,7 @@ let fullStackEMIPlans = [
         pay: "₹54,000",
       },
     ],
-    final : 'Monthly Pay',
+    final: "Monthly Pay",
     total: "₹27,000/mo",
   },
   {
@@ -673,42 +674,40 @@ let fullStackEMIPlans = [
         pay: "₹57,000",
       },
     ],
-    final : 'Monthly Pay',
+    final: "Monthly Pay",
     total: "₹19,000/mo",
-  }
+  },
 ];
 
 let fsd7Popup = document.querySelector(".fsd7popup__content");
 
 fullStackEMIPlans.forEach((item) => {
+  let emiBox = document.createElement("div");
+  emiBox.classList.add("popup__emibox");
 
-  let emiBox = document.createElement('div');
-  emiBox.classList.add('popup__emibox');
+  let planImg = document.createElement("img");
+  planImg.setAttribute("src", item.image);
+  planImg.setAttribute("alt", item.name);
 
-  let planImg = document.createElement('img');
-  planImg.setAttribute('src', item.image);
-  planImg.setAttribute('alt', item.name);
-
-  let planName = document.createElement('p');
+  let planName = document.createElement("p");
   planName.innerHTML = item.name;
 
-  let planDetails = document.createElement('div');
-  planDetails.classList.add('popup__emidetails');
+  let planDetails = document.createElement("div");
+  planDetails.classList.add("popup__emidetails");
 
   item.details.forEach((list) => {
-    let eachDetail = document.createElement('div');
-    eachDetail.classList.add('popup__emitype');
+    let eachDetail = document.createElement("div");
+    eachDetail.classList.add("popup__emitype");
 
-    let eachType = document.createElement('p');
+    let eachType = document.createElement("p");
     eachType.innerHTML = list.type;
 
-    let eachPay = document.createElement('p');
+    let eachPay = document.createElement("p");
     eachPay.innerHTML = list.pay;
 
     eachDetail.append(eachType, eachPay);
     planDetails.append(eachDetail);
-
-  })
+  });
 
   let finalPayDetail = document.createElement("div");
   finalPayDetail.classList.add("popup__emifinal");
@@ -723,17 +722,15 @@ fullStackEMIPlans.forEach((item) => {
 
   emiBox.append(planImg, planName, planDetails, finalPayDetail);
   fsd7Popup.append(emiBox);
-
-})
+});
 
 let emiPopUp = document.querySelector(".cohort7__popup");
 
 function emiPopup(type) {
-  if (type === 'open') {
-    emiPopUp.classList.toggle('active');
-  }
-  else {
-    emiPopUp.classList.remove('active');
+  if (type === "open") {
+    emiPopUp.classList.toggle("active");
+  } else {
+    emiPopUp.classList.remove("active");
   }
 }
 
@@ -741,49 +738,48 @@ function emiPopup(type) {
 
 let fullStackMentors = [
   {
-    id : 1,
-    name : 'John Doe',
-    desc : 'Having 10+ years of experience in managing mission-critical web projects.Exceptional record overseeing all facets of Application Development Life Cycle',
-    image : '../Assets/Potrait.jpg',
-    linkedin : '#'
+    id: 1,
+    name: "John Doe",
+    desc: "Having 10+ years of experience in managing mission-critical web projects.Exceptional record overseeing all facets of Application Development Life Cycle",
+    image: "../Assets/Potrait.jpg",
+    linkedin: "#",
   },
   {
-    id : 2,
-    name : 'John Doe',
-    desc : 'Having 10+ years of experience in managing mission-critical web projects.Exceptional record overseeing all facets of Application Development Life Cycle',
-    image : '../Assets/Potrait.jpg',
-    linkedin : '#'
-  } 
-]
+    id: 2,
+    name: "John Doe",
+    desc: "Having 10+ years of experience in managing mission-critical web projects.Exceptional record overseeing all facets of Application Development Life Cycle",
+    image: "../Assets/Potrait.jpg",
+    linkedin: "#",
+  },
+];
 
-let fsd8Content = document.querySelector('.fsd8__content');
+let fsd8Content = document.querySelector(".fsd8__content");
 
 fullStackMentors.forEach((item) => {
-  let mentorBox = document.createElement('div');
-  mentorBox.classList.add('cohort8__mentorbox');
+  let mentorBox = document.createElement("div");
+  mentorBox.classList.add("cohort8__mentorbox");
 
-  let mentorImg = document.createElement('img');
+  let mentorImg = document.createElement("img");
   mentorImg.setAttribute("src", item.image);
   mentorImg.setAttribute("alt", item.name);
 
-  let mentorName = document.createElement('p');
-  mentorName.classList.add('cohort8__mentorname');
+  let mentorName = document.createElement("p");
+  mentorName.classList.add("cohort8__mentorname");
   mentorName.innerHTML = item.name;
 
   let mentorDesc = document.createElement("p");
   mentorDesc.classList.add("cohort8__mentordesc");
   mentorDesc.innerHTML = item.desc;
 
-  let mentorLinkedin = document.createElement('a');
-  mentorLinkedin.setAttribute('href',item.linkedin);
-  mentorLinkedin.setAttribute('target','_blank');
-  mentorLinkedin.setAttribute('rel','noopener');
+  let mentorLinkedin = document.createElement("a");
+  mentorLinkedin.setAttribute("href", item.linkedin);
+  mentorLinkedin.setAttribute("target", "_blank");
+  mentorLinkedin.setAttribute("rel", "noopener");
   mentorLinkedin.innerHTML = '<ion-icon name="logo-linkedin"></ion-icon>';
 
   mentorBox.append(mentorImg, mentorName, mentorDesc, mentorLinkedin);
   fsd8Content.append(mentorBox);
-
-})
+});
 
 // ************************** - SECTION 8 - *********************************
 
@@ -840,57 +836,56 @@ let fullStackQueries = [
 let fsd10Content = document.querySelector(".fsd10__content");
 
 fullStackQueries.forEach((item) => {
-  let queryBox = document.createElement('div');
-  queryBox.classList.add('cohort10__querybox', 'fsd10__querybox');
+  let queryBox = document.createElement("div");
+  queryBox.classList.add("cohort10__querybox", "fsd10__querybox");
 
   let questionBox = document.createElement("div");
   questionBox.classList.add("cohort10__questionbox", "fsd10__questionbox");
 
-  let question = document.createElement('p');
+  let question = document.createElement("p");
   question.innerHTML = item.question;
 
-  let toggle = document.createElement('img');
-  toggle.setAttribute('src', '../Assets/DownArrow.svg');
-  toggle.setAttribute('alt', 'Toggle');
-  toggle.setAttribute('data-token', `icon-${item.id}`);
+  let toggle = document.createElement("img");
+  toggle.setAttribute("src", "../Assets/DownArrow.svg");
+  toggle.setAttribute("alt", "Toggle");
+  toggle.setAttribute("data-token", `icon-${item.id}`);
 
   questionBox.append(question, toggle);
 
   let answerBox = document.createElement("div");
   answerBox.classList.add("cohort10__answerbox", "fsd10__answerbox");
-  answerBox.setAttribute('data-token', `answer-${item.id}`);
+  answerBox.setAttribute("data-token", `answer-${item.id}`);
 
   let answer = document.createElement("p");
   answer.innerHTML = item.answer;
 
-  questionBox.addEventListener('click', function() {
+  questionBox.addEventListener("click", function () {
     showTheAnswer(answerBox, toggle);
-  })
+  });
 
   answerBox.append(answer);
 
   queryBox.append(questionBox, answerBox);
   fsd10Content.append(queryBox);
-})
+});
 
-let allAnswerBoxes = document.querySelectorAll('.fsd10__answerbox');
-let allToggleImages = document.querySelectorAll('.fsd10__questionbox img');
+let allAnswerBoxes = document.querySelectorAll(".fsd10__answerbox");
+let allToggleImages = document.querySelectorAll(".fsd10__questionbox img");
 
 function showTheAnswer(answerbox, thisEle) {
   allToggleImages.forEach((imges) => {
     if (imges.dataset.token === thisEle.dataset.token) {
-      imges.classList.toggle('active');
-      answerbox.classList.toggle('active');
-    }
-    else {
-      imges.classList.remove('active');
+      imges.classList.toggle("active");
+      answerbox.classList.toggle("active");
+    } else {
+      imges.classList.remove("active");
       allAnswerBoxes.forEach((answer) => {
         if (answer.dataset.token !== answerbox.dataset.token) {
-          answer.classList.remove('active');
+          answer.classList.remove("active");
         }
-      })
+      });
     }
-  })
+  });
 }
 
 // *********************** - SECTION 10 - ******************

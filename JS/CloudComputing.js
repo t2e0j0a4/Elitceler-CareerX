@@ -4,30 +4,17 @@ let downArrow = document.querySelector("ion-icon[name='chevron-down']");
 let smScreenMenu = document.querySelector(".navbar__smallScreen");
 let navbarMenu = document.querySelector(".navbar__list");
 let smScreenMenuIcon = document.querySelector(".navbar__smallScreen ion-icon");
+let listDrop = document.querySelector(".list__drop");
 
 navDropDown.addEventListener("click", () => {
   dropDownMenu.classList.toggle("active");
   downArrow.classList.toggle("active");
+  listDrop.classList.toggle("makeGap");
 });
 
 smScreenMenu.addEventListener("click", () => {
   navbarMenu.classList.toggle("active");
 });
-
-if (window.innerWidth <= 785) {
-  navDropDown.style.pointerEvents = "none";
-} else {
-  navDropDown.style.pointerEvents = "all";
-}
-
-window.addEventListener("resize", (e) => {
-  if (window.innerWidth <= 785) {
-    navDropDown.style.pointerEvents = "none";
-  } else {
-    navDropDown.style.pointerEvents = "all";
-  }
-});
-
 // ************************** - NAVBAR ENDS - *******************************
 
 // **************** Function for Auto Scroll **************
@@ -80,22 +67,22 @@ let dataScienceIntro = [
 let cc1Content = document.querySelector(".cc1__slide2");
 
 dataScienceIntro.forEach((item) => {
-  let introBox = document.createElement('div');
+  let introBox = document.createElement("div");
   introBox.classList.add("slide2__introbox");
 
-  let introImg = document.createElement('img');
-  introImg.setAttribute('src', item.image);
-  introImg.setAttribute('alt', item.title);
+  let introImg = document.createElement("img");
+  introImg.setAttribute("src", item.image);
+  introImg.setAttribute("alt", item.title);
 
-  let introTitle = document.createElement('p');
+  let introTitle = document.createElement("p");
   introTitle.innerHTML = item.title;
 
-  let introDesc = document.createElement('p');
+  let introDesc = document.createElement("p");
   introDesc.innerHTML = item.desc;
 
   introBox.append(introImg, introTitle, introDesc);
   cc1Content.append(introBox);
-})
+});
 
 // Funtion To Move The Intro Slider
 
@@ -107,8 +94,7 @@ let fsd1IntroSlider = document.querySelectorAll(".cohort1__slide");
 let fsd1OuterSlider = document.querySelector(".cohort1__slides");
 
 function moveIntroSec(type) {
-
-  if (type === 'next') {
+  if (type === "next") {
     clearInterval(scrollInt);
 
     if (initialValue === 3) {
@@ -118,19 +104,16 @@ function moveIntroSec(type) {
     fsd1IntroSlider.forEach((introSlide) => {
       introSlide.style.transform = `translateX(-${base * initialValue}%)`;
       fsd1OuterSlider.scrollTop = 0;
-    })
+    });
     initialValue = initialValue + 1;
     scrollerInterval();
-  }
-  
-  else {
-    
-    clearInterval(scrollInt)
+  } else {
+    clearInterval(scrollInt);
 
     if (initialValue === 1) {
       initialValue = 4;
     }
-    
+
     initialValue = initialValue - 2;
     fsd1IntroSlider.forEach((introSlide) => {
       introSlide.style.transform = `translateX(-${base * initialValue}%)`;
@@ -139,9 +122,7 @@ function moveIntroSec(type) {
     initialValue = initialValue + 1;
 
     scrollerInterval();
-    
   }
-
 }
 
 function scrollerInterval() {
@@ -240,11 +221,10 @@ let cloudComputingTools = [
     id: 4,
     toolImg: "../Assets/CCTool4.svg",
     toolName: "AWS",
-  }
-
+  },
 ];
 
-let cc4Content = document.querySelector('.cc4__content');
+let cc4Content = document.querySelector(".cc4__content");
 
 function cc4ContentPopulate() {
   cloudComputingTools.forEach((tool) => {
@@ -306,26 +286,25 @@ let cloudComputingCourse = [
       "Fundamentals of Web Dev",
     ],
   },
-  
 ];
 
 let cc5Content = document.querySelector(".cc5__data");
 
 cloudComputingCourse.forEach((item) => {
-  let courseBox = document.createElement('div');
-  courseBox.classList.add('cohort5__coursebox', 'cc5__coursebox');
+  let courseBox = document.createElement("div");
+  courseBox.classList.add("cohort5__coursebox", "cc5__coursebox");
 
-  let titleBox = document.createElement('div');
-  titleBox.classList.add('cohort5__titlebox', 'cc5__titlebox');
+  let titleBox = document.createElement("div");
+  titleBox.classList.add("cohort5__titlebox", "cc5__titlebox");
 
-  let courseTitle = document.createElement('p');
+  let courseTitle = document.createElement("p");
   courseTitle.innerHTML = item.name;
 
   let toggle = document.createElement("img");
   toggle.setAttribute("src", "../Assets/DownArrow2.svg");
   toggle.setAttribute("alt", "Toggle");
   toggle.setAttribute("data-token", `icon-${item.id}`);
-  
+
   titleBox.append(courseTitle, toggle);
 
   let listBox = document.createElement("ol");
@@ -336,28 +315,25 @@ cloudComputingCourse.forEach((item) => {
     let listItem = document.createElement("li");
     listItem.innerHTML = list;
     listBox.append(listItem);
-  })
+  });
 
   courseBox.append(titleBox, listBox);
   cc5Content.append(courseBox);
 
-  titleBox.addEventListener('click', function() {
+  titleBox.addEventListener("click", function () {
     courseExpand(listBox, toggle);
-  })
-
-})
-
+  });
+});
 
 let allListBoxes = document.querySelectorAll(".cc5__listbox");
 let allCourseToggles = document.querySelectorAll(".cc5__titlebox img");
 
 function courseExpand(currentList, currentToggle) {
-
   allCourseToggles.forEach((imges) => {
     if (imges.dataset.token === currentToggle.dataset.token) {
       imges.classList.toggle("active");
       currentList.classList.toggle("active");
-    } 
+    }
     // else {
     //   imges.classList.remove("active");
     //   allListBoxes.forEach((answer) => {
@@ -367,12 +343,12 @@ function courseExpand(currentList, currentToggle) {
     //   });
     // }
   });
-
 }
 
 // Download Popup
 
-let API = "https://api-in21.leadsquared.com/v2/LeadManagement.svc/Lead.Capture?accessKey=u$rbb01343610153d72739e7fe9984d4a34&secretKey=8361119156fef165d1ebe571c9d1f42dc894eac7";
+let API =
+  "https://api-in21.leadsquared.com/v2/LeadManagement.svc/Lead.Capture?accessKey=u$rbb01343610153d72739e7fe9984d4a34&secretKey=8361119156fef165d1ebe571c9d1f42dc894eac7";
 
 async function sendUserData(data) {
   const response = await fetch(API, {
@@ -393,19 +369,20 @@ let downloadPopupContent = document.querySelector(".download__content");
 let screenYLenght;
 
 function downloadPopup(type) {
-  if (type === 'open') {
-    downloadPopupBox.classList.add('active');
-    screenYLenght =  window.scrollY;
+  if (type === "open") {
+    downloadPopupBox.classList.add("active");
+    screenYLenght = window.scrollY;
 
     setInterval(() => {
-      if (window.scrollY > screenYLenght + 500 || window.scrollY < screenYLenght - 500) {
+      if (
+        window.scrollY > screenYLenght + 500 ||
+        window.scrollY < screenYLenght - 500
+      ) {
         downloadPopupBox.classList.remove("active");
       }
     }, 100);
-
-  }
-  else {
-    downloadPopupBox.classList.remove('active');
+  } else {
+    downloadPopupBox.classList.remove("active");
   }
 }
 
@@ -448,15 +425,14 @@ function fullStackBrochure(e) {
   sendUserData(newRequest);
 
   let submitNotice = `<h1>Download Starts Soon...</h1>`;
-  
+
   downloadPopupContent.innerHTML = submitNotice;
 
-  
   setTimeout(() => {
     window.location.reload();
   }, 3000);
-  
-  window.location.href = '../Assets/CareerX Cloud Computing Brochure.pdf';
+
+  window.location.href = "../Assets/CareerX Cloud Computing Brochure.pdf";
 }
 
 // Download Popup
@@ -495,23 +471,22 @@ let cloudComputingProjects = [
   },
 ];
 
-let cc6Content = document.querySelector('.cc6__content');
+let cc6Content = document.querySelector(".cc6__content");
 
 cloudComputingProjects.forEach((item) => {
-  let projectBox = document.createElement('div');
-  projectBox.classList.add('cohort6__projectbox');
+  let projectBox = document.createElement("div");
+  projectBox.classList.add("cohort6__projectbox");
 
-  let projectImg = document.createElement('img');
-  projectImg.setAttribute('src', item.projectImage);
-  projectImg.setAttribute('alt', item.projectTitle);
+  let projectImg = document.createElement("img");
+  projectImg.setAttribute("src", item.projectImage);
+  projectImg.setAttribute("alt", item.projectTitle);
 
-  let projectTitle = document.createElement('p');
+  let projectTitle = document.createElement("p");
   projectTitle.innerHTML = item.projectTitle;
-  
+
   projectBox.append(projectImg, projectTitle);
   cc6Content.append(projectBox);
-  
-})
+});
 
 let projectBoxes = document.querySelectorAll(".cohort6__projectbox");
 autoScroll(projectBoxes);
@@ -520,30 +495,54 @@ autoScroll(projectBoxes);
 
 let cloudComputingFeeStructure = [
   {
-    id : 1,
-    name : 'Silver',
-    badge : '../Assets/CohortSilverBadge.svg',
-    structure : [
-      'Rs 26,000 (O)', 'Rs 21,500 (A)', 'Rs 18,00 (L)', 'Training', 'Projects', 'Certification', 'Resume Building'
-    ]
+    id: 1,
+    name: "Silver",
+    badge: "../Assets/CohortSilverBadge.svg",
+    structure: [
+      "Rs 26,000 (O)",
+      "Rs 21,500 (A)",
+      "Rs 18,00 (L)",
+      "Training",
+      "Projects",
+      "Certification",
+      "Resume Building",
+    ],
   },
   {
-    id : 2,
-    name : 'Gold',
-    badge : '../Assets/CohortGoldBadge.svg',
-    structure : [
-      'Rs 53,000 (O)', 'Rs 35,000 (A)', 'Rs 33,000 (L)', 'Eligiblity Test', 'Projects', '1:1 Mentor Sessions', 'Certification', 'Resume Building', 'Mock Interviews', '5 Assured Interviews'
-    ]
+    id: 2,
+    name: "Gold",
+    badge: "../Assets/CohortGoldBadge.svg",
+    structure: [
+      "Rs 53,000 (O)",
+      "Rs 35,000 (A)",
+      "Rs 33,000 (L)",
+      "Eligiblity Test",
+      "Projects",
+      "1:1 Mentor Sessions",
+      "Certification",
+      "Resume Building",
+      "Mock Interviews",
+      "5 Assured Interviews",
+    ],
   },
   {
-    id : 3,
-    name : 'Platinum',
-    badge : '../Assets/CohortPlatBadge.svg',
-    structure : [
-      'Rs 71,000 (O)', 'Rs 53,000 (A)', 'Rs 45,000 (L)', 'Eligiblity Test', 'Projects', '1:1 Mentor Sessions', 'Certification', 'Resume Building', 'Mock Interviews', 'Job Guarentee'
-    ]
-  }
-]
+    id: 3,
+    name: "Platinum",
+    badge: "../Assets/CohortPlatBadge.svg",
+    structure: [
+      "Rs 71,000 (O)",
+      "Rs 53,000 (A)",
+      "Rs 45,000 (L)",
+      "Eligiblity Test",
+      "Projects",
+      "1:1 Mentor Sessions",
+      "Certification",
+      "Resume Building",
+      "Mock Interviews",
+      "Job Guarentee",
+    ],
+  },
+];
 
 let cc7Content = document.querySelector(".cc7__content");
 
@@ -595,7 +594,7 @@ let cloudComputingEMIPlans = [
         pay: "₹52,000",
       },
     ],
-    final : 'One Time Pay',
+    final: "One Time Pay",
     total: "₹52,000",
   },
   {
@@ -620,7 +619,7 @@ let cloudComputingEMIPlans = [
         pay: "₹54,000",
       },
     ],
-    final : 'Monthly Pay',
+    final: "Monthly Pay",
     total: "₹27,000/mo",
   },
   {
@@ -645,42 +644,40 @@ let cloudComputingEMIPlans = [
         pay: "₹57,000",
       },
     ],
-    final : 'Monthly Pay',
+    final: "Monthly Pay",
     total: "₹19,000/mo",
-  }
+  },
 ];
 
 let cc7Popup = document.querySelector(".cc7popup__content");
 
 cloudComputingEMIPlans.forEach((item) => {
+  let emiBox = document.createElement("div");
+  emiBox.classList.add("popup__emibox");
 
-  let emiBox = document.createElement('div');
-  emiBox.classList.add('popup__emibox');
+  let planImg = document.createElement("img");
+  planImg.setAttribute("src", item.image);
+  planImg.setAttribute("alt", item.name);
 
-  let planImg = document.createElement('img');
-  planImg.setAttribute('src', item.image);
-  planImg.setAttribute('alt', item.name);
-
-  let planName = document.createElement('p');
+  let planName = document.createElement("p");
   planName.innerHTML = item.name;
 
-  let planDetails = document.createElement('div');
-  planDetails.classList.add('popup__emidetails');
+  let planDetails = document.createElement("div");
+  planDetails.classList.add("popup__emidetails");
 
   item.details.forEach((list) => {
-    let eachDetail = document.createElement('div');
-    eachDetail.classList.add('popup__emitype');
+    let eachDetail = document.createElement("div");
+    eachDetail.classList.add("popup__emitype");
 
-    let eachType = document.createElement('p');
+    let eachType = document.createElement("p");
     eachType.innerHTML = list.type;
 
-    let eachPay = document.createElement('p');
+    let eachPay = document.createElement("p");
     eachPay.innerHTML = list.pay;
 
     eachDetail.append(eachType, eachPay);
     planDetails.append(eachDetail);
-
-  })
+  });
 
   let finalPayDetail = document.createElement("div");
   finalPayDetail.classList.add("popup__emifinal");
@@ -695,17 +692,15 @@ cloudComputingEMIPlans.forEach((item) => {
 
   emiBox.append(planImg, planName, planDetails, finalPayDetail);
   cc7Popup.append(emiBox);
-
-})
+});
 
 let emiPopUp = document.querySelector(".cohort7__popup");
 
 function emiPopup(type) {
-  if (type === 'open') {
-    emiPopUp.classList.toggle('active');
-  }
-  else {
-    emiPopUp.classList.remove('active');
+  if (type === "open") {
+    emiPopUp.classList.toggle("active");
+  } else {
+    emiPopUp.classList.remove("active");
   }
 }
 
@@ -713,49 +708,48 @@ function emiPopup(type) {
 
 let cloudComputingMentors = [
   {
-    id : 1,
-    name : 'John Doe',
-    desc : 'Having 10+ years of experience in managing mission-critical web projects.Exceptional record overseeing all facets of Application Development Life Cycle',
-    image : '../Assets/Potrait.jpg',
-    linkedin : '#'
+    id: 1,
+    name: "John Doe",
+    desc: "Having 10+ years of experience in managing mission-critical web projects.Exceptional record overseeing all facets of Application Development Life Cycle",
+    image: "../Assets/Potrait.jpg",
+    linkedin: "#",
   },
   {
-    id : 2,
-    name : 'John Doe',
-    desc : 'Having 10+ years of experience in managing mission-critical web projects.Exceptional record overseeing all facets of Application Development Life Cycle',
-    image : '../Assets/Potrait.jpg',
-    linkedin : '#'
-  } 
-]
+    id: 2,
+    name: "John Doe",
+    desc: "Having 10+ years of experience in managing mission-critical web projects.Exceptional record overseeing all facets of Application Development Life Cycle",
+    image: "../Assets/Potrait.jpg",
+    linkedin: "#",
+  },
+];
 
-let cc8Content = document.querySelector('.cc8__content');
+let cc8Content = document.querySelector(".cc8__content");
 
 cloudComputingMentors.forEach((item) => {
-  let mentorBox = document.createElement('div');
-  mentorBox.classList.add('cohort8__mentorbox');
+  let mentorBox = document.createElement("div");
+  mentorBox.classList.add("cohort8__mentorbox");
 
-  let mentorImg = document.createElement('img');
+  let mentorImg = document.createElement("img");
   mentorImg.setAttribute("src", item.image);
   mentorImg.setAttribute("alt", item.name);
 
-  let mentorName = document.createElement('p');
-  mentorName.classList.add('cohort8__mentorname');
+  let mentorName = document.createElement("p");
+  mentorName.classList.add("cohort8__mentorname");
   mentorName.innerHTML = item.name;
 
   let mentorDesc = document.createElement("p");
   mentorDesc.classList.add("cohort8__mentordesc");
   mentorDesc.innerHTML = item.desc;
 
-  let mentorLinkedin = document.createElement('a');
-  mentorLinkedin.setAttribute('href',item.linkedin);
-  mentorLinkedin.setAttribute('target','_blank');
-  mentorLinkedin.setAttribute('rel','noopener');
+  let mentorLinkedin = document.createElement("a");
+  mentorLinkedin.setAttribute("href", item.linkedin);
+  mentorLinkedin.setAttribute("target", "_blank");
+  mentorLinkedin.setAttribute("rel", "noopener");
   mentorLinkedin.innerHTML = '<ion-icon name="logo-linkedin"></ion-icon>';
 
   mentorBox.append(mentorImg, mentorName, mentorDesc, mentorLinkedin);
   cc8Content.append(mentorBox);
-
-})
+});
 
 // ************************** - SECTION 8 - *********************************
 
@@ -845,24 +839,23 @@ cloudComputingQueries.forEach((item) => {
   cc10Content.append(queryBox);
 });
 
-let allAnswerBoxes = document.querySelectorAll('.cc10__answerbox');
-let allToggleImages = document.querySelectorAll('.cc10__questionbox img');
+let allAnswerBoxes = document.querySelectorAll(".cc10__answerbox");
+let allToggleImages = document.querySelectorAll(".cc10__questionbox img");
 
 function showTheAnswer(answerbox, thisEle) {
   allToggleImages.forEach((imges) => {
     if (imges.dataset.token === thisEle.dataset.token) {
-      imges.classList.toggle('active');
-      answerbox.classList.toggle('active');
-    }
-    else {
-      imges.classList.remove('active');
+      imges.classList.toggle("active");
+      answerbox.classList.toggle("active");
+    } else {
+      imges.classList.remove("active");
       allAnswerBoxes.forEach((answer) => {
         if (answer.dataset.token !== answerbox.dataset.token) {
-          answer.classList.remove('active');
+          answer.classList.remove("active");
         }
-      })
+      });
     }
-  })
+  });
 }
 
 // ************************** - SECTION 10 - *********************************

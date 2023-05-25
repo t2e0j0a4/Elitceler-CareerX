@@ -4,32 +4,19 @@ let downArrow = document.querySelector("ion-icon[name='chevron-down']");
 let smScreenMenu = document.querySelector(".navbar__smallScreen");
 let navbarMenu = document.querySelector(".navbar__list");
 let smScreenMenuIcon = document.querySelector(".navbar__smallScreen ion-icon");
+let listDrop = document.querySelector(".list__drop");
 
 navDropDown.addEventListener("click", () => {
   dropDownMenu.classList.toggle("active");
   downArrow.classList.toggle("active");
+  listDrop.classList.toggle("makeGap");
 });
 
 smScreenMenu.addEventListener("click", () => {
   navbarMenu.classList.toggle("active");
 });
 
-if (window.innerWidth <= 785) {
-  navDropDown.style.pointerEvents = "none";
-} else {
-  navDropDown.style.pointerEvents = "all";
-}
-
-window.addEventListener("resize", (e) => {
-  if (window.innerWidth <= 785) {
-    navDropDown.style.pointerEvents = "none";
-  } else {
-    navDropDown.style.pointerEvents = "all";
-  }
-});
-
 // ***************** - NAVBAR ENDS - ********************
-
 
 // **************** Function for Auto Scroll **************
 
@@ -51,66 +38,66 @@ function autoScroll(itemsContainer) {
 
 // **************** Function for Auto Scroll **************
 
-
 let webinars = [
-    {
-        id : 0,
-        webinar : "Name of Webinar",
-        image : "../Assets/HomeWebinar1.png",
-        desc : "Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.",
-        link : "#"
-    },
-    {
-        id : 1,
-        webinar : "Name of Webinar",
-        image : "../Assets/HomeWebinar2.png",
-        desc : "Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.",
-        link : "#"
-    }
-]
+  {
+    id: 0,
+    webinar: "Name of Webinar",
+    image: "../Assets/HomeWebinar1.png",
+    desc: "Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.",
+    link: "#",
+  },
+  {
+    id: 1,
+    webinar: "Name of Webinar",
+    image: "../Assets/HomeWebinar2.png",
+    desc: "Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.",
+    link: "#",
+  },
+];
 
 let sec2Content = document.querySelector(".webinars__data");
 
 webinars.forEach((item) => {
-    let webinarBox = document.createElement('div');
-    webinarBox.classList.add('webinar__box');
+  let webinarBox = document.createElement("div");
+  webinarBox.classList.add("webinar__box");
 
-    let side1 = document.createElement("div");
-    side1.classList.add("webinar__side1");
+  let side1 = document.createElement("div");
+  side1.classList.add("webinar__side1");
 
-    let webinarImg = document.createElement('img');
-    webinarImg.setAttribute('src', item.image);
-    webinarImg.setAttribute('alt', item.webinar);
+  let webinarImg = document.createElement("img");
+  webinarImg.setAttribute("src", item.image);
+  webinarImg.setAttribute("alt", item.webinar);
 
-    let webinarName = document.createElement("p");
-    webinarName.classList.add("webinar__name");
-    webinarName.textContent = item.webinar;
+  let webinarName = document.createElement("p");
+  webinarName.classList.add("webinar__name");
+  webinarName.textContent = item.webinar;
 
-    side1.append(webinarImg, webinarName);
+  side1.append(webinarImg, webinarName);
 
-    let side2 = document.createElement("div");
-    side2.classList.add("webinar__side2");
+  let side2 = document.createElement("div");
+  side2.classList.add("webinar__side2");
 
-    let webinarDesc = document.createElement("p");
-    webinarDesc.classList.add("webinar__desc");
-    webinarDesc.textContent = "Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.";
+  let webinarDesc = document.createElement("p");
+  webinarDesc.classList.add("webinar__desc");
+  webinarDesc.textContent =
+    "Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.";
 
-    let webinarLink = document.createElement('a');
-    webinarLink.setAttribute("href", item.link);
-    webinarLink.setAttribute("target", "_blank");
-    webinarLink.setAttribute("rel", "noopener");
-    webinarLink.innerHTML = "Join Webinar";
+  let webinarLink = document.createElement("a");
+  webinarLink.setAttribute("href", item.link);
+  webinarLink.setAttribute("target", "_blank");
+  webinarLink.setAttribute("rel", "noopener");
+  webinarLink.innerHTML = "Join Webinar";
 
-    side2.append(webinarDesc, webinarLink);
+  side2.append(webinarDesc, webinarLink);
 
-    webinarBox.append(side1, side2);
+  webinarBox.append(side1, side2);
 
-    sec2Content.append(webinarBox);
-})
+  sec2Content.append(webinarBox);
+});
 
 let totalWebinars = webinars.length;
 sec2Content.style.width = `${totalWebinars * 60}%`;
-let moveConstant = 100/totalWebinars;
+let moveConstant = 100 / totalWebinars;
 let initialValue = 1;
 
 if (window.innerWidth <= 500) {
@@ -125,97 +112,98 @@ if (window.innerWidth >= 900) {
   sec2Content.style.width = `${totalWebinars * 60}%`;
 }
 
-window.addEventListener('resize', () => {
-    if (window.innerWidth <= 500) {
-        sec2Content.style.width = `${totalWebinars * 75}%`;
-    }
-    
-    if (window.innerWidth <= 380) {
-        sec2Content.style.width = `${totalWebinars * 98}%`;
-    }
-    
-    if (window.innerWidth >= 900) {
-        sec2Content.style.width = `${totalWebinars * 60}%`;
-    }
-})
+window.addEventListener("resize", () => {
+  if (window.innerWidth <= 500) {
+    sec2Content.style.width = `${totalWebinars * 75}%`;
+  }
+
+  if (window.innerWidth <= 380) {
+    sec2Content.style.width = `${totalWebinars * 98}%`;
+  }
+
+  if (window.innerWidth >= 900) {
+    sec2Content.style.width = `${totalWebinars * 60}%`;
+  }
+});
 
 function moreWebinars(type) {
-
-    if (type === 'next') {
-        if (initialValue === totalWebinars) {
-            initialValue = 0;
-        }
-        sec2Content.style.transform = `translateX(-${moveConstant * initialValue}%)`;
-        initialValue = initialValue + 1;
+  if (type === "next") {
+    if (initialValue === totalWebinars) {
+      initialValue = 0;
     }
-    else {
-        if (initialValue === 1) {
-            initialValue = totalWebinars + 1;
-        }
-        initialValue = initialValue - 2;
-        sec2Content.style.transform = `translateX(-${moveConstant * initialValue}%)`;
-        initialValue = initialValue + 1;
+    sec2Content.style.transform = `translateX(-${
+      moveConstant * initialValue
+    }%)`;
+    initialValue = initialValue + 1;
+  } else {
+    if (initialValue === 1) {
+      initialValue = totalWebinars + 1;
     }
-
+    initialValue = initialValue - 2;
+    sec2Content.style.transform = `translateX(-${
+      moveConstant * initialValue
+    }%)`;
+    initialValue = initialValue + 1;
+  }
 }
 
 // ************************** - SECTION 2 ENDS - *******************************
 
 let workshops = [
   {
-    id : 0,
-    title : 'Title',
-    desc : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+    id: 0,
+    title: "Title",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
   },
   {
-    id : 1,
-    title : 'Title',
-    desc : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+    id: 1,
+    title: "Title",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
   },
   {
-    id : 2,
-    title : 'Title',
-    desc : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+    id: 2,
+    title: "Title",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
   },
   {
-    id : 3,
-    title : 'Title',
-    desc : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+    id: 3,
+    title: "Title",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
   },
-]
+];
 
 let meetups = [
   {
-    id : 0,
-    title : 'Title',
-    desc : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+    id: 0,
+    title: "Title",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
   },
   {
-    id : 1,
-    title : 'Title',
-    desc : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+    id: 1,
+    title: "Title",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
   },
   {
-    id : 2,
-    title : 'Title',
-    desc : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+    id: 2,
+    title: "Title",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
   },
   {
-    id : 3,
-    title : 'Title',
-    desc : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+    id: 3,
+    title: "Title",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
   },
-]
+];
 
-let sec3Content = document.querySelector('.section3__content');
-let sec4Content = document.querySelector('.section4__content');
+let sec3Content = document.querySelector(".section3__content");
+let sec4Content = document.querySelector(".section4__content");
 
 workshops.forEach((item) => {
-  let itemBox = document.createElement('div');
-  itemBox.classList.add('item__box');
+  let itemBox = document.createElement("div");
+  itemBox.classList.add("item__box");
 
-  let itemTitle = document.createElement('p');
-  itemTitle.classList.add('item__title');
+  let itemTitle = document.createElement("p");
+  itemTitle.classList.add("item__title");
   itemTitle.textContent = item.title;
 
   let itemDesc = document.createElement("p");
@@ -225,7 +213,7 @@ workshops.forEach((item) => {
   itemBox.append(itemTitle, itemDesc);
 
   sec3Content.append(itemBox);
-})
+});
 
 meetups.forEach((item) => {
   let itemBox = document.createElement("div");
@@ -244,13 +232,12 @@ meetups.forEach((item) => {
   sec4Content.append(itemBox);
 });
 
-let item3Boxes = document.querySelectorAll('.section3__content .item__box');
-let item4Boxes = document.querySelectorAll('.section4__content .item__box');
+let item3Boxes = document.querySelectorAll(".section3__content .item__box");
+let item4Boxes = document.querySelectorAll(".section4__content .item__box");
 autoScroll(item3Boxes);
 autoScroll(item4Boxes);
 
 // *************** - SECTION 3 & 4 ENDS - *****************
-
 
 let PeersReviews = [
   {
@@ -315,7 +302,7 @@ let PeersReviews = [
     placement: "Placed at Divami Design Labs",
     image: "../Assets/Peer9.jpg",
     desc: "“CareerX.Club has always believed in helping the students to achieve their dream job. They always provided me with the assistance that I require to bag my dream job.”",
-  }
+  },
 ];
 
 let sec5Content = document.querySelector(".section5__content");
@@ -365,7 +352,7 @@ if (window.innerWidth >= 800) {
   sec5ContentPopulate();
 }
 
-let peerBoxes = document.querySelectorAll('.peer__box');
+let peerBoxes = document.querySelectorAll(".peer__box");
 autoScroll(peerBoxes);
 
 // ************************* Section 5 **************************
