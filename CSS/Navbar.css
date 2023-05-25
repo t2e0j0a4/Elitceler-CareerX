@@ -253,10 +253,6 @@ ion-icon[name='chevron-down'].active {
         font-weight: 300;
     }
 
-    .link2 span ion-icon {
-        display: none;
-    }
-
     .cta__btn {
         flex: 0.8;
         display: flex;
