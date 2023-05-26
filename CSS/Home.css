@@ -732,7 +732,42 @@
     color: #FFFFFF;
 }
 
-/* Section 6 : Our Stats *
+/* Section 6 : Our Stats */
+
+/* New Addition : Companies */
+
+.section__companies {
+    margin: 2rem auto;
+    padding: 2rem 10px;
+    width: 100%;
+}
+
+.companies__list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.companies__list img {
+    aspect-ratio: 4/1;
+    object-fit: contain;
+    animation: companies 12s linear infinite;
+}
+
+@keyframes companies {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(calc(-274.5px * 6.3));
+    }
+}
+
+/* New Addition : Companies */
 
 /* Section 7 : The HR's Saying */
 

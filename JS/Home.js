@@ -318,6 +318,59 @@ cohortsData.forEach((item) => {
 
 // ************************** - SECTION 5 ENDS - *******************************
 
+let companyList = [
+  {
+    id : 1,
+    company : '../Assets/HomeCompany1.png'
+  },
+  {
+    id : 2,
+    company : '../Assets/HomeCompany2.png'
+  },
+  {
+    id : 3,
+    company : '../Assets/HomeCompany3.png'
+  },
+  {
+    id : 4,
+    company : '../Assets/HomeCompany4.png'
+  },
+  {
+    id : 5,
+    company : '../Assets/HomeCompany5.png'
+  },
+  {
+    id : 6,
+    company : '../Assets/HomeCompany6.png'
+  },
+  {
+    id : 7,
+    company : '../Assets/HomeCompany7.png'
+  },
+  {
+    id : 8,
+    company : '../Assets/HomeCompany8.png'
+  }
+]
+
+let companySection = document.querySelector(".companies__list");
+
+companyList.forEach((comp) => {
+  let compImage = document.createElement('img');
+  compImage.setAttribute('src', comp.company);
+  compImage.setAttribute('alt', `company`);
+  companySection.append(compImage);
+})
+
+companyList.forEach((comp) => {
+  let compImage = document.createElement("img");
+  compImage.setAttribute("src", comp.company);
+  compImage.setAttribute("alt", `company`);
+  companySection.append(compImage);
+});
+
+// ************************** - Companies ENDS - *******************************
+
 let HRReviews = [
   {
     id: 0,
