@@ -174,7 +174,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 2rem;
+    gap: 1.6rem;
     transition: transform 0.3s linear;
 }
 
@@ -279,6 +279,26 @@
     color: #FFF;
 }
 
+@media all and (max-width : 600px) {
+
+    .section2__content {
+        overflow-x: scroll;
+        padding: 0 10px;
+    }
+
+    .section2__content::-webkit-scrollbar {
+        height: 0;
+    }
+
+    .webinar__box {
+        margin: 1rem auto;
+    }
+
+    .section2__content .section2__btns {
+        display: none;
+    }
+}
+
 /* Similar to Home Page : Copied */
 
 /* Section 3 : Workshops & Section 4 : Meetups */
@@ -333,6 +353,17 @@
     font-size: 18px;
     line-height: 22px;
     color: #636363;
+}
+
+.item__box a {
+    font-family: var(--font-poppins);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1e1e1e;
+    border: 2px solid #484848;
+    padding: 6px 12px;
+    border-radius: 8px;
 }
 
 /* Section 3 : Workshops & Section 4 : Meetups */

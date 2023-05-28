@@ -53,6 +53,14 @@ let webinars = [
     desc: "Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.",
     link: "#",
   },
+  {
+    id: 2,
+    webinar: "Name of Webinar",
+    image: "../Assets/HomeWebinar1.png",
+    desc: "Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.",
+    link: "#",
+  },
+  
 ];
 
 let sec2Content = document.querySelector(".webinars__data");
@@ -154,21 +162,25 @@ let workshops = [
     id: 0,
     title: "Title",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    link : '#'
   },
   {
     id: 1,
     title: "Title",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    link : '#'
   },
   {
     id: 2,
     title: "Title",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    link : '#'
   },
   {
     id: 3,
     title: "Title",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    link : '#'
   },
 ];
 
@@ -177,21 +189,25 @@ let meetups = [
     id: 0,
     title: "Title",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    link : '#'
   },
   {
     id: 1,
     title: "Title",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    link : '#'
   },
   {
     id: 2,
     title: "Title",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    link : '#'
   },
   {
     id: 3,
     title: "Title",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    link : '#'
   },
 ];
 
@@ -210,7 +226,13 @@ workshops.forEach((item) => {
   itemDesc.classList.add("item__desc");
   itemDesc.textContent = item.desc;
 
-  itemBox.append(itemTitle, itemDesc);
+  let itemRedirect = document.createElement('a');
+  itemRedirect.setAttribute('href', item.link);
+  itemRedirect.setAttribute('target', '_blank');
+  itemRedirect.setAttribute('rel', 'noopener');
+  itemRedirect.innerHTML = 'Join ';
+
+  itemBox.append(itemTitle, itemDesc, itemRedirect);
 
   sec3Content.append(itemBox);
 });
@@ -227,7 +249,13 @@ meetups.forEach((item) => {
   itemDesc.classList.add("item__desc");
   itemDesc.textContent = item.desc;
 
-  itemBox.append(itemTitle, itemDesc);
+  let itemRedirect = document.createElement('a');
+  itemRedirect.setAttribute('href', item.link);
+  itemRedirect.setAttribute('target', '_blank');
+  itemRedirect.setAttribute('rel', 'noopener');
+  itemRedirect.innerHTML = 'Join ';
+
+  itemBox.append(itemTitle, itemDesc, itemRedirect);
 
   sec4Content.append(itemBox);
 });
