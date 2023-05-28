@@ -576,6 +576,12 @@
     padding: 2rem 0;
 }
 
+@media all and (max-width : 600px) {
+    .cohorts__section2 {
+        display: none;
+    }
+}
+
 .cohorts__section2 .cohort2__content {
     width: 97%;
     max-width: 100%;
