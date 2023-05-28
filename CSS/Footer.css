@@ -194,24 +194,6 @@
     }
 
     .footer__side3 li  {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .footer__side3 li ion-icon {
-        flex: 0 0 auto;
-    }
-
-    .footer__side3 li span {
-        flex: 0 0 auto;
-    }
-}
-
-@media all and (max-width : 390px) {
-
-    .footer__side3 li {
         gap: 0.3rem;
         display: flex; 
         flex-direction: column;
@@ -222,9 +204,12 @@
     .footer__side3 li span {
         width: 100%;
         text-align: center;
+        flex: 0 0 auto;
     }
     
     .footer__side3 li ion-icon {
         font-size: 30px;
+        flex: 0 0 auto;
     }
+
 }
