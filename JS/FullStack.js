@@ -467,15 +467,6 @@ function fullStackBrochure(e) {
 
 // Download Popup
 
-// Apply Now Popup
-
-function applyNowPopUp() {
-  window.location.href = "#download__brochure";
-  downloadPopupBox.classList.add("active");
-}
-
-// Apply Now Popup
-
 // ************************** - SECTION 5 - *********************************
 
 let fullStackProjects = [
