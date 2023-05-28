@@ -493,6 +493,25 @@
     }
 }
 
+@media all and (max-width : 550px) {
+    .section_3-content .content_3-btns {
+        display: none;
+    }
+
+    .webinar__box {
+        margin: 1rem auto;
+    }
+
+    .content_3-data {
+        overflow-x: scroll;
+        padding: 0 10px;
+    }
+
+    .content_3-data::-webkit-scrollbar {
+        height: 0;
+    }
+}
+
 /* Section 3 : Webinars */
 
 /* Section 4 : We Got Featured In */
