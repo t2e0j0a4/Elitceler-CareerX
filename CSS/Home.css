@@ -1321,7 +1321,7 @@
 
 @media all and  (max-width : 400px) {
 
-    .section_4 .section__heads p, .section_5 .section__heads p , .section_7 .section__heads p, .section_8 .section__heads p {
+    .section_4 .section__heads p, .section_5 .section__heads p , .section_7 .section__heads p, .section_8 .section__heads p, .section__companies .section__heads p {
         font-size: 1.3rem;
     }
 
