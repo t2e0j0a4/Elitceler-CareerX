@@ -694,7 +694,7 @@
     }
 }
 
-@media all and (max-width : 810px) {
+@media all and (max-width : 880px) {
     .cohorts__section2 .cohort2__content {
         display: flex;
         flex-direction: column;
@@ -728,6 +728,17 @@
         flex: 0 0 auto;
         justify-content: flex-start;
         margin: 1rem auto;
+        animation: moveBoxes 16s linear infinite;
+    }
+
+    @keyframes moveBoxes {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(calc(-300px * 6.35));
+        }
     }
 
     .cohort2__side2::-webkit-scrollbar {
@@ -752,6 +763,16 @@
         height: 220px;
         padding: 1rem;
         gap: 0.4rem;
+    }
+
+    @keyframes moveBoxes {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(calc(-220px * 6.2));
+        }
     }
 
     .cohorts__section2 .cohort2__content {

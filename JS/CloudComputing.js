@@ -178,21 +178,28 @@ let cloudComputingDetails = [
 
 let cc2Content = document.querySelector(".cc2__side2");
 
-cloudComputingDetails.forEach((item) => {
-  let whyCohortItem = document.createElement("div");
-  whyCohortItem.classList.add("cohort2__whybox");
+function cohortSec2() {
+  cloudComputingDetails.forEach((item) => {
+    let whyCohortItem = document.createElement("div");
+    whyCohortItem.classList.add("cohort2__whybox");
 
-  let whyCohortTitle = document.createElement("p");
-  whyCohortTitle.classList.add("cohort2__whytitle");
-  whyCohortTitle.innerHTML = `${item.id}. ${item.title}`;
+    let whyCohortTitle = document.createElement("p");
+    whyCohortTitle.classList.add("cohort2__whytitle");
+    whyCohortTitle.innerHTML = `${item.id}. ${item.title}`;
+    
+    let whyCohortDesc = document.createElement("p");
+    whyCohortDesc.classList.add("cohort2__whydesc");
+    whyCohortDesc.textContent = item.desc;
+    
+    whyCohortItem.append(whyCohortTitle, whyCohortDesc);
+    cc2Content.append(whyCohortItem);
+  });
+}
 
-  let whyCohortDesc = document.createElement("p");
-  whyCohortDesc.classList.add("cohort2__whydesc");
-  whyCohortDesc.textContent = item.desc;
-
-  whyCohortItem.append(whyCohortTitle, whyCohortDesc);
-  cc2Content.append(whyCohortItem);
-});
+cohortSec2();
+if (window.innerWidth <= 710) {
+  cohortSec2();
+}
 
 // ************************** - SECTION 2 - *********************************
 

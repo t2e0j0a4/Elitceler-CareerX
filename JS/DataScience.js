@@ -179,21 +179,29 @@ let dataScienceDetails = [
 
 let ds2Content = document.querySelector(".ds2__side2");
 
-dataScienceDetails.forEach((item) => {
-  let whyCohortItem = document.createElement("div");
-  whyCohortItem.classList.add("cohort2__whybox");
+function cohortSec2() {
+  dataScienceDetails.forEach((item) => {
+    let whyCohortItem = document.createElement("div");
+    whyCohortItem.classList.add("cohort2__whybox");
 
-  let whyCohortTitle = document.createElement("p");
-  whyCohortTitle.classList.add("cohort2__whytitle");
-  whyCohortTitle.innerHTML = `${item.id}. ${item.title}`;
+    let whyCohortTitle = document.createElement("p");
+    whyCohortTitle.classList.add("cohort2__whytitle");
+    whyCohortTitle.innerHTML = `${item.id}. ${item.title}`;
 
-  let whyCohortDesc = document.createElement("p");
-  whyCohortDesc.classList.add("cohort2__whydesc");
-  whyCohortDesc.textContent = item.desc;
+    let whyCohortDesc = document.createElement("p");
+    whyCohortDesc.classList.add("cohort2__whydesc");
+    whyCohortDesc.textContent = item.desc;
+    
+    whyCohortItem.append(whyCohortTitle, whyCohortDesc);
+    ds2Content.append(whyCohortItem);
+  });
+}
 
-  whyCohortItem.append(whyCohortTitle, whyCohortDesc);
-  ds2Content.append(whyCohortItem);
-});
+cohortSec2();
+if (window.innerWidth <= 710) {
+  cohortSec2();
+}
+
 
 // ************************** - SECTION 2 - *********************************
 
