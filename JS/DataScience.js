@@ -851,3 +851,90 @@ function showTheAnswer(answerbox, thisEle) {
 }
 
 // ************************** - SECTION 10 - *********************************
+
+// Apply Now Popup
+
+let reachUsPopup = document.querySelector(".reachus__box ");
+let reachUsPopupContent = document.querySelector(".reachus__content");
+
+let mainPage = document.querySelector(".home__main");
+let navbar = document.querySelector(".app__navbar");
+
+function managePopup(type) {
+  if (type === 'open') {
+    window.location.href = "#applynow";
+    reachUsPopup.classList.add('active');
+    document.body.classList.add('body__popup');
+    mainPage.style.pointerEvents = 'none';
+    navbar.style.pointerEvents = 'none';
+  }
+  else {
+    reachUsPopup.classList.remove('active');
+    document.body.classList.remove('body__popup');
+    mainPage.style.pointerEvents = 'all';
+    navbar.style.pointerEvents = 'all';
+  }
+}
+
+let enquiryName = document.querySelector('.reachus__name');
+let enquiryEmail = document.querySelector('.reachus__email');
+let enquiryMobile = document.querySelector('.reachus__mobile');
+let enquiryCity = document.querySelector('.reachus__city');
+let enquiryCohort = document.querySelector('.reachus__option');
+
+async function sendUserData(data) {
+  const response = await fetch(API, {
+    method: "POST",
+    cache: "no-cache",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+  return response.json();
+}
+
+function applyNowCohort(e) {
+  e.preventDefault();
+
+  let newRequest = [
+    {
+      Attribute: enquiryName.name,
+      Value: enquiryName.value,
+    },
+    {
+      Attribute: enquiryEmail.name,
+      Value: enquiryEmail.value,
+    },
+    {
+      Attribute: enquiryMobile.name,
+      Value : enquiryMobile.value,
+    },
+    {
+      Attribute: enquiryCohort.name,
+      Value: enquiryCohort.value,
+    },
+    {
+      Attribute: enquiryCity.name,
+      Value: enquiryCity.value,
+    },
+    {
+      Attribute: "Source",
+      Value: "Website",
+    }
+  ];
+
+  sendUserData(newRequest);
+
+  let submitNotice = `
+    <h1>We will Reach you soon...</h1>
+  `
+  reachUsPopupContent.innerHTML = submitNotice;
+
+  setTimeout(() => {
+    window.location.reload();
+  }, 3000);
+
+}
+
+// Apply Now Popup

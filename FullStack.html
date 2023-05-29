@@ -531,13 +531,41 @@
         <a href="#">Our EMI Options</a> -->
       </div>
       <div class="bar__side2">
-        <button type="button">Apply Now</button>
+        <button type="button" onclick="managePopup('open')">Apply Now</button>
         <a href="tel:8367721627">Contact Us</a>
         <a href="https://api.whatsapp.com/send?phone=919490820658&text=Hello,%20I%E2%80%99d%20like%20to%20know%20more%20about%20the%20%20cohorts" target="_blank" rel="noopener" title="Whatsapp"><ion-icon name="logo-whatsapp"></ion-icon></a>
       </div>
     </div>
 
     <!-- Bottom Sticky Bar -->
+
+    <!-- Apply Now Popup -->
+
+    <div class="reachus__box" id="applynow">
+
+      <form onsubmit="applyNowCohort(event)" class="reachus__form">
+        
+        <div class="reachus__heads">
+          <p>Apply Now</p>
+          <button type="button" title="Close" onclick="managePopup('close')"><ion-icon name="close"></ion-icon></button>
+        </div>
+        
+        <div class="reachus__content">
+          <input name="FirstName" required class="reachus__name" type="text" placeholder="Name*">
+          <input name="EmailAddress" required class="reachus__email" type="text" placeholder="Email*">
+          <div class="reachus__details">
+            <input name="PhoneNumber" required class="reachus__mobile" type="text" placeholder="Mobile Number*">
+            <input name="City" required class="reachus__city" type="text" placeholder="City*">
+          </div>
+          <input name="Cohort" readonly type="text" class="reachus__option" value="Full Stack" title="Cohort">
+          <button type="submit">Submit</button>
+        </div>
+        
+      </form>
+
+    </div>
+
+    <!-- Apply Now Popup -->
     
     <!-- Scripts -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
