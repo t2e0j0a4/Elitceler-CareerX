@@ -712,6 +712,13 @@
 }
 
 @media all and (max-width : 710px) {
+
+    .cohorts__section2 .cohort2__content {
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
     .cohort2__content .cohort2__side2 {
         display: flex;
         flex-direction: row;
