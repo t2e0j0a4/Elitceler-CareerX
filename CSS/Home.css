@@ -521,7 +521,7 @@
     margin-top: 4rem;
 }
 
-.section_2 .section__heads p span, .section_4 .section__heads p span , .section_5 .section__heads p span, .section_7 .section__heads p span, .section_8 .section__heads p span {
+.section_2 .section__heads p span, .section_4 .section__heads p span , .section_5 .section__heads p span, .section_7 .section__heads p span, .section_8 .section__heads p span, .section__companies .section__heads p span  {
     color: var(--primary);
 }
 
@@ -742,7 +742,6 @@
 }
 
 .stats .stat__name {
-    
     font-family: var(--font-poppins);
     font-style: normal;
     font-weight: 400;
@@ -755,9 +754,9 @@
 
 /* New Addition : Companies */
 
-/* .section__companies {
-    margin: 2rem auto;
-    padding: 2rem 10px;
+.section__companies {
+    margin: 2rem auto 1rem auto;
+    padding: 1rem 10px;
     width: 100%;
 }
 
@@ -768,12 +767,21 @@
     gap: 1rem;
     align-items: center;
     justify-content: flex-start;
+    padding: 2rem 0;
 }
 
-.companies__list img {
-    aspect-ratio: 4/1;
-    object-fit: contain;
+.company__box {
+    width: 200px;
+    height: 100%;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: companies 12s linear infinite;
+}
+
+.company__box img {
+    width: 100%;
 }
 
 @keyframes companies {
@@ -782,9 +790,9 @@
     }
 
     100% {
-        transform: translateX(calc(-274.5px * 6.3));
+        transform: translateX(calc(-200px * 8.65));
     }
-} */
+}
 
 /* New Addition : Companies */
 
