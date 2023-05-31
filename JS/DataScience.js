@@ -263,37 +263,20 @@ let dataScienceCourse = [
     id: 1,
     name: "Fundamentals",
     details: [
-      "Fundamentals of Web Dev",
-      "Fundamentals of Web Dev",
-      "Fundamentals of Web Dev",
-      "Fundamentals of Web Dev",
-      "Fundamentals of Web Dev",
-      "Fundamentals of Web Dev",
+      "Course Introduction",
+      "Data Analytics Overview",
+      "Statistics Essential",
     ],
   },
   {
     id: 2,
     name: "Programming",
-    details: [
-      "Fundamentals of Web Dev",
-      "Fundamentals of Web Dev",
-      "Fundamentals of Web Dev",
-      "Fundamentals of Web Dev",
-      "Fundamentals of Web Dev",
-      "Fundamentals of Web Dev",
-    ],
+    details: ["Python For Data Science", "Python Libraries", "SQL"],
   },
   {
     id: 3,
     name: "Level Up",
-    details: [
-      "Fundamentals of Web Dev",
-      "Fundamentals of Web Dev",
-      "Fundamentals of Web Dev",
-      "Fundamentals of Web Dev",
-      "Fundamentals of Web Dev",
-      "Fundamentals of Web Dev",
-    ],
+    details: ["Tableau", "Machine Learning"],
   },
 ];
 
