@@ -45,28 +45,42 @@
 
 @media all and (max-width : 1275px) {
     .section_1-side1 h1 {
-        letter-spacing: 0.2rem;
-        font-size: 3.3rem;
+        font-size: 3rem;
+    }
+}
+
+@media all and (max-width : 1108px) {
+    .section_1-side1 h1 {
+        font-size: 2.8rem;
     }
 }
 
 @media all and (max-width : 600px) {
     .section_1-side1 h1 {
-        letter-spacing: 0.16rem;
-        font-size: 3rem;
+        font-size: 2.6rem;
     }
 }
 
 @media all and (max-width : 500px) {
     .section_1-side1 h1 {
-        letter-spacing: 0.1rem;
-        font-size: 2.6rem;
+        font-size: 2.2rem;
+    }
+}
+
+@media all and (max-width : 476px) {
+    .section_1-side1 h1 {
+        font-size: 2rem;
+    }
+}
+
+@media all and (max-width : 438px) {
+    .section_1-side1 h1 {
+        font-size: 1.8rem;
     }
 }
 
 @media all and (max-width : 400px) {
     .section_1-side1 h1 {
-        letter-spacing: 0.1rem;
         font-size: 1.5rem;
     }
 }
