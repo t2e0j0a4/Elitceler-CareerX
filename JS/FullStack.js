@@ -16,7 +16,7 @@ smScreenMenu.addEventListener("click", () => {
   navbarMenu.classList.toggle("active");
 });
 
-// ************************** - NAVBAR ENDS - *******************************
+// **************** - NAVBAR ENDS - ***************
 
 // **************** Function for Auto Scroll **************
 
@@ -142,7 +142,7 @@ function scrollerInterval() {
 
 scrollerInterval();
 
-// ************************** - Section 1 - *********************************
+// **************** - Section 1 - ******************
 
 let fullStackDetails = [
   {
@@ -202,12 +202,12 @@ if (window.innerWidth <= 710) {
   cohortSec2();
 }
 
-// ************************** - SECTION 2 - *********************************
+// *************** - SECTION 2 - *******************
 
 let roadMapBoxes = document.querySelectorAll(".cohort3__content .roadmap__box");
 autoScroll(roadMapBoxes);
 
-// ************************** - SECTION 3 - *********************************
+// **************** - SECTION 3 - *******************
 
 let fullStackTools = [
   {
@@ -284,7 +284,7 @@ function fsd4ContentPopulate() {
 fsd4ContentPopulate();
 fsd4ContentPopulate();
 
-// ************************** - SECTION 4 - *********************************
+// ******************* - SECTION 4 - *********************
 
 let fullStackCourse = [
   {
@@ -465,7 +465,7 @@ function fullStackBrochure(e) {
 
 // Download Popup
 
-// ************************** - SECTION 5 - *********************************
+// ***************** - SECTION 5 - *******************
 
 let fullStackProjects = [
   {
@@ -510,7 +510,7 @@ fullStackProjects.forEach((item) => {
 let projectBoxes = document.querySelectorAll(".cohort6__projectbox");
 autoScroll(projectBoxes);
 
-// ************************** - SECTION 6 - *********************************
+// ************** - SECTION 6 - ****************
 
 let fullStackFeeStructure = [
   {
@@ -518,9 +518,7 @@ let fullStackFeeStructure = [
     name: "Silver",
     badge: "../Assets/CohortSilverBadge.svg",
     structure: [
-      "Rs 26,000 (O)",
-      "Rs 21,000 (A)",
-      "Rs 18,500 (L)",
+      "Rs 26,000",
       "Training",
       "Projects",
       "Certification",
@@ -532,9 +530,7 @@ let fullStackFeeStructure = [
     name: "Gold",
     badge: "../Assets/CohortGoldBadge.svg",
     structure: [
-      "Rs 53,000 (O)",
-      "Rs 35,000 (A)",
-      "Rs 33,000 (L)",
+      "Rs 53,000",
       "Eligiblity Test",
       "Projects",
       "1:1 Mentor Sessions",
@@ -549,9 +545,7 @@ let fullStackFeeStructure = [
     name: "Platinum",
     badge: "../Assets/CohortPlatBadge.svg",
     structure: [
-      "Rs 71,000 (O)",
-      "Rs 53,000 (A)",
-      "Rs 45,000 (L)",
+      "Rs 71,000",
       "Eligiblity Test",
       "Projects",
       "1:1 Mentor Sessions",
@@ -723,7 +717,7 @@ function emiPopup(type) {
   }
 }
 
-// ************************** - SECTION 7 - *********************************
+// ****************** - SECTION 7 - ******************
 
 let fullStackMentors = [
   {
@@ -770,7 +764,7 @@ fullStackMentors.forEach((item) => {
   fsd8Content.append(mentorBox);
 });
 
-// ************************** - SECTION 8 - *********************************
+// ****************** - SECTION 8 - ******************
 
 let fullStackQueries = [
   {
@@ -877,7 +871,7 @@ function showTheAnswer(answerbox, thisEle) {
   });
 }
 
-// *********************** - SECTION 10 - ******************
+// **************** - SECTION 10 - ******************
 
 // Apply Now Popup
 

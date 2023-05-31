@@ -482,9 +482,7 @@ let dataScienceFeeStructure = [
     name: "Silver",
     badge: "../Assets/CohortSilverBadge.svg",
     structure: [
-      "Rs 30,000 (O)",
-      "Rs 23,600 (A)",
-      "Rs 21,500 (L)",
+      "Rs 30,000",
       "Training",
       "Projects",
       "Certification",
@@ -496,9 +494,7 @@ let dataScienceFeeStructure = [
     name: "Gold",
     badge: "../Assets/CohortGoldBadge.svg",
     structure: [
-      "Rs 59,000 (O)",
-      "Rs 47,200 (A)",
-      "Rs 41,300 (L)",
+      "Rs 59,000",
       "Eligiblity Test",
       "Projects",
       "1:1 Mentor Sessions",
@@ -513,9 +509,7 @@ let dataScienceFeeStructure = [
     name: "Platinum",
     badge: "../Assets/CohortPlatBadge.svg",
     structure: [
-      "Rs 88,000 (O)",
-      "Rs 71,000 (A)",
-      "Rs 59,000 (L)",
+      "Rs 88,000",
       "Eligiblity Test",
       "Projects",
       "1:1 Mentor Sessions",

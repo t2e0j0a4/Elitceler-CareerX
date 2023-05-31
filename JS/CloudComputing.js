@@ -509,9 +509,7 @@ let cloudComputingFeeStructure = [
     name: "Silver",
     badge: "../Assets/CohortSilverBadge.svg",
     structure: [
-      "Rs 26,000 (O)",
-      "Rs 21,500 (A)",
-      "Rs 18,00 (L)",
+      "Rs 26,000",
       "Training",
       "Projects",
       "Certification",
@@ -523,9 +521,7 @@ let cloudComputingFeeStructure = [
     name: "Gold",
     badge: "../Assets/CohortGoldBadge.svg",
     structure: [
-      "Rs 53,000 (O)",
-      "Rs 35,000 (A)",
-      "Rs 33,000 (L)",
+      "Rs 53,000",
       "Eligiblity Test",
       "Projects",
       "1:1 Mentor Sessions",
@@ -540,9 +536,7 @@ let cloudComputingFeeStructure = [
     name: "Platinum",
     badge: "../Assets/CohortPlatBadge.svg",
     structure: [
-      "Rs 71,000 (O)",
-      "Rs 53,000 (A)",
-      "Rs 45,000 (L)",
+      "Rs 71,000",
       "Eligiblity Test",
       "Projects",
       "1:1 Mentor Sessions",
