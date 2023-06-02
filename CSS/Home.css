@@ -307,6 +307,11 @@
     user-select: none;
 }
 
+.section_2-data:nth-child(1) img {
+    width: 150px;
+    height: 150px;
+}
+
 .section_2-data p {
     font-family: var(--font-poppins);
     font-style: normal;
@@ -1267,6 +1272,11 @@
         height: 64px;
     }
 
+    .section_2-data:nth-child(1) img {
+        width: 72px;
+        height: 72px;
+    }
+
     .section_2-data p {
         font-size: 16px;
 
@@ -1374,6 +1384,11 @@
     .section_2-data img {
         width: 48px;
         height: 48px;
+    }
+
+    .section_2-dat:nth-child(1) img {
+        width: 52px;
+        height: 52px;
     }
 }
 
