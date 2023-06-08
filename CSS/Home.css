@@ -9,10 +9,13 @@
 }
 
 .main__center {
+    padding: 1rem;
+}
+
+.main__sections .section_3-content , .main__sections .section_4-content, .main__sections .section_5-content, .main__sections .companies__list, .main__sections .section_7-content, .main__sections .section_8-content {
     width: 1400px;
     max-width: 100%;
     margin: auto;
-    padding: 1rem;
 }
 
 /* Section 1 */
@@ -22,6 +25,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 1400px;
+    max-width: 100%;
+    margin: auto;
     gap: 1rem;
 }
 
@@ -174,44 +180,6 @@
     background-color: var(--primary);
 }
 
-/* .section_1-links {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-} */
-
-/* .section_1-links .circle_vector {
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: 3px solid var(--primary);
-} */
-
-/* .section_1-links .link__content {
-    background-color: #121212;
-    position: relative;
-    left: 20px;
-    padding: 0.8rem 0.2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.4rem;
-} */
-
-/* .link__content ion-icon:nth-child(1) {
-    font-size: 24px;
-    color: var(--white);
-}
-
-.link__content ion-icon:nth-child(3) {
-    font-size: 20px;
-    color: var(--primary);
-    animation: animatedarrows 1.2s linear infinite;
-} */
-
 .link__content span {
     font-family: var(--font-poppins);
     color: var(--white);
@@ -246,23 +214,15 @@
 }
 
 .section__heads {
+    width: 1164px;
+    max-width: 100%;
+    margin: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 2rem;
 }
 
-.section_2 .section__heads {
-    width: 1400px;
-    max-width: 100%;
-    margin: auto;
-}
-
-@media all and (max-width : 1400px) {
-    .section_2 .section__heads {
-        margin-left: 1rem;
-    }
-}
 
 .section__heads .head__vector {
     width: 70px;
@@ -1209,14 +1169,6 @@
         padding: 0.4rem;
     }
 
-    .section__heads {
-        justify-content: flex-start;
-    }
-
-    .section_2 .section__heads {
-        margin-left: 0.4rem;
-    }
-
     .section_5-content {
         gap: 0.6rem;
     }
@@ -1228,10 +1180,6 @@
 }
 
 @media all and (max-width : 500px) {
-
-    .main__center {
-        max-width: 100%;
-    }   
 
     .link__content ion-icon:nth-child(1) {
         font-size: 20px;
