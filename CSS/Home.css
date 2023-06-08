@@ -242,7 +242,7 @@
 
 .section__heads {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin-bottom: 2rem;
 }
