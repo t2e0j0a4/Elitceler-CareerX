@@ -70,6 +70,11 @@
 }
 
 @media all and (max-width : 600px) {
+
+    .section_1-side1 {
+        margin-left: auto;
+    }
+
     .section_1-side1 h1 {
         width: 100%;
         font-size: 2.6rem;
@@ -1141,6 +1146,7 @@
 
     .section_1-side1 p {
         font-size: 1rem;
+        width: 100%;
     }
 
     .section_1-side2 {
