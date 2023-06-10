@@ -56,7 +56,14 @@
     }
 }
 
+@media all and (max-width : 900px) {
+    .section_1-side1 {
+        margin-left: 10px;
+    }
+}
+
 @media all and (max-width : 1108px) {
+    
     .section_1-side1 h1 {
         font-size: 2.8rem;
     }
@@ -1149,6 +1156,7 @@
 
     .section_1-side1 {
         width: 100%;
+        margin-left : 10px;
     }
 
     .section_1-side2 {
