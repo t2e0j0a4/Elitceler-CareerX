@@ -41,25 +41,25 @@ function autoScroll(itemsContainer) {
 let fullStackIntro = [
   {
     id: 1,
-    image: "../Assets/FSDMap1.svg",
+    image: "Assets/FSDMap1.svg",
     title: "100+ Hours of Hybrid Learning",
     desc: "Acquire premium content through live full-stack development classes and offline bootcamps.",
   },
   {
     id: 2,
-    image: "../Assets/FSDMap2.svg",
+    image: "Assets/FSDMap2.svg",
     title: "1:1 Personalized Mentoring from Industry Experts",
     desc: "Get personalized 1:1 career coaching from 100+ Coaches to learn in-demand Block Chain skills.",
   },
   {
     id: 3,
-    image: "../Assets/FSDMap5.svg",
+    image: "Assets/FSDMap5.svg",
     title: "Access to Employment Oppurtunities",
     desc: "Apply for available industry internships and live Block Chain projects and full-time job opportunities.",
   },
   {
     id: 4,
-    image: "../Assets/FSDMap4.svg",
+    image: "Assets/FSDMap4.svg",
     title: "Rs 3-15 LPA CTC Salary Range",
     desc: "Land your dream job now with our full stack development course with right salary in the right company.",
   },
@@ -212,52 +212,52 @@ autoScroll(roadMapBoxes);
 let fullStackTools = [
   {
     id: 1,
-    toolImg: "../Assets/FSDTool1.png",
+    toolImg: "Assets/FSDTool1.png",
     toolName: "HTML",
   },
   {
     id: 2,
-    toolImg: "../Assets/FSDTool2.png",
+    toolImg: "Assets/FSDTool2.png",
     toolName: "CSS",
   },
   {
     id: 3,
-    toolImg: "../Assets/FSDTool3.png",
+    toolImg: "Assets/FSDTool3.png",
     toolName: "Javascript",
   },
   {
     id: 4,
-    toolImg: "../Assets/FSDTool4.png",
+    toolImg: "Assets/FSDTool4.png",
     toolName: "Bootstrap",
   },
   {
     id: 5,
-    toolImg: "../Assets/FSDTool5.png",
+    toolImg: "Assets/FSDTool5.png",
     toolName: "jQuery",
   },
   {
     id: 6,
-    toolImg: "../Assets/FSDTool6.png",
+    toolImg: "Assets/FSDTool6.png",
     toolName: "React.js",
   },
   {
     id: 7,
-    toolImg: "../Assets/FSDTool7.png",
+    toolImg: "Assets/FSDTool7.png",
     toolName: "Angular",
   },
   {
     id: 8,
-    toolImg: "../Assets/FSDTool8.png",
+    toolImg: "Assets/FSDTool8.png",
     toolName: "Github",
   },
   {
     id: 9,
-    toolImg: "../Assets/FSDTool9.png",
+    toolImg: "Assets/FSDTool9.png",
     toolName: "Node.js",
   },
   {
     id: 10,
-    toolImg: "../Assets/FSDTool10.png",
+    toolImg: "Assets/FSDTool10.png",
     toolName: "Mongo DB",
   },
 ];
@@ -329,7 +329,7 @@ fullStackCourse.forEach((item) => {
   courseTitle.innerHTML = item.name;
 
   let toggle = document.createElement("img");
-  toggle.setAttribute("src", "../Assets/DownArrow2.svg");
+  toggle.setAttribute("src", "Assets/DownArrow2.svg");
   toggle.setAttribute("alt", "Toggle");
   toggle.setAttribute("data-token", `icon-${item.id}`);
 
@@ -460,7 +460,7 @@ function fullStackBrochure(e) {
     window.location.reload();
   }, 3000);
 
-  window.location.href = "../Assets/CareerX FSD Brochure.pdf";
+  window.location.href = "Assets/CareerX FSD Brochure.pdf";
 }
 
 // Download Popup
@@ -471,22 +471,22 @@ let fullStackProjects = [
   {
     id: 1,
     projectTitle: "Netflix Clone",
-    projectImage: "../Assets/FSDProject1.svg",
+    projectImage: "Assets/FSDProject1.svg",
   },
   {
     id: 2,
     projectTitle: "Spotify Clone",
-    projectImage: "../Assets/FSDProject2.svg",
+    projectImage: "Assets/FSDProject2.svg",
   },
   {
     id: 3,
     projectTitle: "Amazon Clone",
-    projectImage: "../Assets/FSDProject3.svg",
+    projectImage: "Assets/FSDProject3.svg",
   },
   {
     id: 4,
     projectTitle: "Instagram Clone",
-    projectImage: "../Assets/FSDProject4.svg",
+    projectImage: "Assets/FSDProject4.svg",
   },
 ];
 
@@ -516,7 +516,7 @@ let fullStackFeeStructure = [
   {
     id: 1,
     name: "Silver",
-    badge: "../Assets/CohortSilverBadge.svg",
+    badge: "Assets/CohortSilverBadge.svg",
     structure: [
       "Rs 26,000",
       "Training",
@@ -528,7 +528,7 @@ let fullStackFeeStructure = [
   {
     id: 2,
     name: "Gold",
-    badge: "../Assets/CohortGoldBadge.svg",
+    badge: "Assets/CohortGoldBadge.svg",
     structure: [
       "Rs 53,000",
       "Eligiblity Test",
@@ -543,7 +543,7 @@ let fullStackFeeStructure = [
   {
     id: 3,
     name: "Platinum",
-    badge: "../Assets/CohortPlatBadge.svg",
+    badge: "Assets/CohortPlatBadge.svg",
     structure: [
       "Rs 71,000",
       "Eligiblity Test",
@@ -588,7 +588,7 @@ let fullStackEMIPlans = [
   {
     id: 1,
     name: "One Time Plan",
-    image: "../Assets/CohortEMI1.svg",
+    image: "Assets/CohortEMI1.svg",
     details: [
       {
         type: "Course Fee",
@@ -613,7 +613,7 @@ let fullStackEMIPlans = [
   {
     id: 2,
     name: "Two Months EMI",
-    image: "../Assets/CohortEMI2.svg",
+    image: "Assets/CohortEMI2.svg",
     details: [
       {
         type: "Course Fee",
@@ -638,7 +638,7 @@ let fullStackEMIPlans = [
   {
     id: 3,
     name: "Three Months EMI",
-    image: "../Assets/CohortEMI3.svg",
+    image: "Assets/CohortEMI3.svg",
     details: [
       {
         type: "Course Fee",
@@ -724,14 +724,14 @@ let fullStackMentors = [
     id: 1,
     name: "John Doe",
     desc: "Having 10+ years of experience in managing mission-critical web projects.Exceptional record overseeing all facets of Application Development Life Cycle",
-    image: "../Assets/Potrait.jpg",
+    image: "Assets/Potrait.jpg",
     linkedin: "#",
   },
   {
     id: 2,
     name: "John Doe",
     desc: "Having 10+ years of experience in managing mission-critical web projects.Exceptional record overseeing all facets of Application Development Life Cycle",
-    image: "../Assets/Potrait.jpg",
+    image: "Assets/Potrait.jpg",
     linkedin: "#",
   },
 ];
@@ -829,7 +829,7 @@ fullStackQueries.forEach((item) => {
   question.innerHTML = item.question;
 
   let toggle = document.createElement("img");
-  toggle.setAttribute("src", "../Assets/DownArrow.svg");
+  toggle.setAttribute("src", "Assets/DownArrow.svg");
   toggle.setAttribute("alt", "Toggle");
   toggle.setAttribute("data-token", `icon-${item.id}`);
 

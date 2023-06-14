@@ -42,21 +42,21 @@ let webinars = [
     {
         id : 0,
         webinar : "Name of Webinar",
-        image : "../Assets/HomeWebinar1.png",
+        image : "Assets/HomeWebinar1.png",
         desc : "Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.",
         link : "#"
     },
     {
         id : 1,
         webinar : "Name of Webinar",
-        image : "../Assets/HomeWebinar2.png",
+        image : "Assets/HomeWebinar2.png",
         desc : "Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.",
         link : "#"
     },
     {
         id : 2,
         webinar : "Name of Webinar",
-        image : "../Assets/HomeWebinar1.png",
+        image : "Assets/HomeWebinar1.png",
         desc : "Acquire premium content through live full-stack development classes and offline bootcamps. Acquire premium content through live full-stack development classes.",
         link : "#"
     }
@@ -157,49 +157,49 @@ function moreWebinars(type) {
 const featuredData = [
   {
     id: 0,
-    image: "../../Assets/HomeNews1.png",
+    image: "Assets/HomeNews1.png",
     context:
       "Programmes are designed to emphasise practical principles and processes that equip students with the required knowledge and skills.",
     readLink: "#",
   },
   {
     id: 1,
-    image: "../../Assets/HomeNews2.png",
+    image: "Assets/HomeNews2.png",
     context:
       "CareerX club has made a significant impact by placing more than 200 students in leading organisations.",
     readLink: "#",
   },
   {
     id: 2,
-    image: "../../Assets/HomeNews3.png",
+    image: "Assets/HomeNews3.png",
     context:
       "The challenge is to stay relevant amid the changes, which is what CareerX specialises in.",
     readLink: "#",
   },
   {
     id: 3,
-    image: "../../Assets/HomeNews4.png",
+    image: "Assets/HomeNews4.png",
     context:
       "Preparing the young talent for the continuously evolving needs of the Tech industry.",
     readLink: "#",
   },
   {
     id: 4,
-    image: "../../Assets/HomeNews5.png",
+    image: "Assets/HomeNews5.png",
     context:
       "Employers do not just look at the educational qualifications but also the additional skills the potential employee has.",
     readLink: "#",
   },
   {
     id: 5,
-    image: "../../Assets/HomeNews6.png",
+    image: "Assets/HomeNews6.png",
     context:
       "Our Startup has been Officially Recognised By Govt. Of India - Ministry Of Commerce.",
     readLink: "#",
   },
   {
     id: 6,
-    image: "../../Assets/HomeNews7.png",
+    image: "Assets/HomeNews7.png",
     context:
       "CareerX Club, a Cohort based Edtech Startup helping students to learn emerging technologies and placing them in top companies.",
     readLink: "#",
@@ -242,24 +242,24 @@ autoScroll(section4Boxes);
 let cohortsData = [
     {
         id : 0,
-        image : '../Assets/HomeCohortFSD.png',
+        image : 'Assets/HomeCohortFSD.png',
         cohort : 'Full Stack Cohort',
         stars : 4,
-        redirect : '../FullStack.html'
+        redirect : 'FullStack.html'
     },
     {
         id : 1,
-        image : '../Assets/HomeCohortDS.png',
+        image : 'Assets/HomeCohortDS.png',
         cohort : 'Data Science Cohort',
         stars : 4,
-        redirect : '../DataScience.html'
+        redirect : 'DataScience.html'
     },
     {
         id : 2,
-        image : '../Assets/HomeCohortCC.png',
+        image : 'Assets/HomeCohortCC.png',
         cohort : 'Cloud Computing',
         stars : 4,
-        redirect : '../CloudComputing.html'
+        redirect : 'CloudComputing.html'
     },   
 ]
 
@@ -292,14 +292,14 @@ cohortsData.forEach((item) => {
     for (let i=1; i<=5; i++ ) {
         if (i <= item.stars) {
             let ratedStar = document.createElement('img');
-            ratedStar.setAttribute("src", '../Assets/RatedStar.png');
+            ratedStar.setAttribute("src", 'Assets/RatedStar.png');
             ratedStar.setAttribute("alt", 'Rated');
             cohortRating.append(ratedStar);
           }
           else {
             
             let notRatedStar = document.createElement("img");
-            notRatedStar.setAttribute("src", "../Assets/NotRatedStar.png");
+            notRatedStar.setAttribute("src", "Assets/NotRatedStar.png");
             notRatedStar.setAttribute("alt", 'NotRated');
             cohortRating.append(notRatedStar);
         }
@@ -321,35 +321,35 @@ cohortsData.forEach((item) => {
 let companyList = [
   {
     id : 1,
-    company : '../Assets/HomeCompany1.png'
+    company : 'Assets/HomeCompany1.png'
   },
   {
     id : 2,
-    company : '../Assets/HomeCompany2.png'
+    company : 'Assets/HomeCompany2.png'
   },
   {
     id : 3,
-    company : '../Assets/HomeCompany3.png'
+    company : 'Assets/HomeCompany3.png'
   },
   {
     id : 4,
-    company : '../Assets/HomeCompany4.png'
+    company : 'Assets/HomeCompany4.png'
   },
   {
     id : 5,
-    company : '../Assets/HomeCompany5.png'
+    company : 'Assets/HomeCompany5.png'
   },
   {
     id : 6,
-    company : '../Assets/HomeCompany6.png'
+    company : 'Assets/HomeCompany6.png'
   },
   {
     id : 7,
-    company : '../Assets/HomeCompany7.png'
+    company : 'Assets/HomeCompany7.png'
   },
   {
     id : 8,
-    company : '../Assets/HomeCompany8.png'
+    company : 'Assets/HomeCompany8.png'
   }
 ]
 
@@ -381,42 +381,42 @@ let HRReviews = [
   {
     id: 0,
     name: "Mr.Mallareddy",
-    image: "../Assets/HomeDummyPotrait.svg",
+    image: "Assets/HomeDummyPotrait.svg",
     role: "HR, Chainmonks",
     desc: "“We hired few resources from CareerX, the experience of hiring process has been really smooth and found well trained resources in a short time.If anyone are looking for trained professionals especially in cutting edge tech, I would strongly recommend CareerX.”",
   },
   {
     id: 1,
     name: "Lavanya Jampana",
-    image: "../Assets/HomeDummyPotrait.svg",
+    image: "Assets/HomeDummyPotrait.svg",
     role: "HR, VIVID Minds PVT LTD",
     desc: "“Working with  CareerX Club has been a fantastic experience. Their team took the time to understand our unique hiring needs and worked tirelessly to identify and recruit the best candidates for our organization.”",
   },
   {
     id: 2,
     name: "Savinay",
-    image: "../Assets/HomeDummyPotrait.svg",
+    image: "Assets/HomeDummyPotrait.svg",
     role: "HR, Immutable Ren Labs",
     desc: "“My experience with CareerX Club has been nothing short of excellent.  We hired front-end developers through CareerX and the experience was really great. The candidates are well-trained for the job and have a thorough understanding of what we expect out of them.”",
   },
   {
     id: 3,
     name: "Harika",
-    image: "../Assets/HomeDummyPotrait.svg",
+    image: "Assets/HomeDummyPotrait.svg",
     role: "HR, Infinite learning Sols",
     desc: "“Happy with the candidates and the support. Grateful to the team for superb coordination and helping in meeting the requirements.”",
   },
   {
     id: 4,
     name: "Vidya",
-    image: "../Assets/HomeDummyPotrait.svg",
+    image: "Assets/HomeDummyPotrait.svg",
     role: "HR, Divami Labs",
     desc: "“Amazing- that's one word I would use to express my experience with CareerX Club. Their drive to ensure win-win placements for both candidates as well as companies helped accelerate our recruiting process.”",
   },
   {
     id: 5,
     name: "Sandeep",
-    image: "../Assets/HomeDummyPotrait.svg",
+    image: "Assets/HomeDummyPotrait.svg",
     role: "HR, Think Hat",
     desc: "“I am pleased to provide a testimonial for our candidates who have been exceptional additions to our team. Their strong work ethic, dedication, and professionalism have been evident from the start.”",
   },
@@ -478,63 +478,63 @@ let PeersReviews = [
     id: 0,
     name: "Bhargav Varma",
     placement: "Placed at Gaura Technologies",
-    image: "../Assets/Peer1.jpg",
+    image: "Assets/Peer1.jpg",
     desc: "“I recently completed the Blockchain Development Cohort at CareerX.club and I am extremely grateful for the opportunity it provided me to learn and grow as a developer. The course was well-structured and provided a comprehensive overview of the Blockchain technology and its various applications.”",
   },
   {
     id: 1,
     name: "Shashidhar Reddy",
     placement: "Placed at Chain Monks",
-    image: "../Assets/Peer2.jpg",
+    image: "Assets/Peer2.jpg",
     desc: "“I am so grateful for the CareerX. The support they have provided me on my professional journey. I felt like I was learning valuable skills that would benefit me in my career. Thank you CareerX for building my career in the blockchain field.”",
   },
   {
     id: 2,
     name: "Shylu",
     placement: "Placed at Think Hat",
-    image: "../Assets/Peer3.jpg",
+    image: "Assets/Peer3.jpg",
     desc: "“I am really feeling good to be the part of careerX , which has really helped me to get the job with required skills , and they have thought me basics of programming from Scratch and very supportive.”",
   },
   {
     id: 3,
     name: "Vandana Adireddy",
     placement: "Placed at VividMinds Tech",
-    image: "../Assets/Peer4.jpg",
+    image: "Assets/Peer4.jpg",
     desc: "“It was a great experience with CareerX.club. Their dedicated support helped me look for more opportunities that could satisfy my ideal job. If you are a career enthusiast and want to build your ideal career, I would highly recommend CareerX.club.”",
   },
   {
     id: 4,
     name: "Ruchitha",
     placement: "Placed at Think Hat",
-    image: "../Assets/Peer5.jpg",
+    image: "Assets/Peer5.jpg",
     desc: "“CareerX.club played a great role in shaping my career. It helped me to establish my Time management skills, Leadership skills, technical skills and also been able to advance them to a new level.”",
   },
   {
     id: 5,
     name: "Afreen",
     placement: "Placed at VividMinds Tech",
-    image: "../Assets/Peer6.jpg",
+    image: "Assets/Peer6.jpg",
     desc: "“The Entire team leaves no stone unturned to shape one’s career. It was my fortune to be part of CareerX.club. Their effort made me count myself into better opportunities.”",
   },
   {
     id: 6,
     name: "Srujan",
     placement: "Placed at Atom State",
-    image: "../Assets/Peer7.jpg",
+    image: "Assets/Peer7.jpg",
     desc: "“I recommend many people like me confused in career change then I strongly suggest CareerX is a good choice which make your dreams come true.”",
   },
   {
     id: 7,
     name: "Survojyothi Dey",
     placement: "Placed at Divami Design Labs",
-    image: "../Assets/Peer8.jpg",
+    image: "Assets/Peer8.jpg",
     desc: "“The entire team helped me to land my dream job. Their constant support and dedication made me seize the opportunities and build my confidence. They have my absolute gratitude.”",
   },
   {
     id: 8,
     name: "Yashwanth Venkat",
     placement: "Placed at Divami Design Labs",
-    image: "../Assets/Peer9.jpg",
+    image: "Assets/Peer9.jpg",
     desc: "“CareerX.Club has always believed in helping the students to achieve their dream job. They always provided me with the assistance that I require to bag my dream job.”",
   },
 ];
