@@ -40,25 +40,25 @@ function autoScroll(itemsContainer) {
 let dataScienceIntro = [
   {
     id: 1,
-    image: "../Assets/CCMap1.svg",
+    image: "Assets/CCMap1.svg",
     title: "100+ Hours of Hybrid Learning",
     desc: "Acquire premium content through live full-stack development classes and offline bootcamps.",
   },
   {
     id: 2,
-    image: "../Assets/CCMap2.svg",
+    image: "Assets/CCMap2.svg",
     title: "1:1 Personalized Mentoring from Industry Experts",
     desc: "Get personalized 1:1 career coaching from 100+ Coaches to learn in-demand Block Chain skills.",
   },
   {
     id: 3,
-    image: "../Assets/CCMap5.svg",
+    image: "Assets/CCMap5.svg",
     title: "Access to Employment Oppurtunities",
     desc: "Apply for available industry internships and live Block Chain projects and full-time job opportunities.",
   },
   {
     id: 4,
-    image: "../Assets/CCMap4.svg",
+    image: "Assets/CCMap4.svg",
     title: "Rs 3-15 LPA CTC Salary Range",
     desc: "Land your dream job now with our full stack development course with right salary in the right company.",
   },
@@ -211,22 +211,22 @@ autoScroll(roadMapBoxes);
 let cloudComputingTools = [
   {
     id: 1,
-    toolImg: "../Assets/CCTool1.svg",
+    toolImg: "Assets/CCTool1.svg",
     toolName: "Kubernetes",
   },
   {
     id: 2,
-    toolImg: "../Assets/CCTool2.svg",
+    toolImg: "Assets/CCTool2.svg",
     toolName: "Google Cloud",
   },
   {
     id: 3,
-    toolImg: "../Assets/CCTool3.svg",
+    toolImg: "Assets/CCTool3.svg",
     toolName: "Docker",
   },
   {
     id: 4,
-    toolImg: "../Assets/CCTool4.svg",
+    toolImg: "Assets/CCTool4.svg",
     toolName: "AWS",
   },
 ];
@@ -320,7 +320,7 @@ cloudComputingCourse.forEach((item) => {
   courseTitle.innerHTML = item.name;
 
   let toggle = document.createElement("img");
-  toggle.setAttribute("src", "../Assets/DownArrow2.svg");
+  toggle.setAttribute("src", "Assets/DownArrow2.svg");
   toggle.setAttribute("alt", "Toggle");
   toggle.setAttribute("data-token", `icon-${item.id}`);
 
@@ -451,7 +451,7 @@ function fullStackBrochure(e) {
     window.location.reload();
   }, 3000);
 
-  window.location.href = "../Assets/CareerX Cloud Computing Brochure.pdf";
+  window.location.href = "Assets/CareerX Cloud Computing Brochure.pdf";
 }
 
 // Download Popup
@@ -462,22 +462,22 @@ let cloudComputingProjects = [
   {
     id: 1,
     projectTitle: "Netflix",
-    projectImage: "../Assets/CCProject1.svg",
+    projectImage: "Assets/CCProject1.svg",
   },
   {
     id: 2,
     projectTitle: "Gmail",
-    projectImage: "../Assets/CCProject2.png",
+    projectImage: "Assets/CCProject2.png",
   },
   {
     id: 3,
     projectTitle: "Facebook",
-    projectImage: "../Assets/CCProject3.svg",
+    projectImage: "Assets/CCProject3.svg",
   },
   {
     id: 4,
     projectTitle: "Prime Video",
-    projectImage: "../Assets/CCProject4.svg",
+    projectImage: "Assets/CCProject4.svg",
   },
 ];
 
@@ -507,7 +507,7 @@ let cloudComputingFeeStructure = [
   {
     id: 1,
     name: "Silver",
-    badge: "../Assets/CohortSilverBadge.svg",
+    badge: "Assets/CohortSilverBadge.svg",
     structure: [
       "Rs 26,000",
       "Training",
@@ -519,7 +519,7 @@ let cloudComputingFeeStructure = [
   {
     id: 2,
     name: "Gold",
-    badge: "../Assets/CohortGoldBadge.svg",
+    badge: "Assets/CohortGoldBadge.svg",
     structure: [
       "Rs 53,000",
       "Eligiblity Test",
@@ -534,7 +534,7 @@ let cloudComputingFeeStructure = [
   {
     id: 3,
     name: "Platinum",
-    badge: "../Assets/CohortPlatBadge.svg",
+    badge: "Assets/CohortPlatBadge.svg",
     structure: [
       "Rs 71,000",
       "Eligiblity Test",
@@ -579,7 +579,7 @@ let cloudComputingEMIPlans = [
   {
     id: 1,
     name: "One Time Plan",
-    image: "../Assets/CohortEMI1.svg",
+    image: "Assets/CohortEMI1.svg",
     details: [
       {
         type: "Course Fee",
@@ -604,7 +604,7 @@ let cloudComputingEMIPlans = [
   {
     id: 2,
     name: "Two Months EMI",
-    image: "../Assets/CohortEMI2.svg",
+    image: "Assets/CohortEMI2.svg",
     details: [
       {
         type: "Course Fee",
@@ -629,7 +629,7 @@ let cloudComputingEMIPlans = [
   {
     id: 3,
     name: "Three Months EMI",
-    image: "../Assets/CohortEMI3.svg",
+    image: "Assets/CohortEMI3.svg",
     details: [
       {
         type: "Course Fee",
@@ -715,14 +715,14 @@ let cloudComputingMentors = [
     id: 1,
     name: "John Doe",
     desc: "Having 10+ years of experience in managing mission-critical web projects.Exceptional record overseeing all facets of Application Development Life Cycle",
-    image: "../Assets/Potrait.jpg",
+    image: "Assets/Potrait.jpg",
     linkedin: "#",
   },
   {
     id: 2,
     name: "John Doe",
     desc: "Having 10+ years of experience in managing mission-critical web projects.Exceptional record overseeing all facets of Application Development Life Cycle",
-    image: "../Assets/Potrait.jpg",
+    image: "Assets/Potrait.jpg",
     linkedin: "#",
   },
 ];
@@ -820,7 +820,7 @@ cloudComputingQueries.forEach((item) => {
   question.innerHTML = item.question;
 
   let toggle = document.createElement("img");
-  toggle.setAttribute("src", "../Assets/DownArrow.svg");
+  toggle.setAttribute("src", "Assets/DownArrow.svg");
   toggle.setAttribute("alt", "Toggle");
   toggle.setAttribute("data-token", `icon-${item.id}`);
 
